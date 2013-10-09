@@ -1,0 +1,1310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A010DFF1805EEFC00EBFCC1 /* AdobeRGB1998.icc in Resources */ = {isa = PBXBuildFile; fileRef = 5AB589E7126DC3A500DDC7FE /* AdobeRGB1998.icc */; };
+		5A010E001805EEFC00EBFCC1 /* sRGB.icc in Resources */ = {isa = PBXBuildFile; fileRef = 5AB589E8126DC3A500DDC7FE /* sRGB.icc */; };
+		5A010E011805EEFC00EBFCC1 /* LinearRGB_709.icc in Resources */ = {isa = PBXBuildFile; fileRef = 5AB589E9126DC3A500DDC7FE /* LinearRGB_709.icc */; };
+		5A010E021805EEFC00EBFCC1 /* WideGamutRGB.icc in Resources */ = {isa = PBXBuildFile; fileRef = 5AB589EA126DC3A500DDC7FE /* WideGamutRGB.icc */; };
+		5A010E031805EEFC00EBFCC1 /* ProPhotoRGB.icc in Resources */ = {isa = PBXBuildFile; fileRef = 5AB589EB126DC3A500DDC7FE /* ProPhotoRGB.icc */; };
+		5A61C4931805F05B00D16742 /* LXPlatform_mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58B23126DC5C700DDC7FE /* LXPlatform_mac.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A61C4941805F06300D16742 /* LQGLContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A16126DC3E500DDC7FE /* LQGLContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A61C4951805F06400D16742 /* GLCheck.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AC696A31711A6A100B1B277 /* GLCheck.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A70443614B216A300F34048 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A70443514B216A300F34048 /* IOKit.framework */; };
+		5A86531B1274BCE900EA24CC /* LXRef_objcwrap.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A86531A1274BCE900EA24CC /* LXRef_objcwrap.m */; };
+		5A8CEB11127E218C00BD253D /* Lacefx.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A89126DC49F00DDC7FE /* Lacefx.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB12127E218C00BD253D /* LXAccumulator.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A8A126DC49F00DDC7FE /* LXAccumulator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB13127E218C00BD253D /* LXBasicTypeFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A8C126DC49F00DDC7FE /* LXBasicTypeFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB14127E218C00BD253D /* LXBasicTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A8B126DC49F00DDC7FE /* LXBasicTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB15127E218C00BD253D /* LXCList.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A8D126DC49F00DDC7FE /* LXCList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB16127E218C00BD253D /* LXConvolver.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A8E126DC49F00DDC7FE /* LXConvolver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB17127E218C00BD253D /* LXDrawContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A8F126DC49F00DDC7FE /* LXDrawContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB18127E218C00BD253D /* LXFPClosure.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A90126DC49F00DDC7FE /* LXFPClosure.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB19127E218C00BD253D /* LXFPClosureContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A91126DC49F00DDC7FE /* LXFPClosureContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB1A127E218C00BD253D /* LXHalfFloat.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A92126DC49F00DDC7FE /* LXHalfFloat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB1B127E218C00BD253D /* LXMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A93126DC49F00DDC7FE /* LXMap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB1C127E218C00BD253D /* LXPixelBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A94126DC49F00DDC7FE /* LXPixelBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB1D127E218C00BD253D /* LXPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A95126DC49F00DDC7FE /* LXPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB1E127E218C00BD253D /* LXPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A96126DC49F00DDC7FE /* LXPool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB1F127E218C00BD253D /* LXRefTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A97126DC49F00DDC7FE /* LXRefTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB20127E218C00BD253D /* LXShader.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A98126DC49F00DDC7FE /* LXShader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB21127E218C00BD253D /* LXSuites.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A99126DC49F00DDC7FE /* LXSuites.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB22127E218C00BD253D /* LXSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A9A126DC49F00DDC7FE /* LXSurface.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB23127E218C00BD253D /* LXTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A9B126DC49F00DDC7FE /* LXTexture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB24127E218C00BD253D /* LXTextureArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A9C126DC49F00DDC7FE /* LXTextureArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB25127E218C00BD253D /* LXTransform3D.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A9D126DC49F00DDC7FE /* LXTransform3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB26127E219100BD253D /* LXColorFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A7A126DC49F00DDC7FE /* LXColorFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB27127E219100BD253D /* LXCurveFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A7D126DC49F00DDC7FE /* LXCurveFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB28127E219100BD253D /* LXCurveTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A7C126DC49F00DDC7FE /* LXCurveTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB29127E219100BD253D /* LXDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A7B126DC49F00DDC7FE /* LXDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB2A127E219100BD253D /* LXFileHandlers.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A7E126DC49F00DDC7FE /* LXFileHandlers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB2B127E219100BD253D /* LXImageFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A7F126DC49F00DDC7FE /* LXImageFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB2C127E219100BD253D /* LXMutex.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A80126DC49F00DDC7FE /* LXMutex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB2D127E219100BD253D /* LXMutexAtomic.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A81126DC49F00DDC7FE /* LXMutexAtomic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB2E127E219100BD253D /* LXNetworkUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A82126DC49F00DDC7FE /* LXNetworkUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB2F127E219100BD253D /* LXPatternGen.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A83126DC49F00DDC7FE /* LXPatternGen.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB30127E219100BD253D /* LXRandomGen.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A84126DC49F00DDC7FE /* LXRandomGen.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB31127E219100BD253D /* LXShaderUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A86126DC49F00DDC7FE /* LXShaderUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB32127E219100BD253D /* LXStringUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A85126DC49F00DDC7FE /* LXStringUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEB33127E219100BD253D /* LXThreadLocal.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A87126DC49F00DDC7FE /* LXThreadLocal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEBC8127E21A200BD253D /* hashmap.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AEC126DC55B00DDC7FE /* hashmap.c */; };
+		5A8CEBC9127E21A200BD253D /* hashmap.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AEB126DC55B00DDC7FE /* hashmap.h */; };
+		5A8CEBCA127E21A200BD253D /* LQLXConvolver.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58ACD126DC52100DDC7FE /* LQLXConvolver.h */; };
+		5A8CEBCB127E21A200BD253D /* LQLXConvolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58ACE126DC52100DDC7FE /* LQLXConvolver.m */; };
+		5A8CEBCC127E21A200BD253D /* LXAccumulator.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58ACA126DC52100DDC7FE /* LXAccumulator.c */; };
+		5A8CEBCD127E21A200BD253D /* LXBasicTypeFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58ACB126DC52100DDC7FE /* LXBasicTypeFunctions.c */; };
+		5A8CEBCE127E21A200BD253D /* LXCList.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58ACC126DC52100DDC7FE /* LXCList.c */; };
+		5A8CEBCF127E21A200BD253D /* LXConvolver_lx.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58ACF126DC52100DDC7FE /* LXConvolver_lx.m */; };
+		5A8CEBD0127E21A200BD253D /* LXDraw_Impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AD1126DC52100DDC7FE /* LXDraw_Impl.h */; };
+		5A8CEBD1127E21A200BD253D /* LXDrawContext.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AD0126DC52100DDC7FE /* LXDrawContext.c */; };
+		5A8CEBD2127E21A200BD253D /* LXDrawContext_Impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AFC126DC55B00DDC7FE /* LXDrawContext_Impl.h */; };
+		5A8CEBD3127E21A200BD253D /* LXFixedPoint.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AD3126DC52100DDC7FE /* LXFixedPoint.c */; };
+		5A8CEBD4127E21A200BD253D /* LXFixedPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AD2126DC52100DDC7FE /* LXFixedPoint.h */; };
+		5A8CEBD5127E21A200BD253D /* LXFPClosure.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AD4126DC52100DDC7FE /* LXFPClosure.c */; };
+		5A8CEBD6127E21A200BD253D /* LXFPClosureContext.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AD5126DC52100DDC7FE /* LXFPClosureContext.c */; };
+		5A8CEBD7127E21A200BD253D /* LXHalfELUT.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AD7126DC52100DDC7FE /* LXHalfELUT.h */; };
+		5A8CEBD8127E21A200BD253D /* LXHalfFloat.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AD6126DC52100DDC7FE /* LXHalfFloat.c */; };
+		5A8CEBD9127E21A200BD253D /* LXHalfToFloatLUT.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AD8126DC52100DDC7FE /* LXHalfToFloatLUT.h */; };
+		5A8CEBDA127E21A200BD253D /* LXImplTests.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AD9126DC52100DDC7FE /* LXImplTests.c */; };
+		5A8CEBDB127E21A200BD253D /* LXMap_c.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AEA126DC55B00DDC7FE /* LXMap_c.c */; };
+		5A8CEBDC127E21A200BD253D /* LXMutexAtomic.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B14126DC56A00DDC7FE /* LXMutexAtomic.c */; };
+		5A8CEBDD127E21A200BD253D /* LXPixelBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AED126DC55B00DDC7FE /* LXPixelBuffer.c */; };
+		5A8CEBDE127E21A200BD253D /* LXPixelBuffer_bmp.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AEF126DC55B00DDC7FE /* LXPixelBuffer_bmp.c */; };
+		5A8CEBDF127E21A200BD253D /* LXPixelBuffer_dpx.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF0126DC55B00DDC7FE /* LXPixelBuffer_dpx.c */; };
+		5A8CEBE0127E21A200BD253D /* LXPixelBuffer_jpeg.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF1126DC55B00DDC7FE /* LXPixelBuffer_jpeg.c */; };
+		5A8CEBE1127E21A200BD253D /* LXPixelBuffer_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AEE126DC55B00DDC7FE /* LXPixelBuffer_priv.h */; };
+		5A8CEBE2127E21A200BD253D /* LXPixelBuffer_tiff.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF2126DC55B00DDC7FE /* LXPixelBuffer_tiff.c */; };
+		5A8CEBE3127E21A200BD253D /* LXPool.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF3126DC55B00DDC7FE /* LXPool.c */; };
+		5A8CEBE4127E21A200BD253D /* LXPool_pixelbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF5126DC55B00DDC7FE /* LXPool_pixelbuffer.c */; };
+		5A8CEBE5127E21A200BD253D /* LXPool_pixelbuffer_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AF4126DC55B00DDC7FE /* LXPool_pixelbuffer_priv.h */; };
+		5A8CEBE6127E21A200BD253D /* LXPool_surface_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58B17126DC56A00DDC7FE /* LXPool_surface_priv.h */; };
+		5A8CEBE7127E21A200BD253D /* LXRef.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF6126DC55B00DDC7FE /* LXRef.c */; };
+		5A8CEBE8127E21A200BD253D /* LXRef_Impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AF7126DC55B00DDC7FE /* LXRef_Impl.h */; };
+		5A8CEBE9127E21A200BD253D /* LXRef_objcwrap.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A86531A1274BCE900EA24CC /* LXRef_objcwrap.m */; };
+		5A8CEBEA127E21A200BD253D /* LXShader_common.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF8126DC55B00DDC7FE /* LXShader_common.m */; };
+		5A8CEBEB127E21A200BD253D /* LXShader_Impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AF9126DC55B00DDC7FE /* LXShader_Impl.h */; };
+		5A8CEBEC127E21A200BD253D /* LXShaderTranslation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AFA126DC55B00DDC7FE /* LXShaderTranslation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A8CEBED127E21A200BD253D /* LXShaderTranslation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AFB126DC55B00DDC7FE /* LXShaderTranslation.m */; };
+		5A8CEBEF127E21A300BD253D /* LXSurface_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B11126DC56A00DDC7FE /* LXSurface_utils.c */; };
+		5A8CEBF0127E21A300BD253D /* LXTextureArray.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B12126DC56A00DDC7FE /* LXTextureArray.c */; };
+		5A8CEBF1127E21A300BD253D /* LXThreadLocal.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B15126DC56A00DDC7FE /* LXThreadLocal.c */; };
+		5A8CEBF2127E21A300BD253D /* LXTransform3D.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B13126DC56A00DDC7FE /* LXTransform3D.c */; };
+		5A8CEBF3127E21A300BD253D /* LXVecInline_SSE2.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58B16126DC56A00DDC7FE /* LXVecInline_SSE2.h */; };
+		5A8CEC51127E259D00BD253D /* LXBinaryUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58A62126DC49300DDC7FE /* LXBinaryUtils.c */; };
+		5A8CEC52127E259D00BD253D /* LXBinaryUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A61126DC49300DDC7FE /* LXBinaryUtils.h */; };
+		5A8CEC53127E259D00BD253D /* LXColorFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58A65126DC49300DDC7FE /* LXColorFunctions.c */; };
+		5A8CEC54127E259D00BD253D /* LXCurveFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58A66126DC49300DDC7FE /* LXCurveFunctions.c */; };
+		5A8CEC55127E259D00BD253D /* LXImageFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58A67126DC49300DDC7FE /* LXImageFunctions.c */; };
+		5A8CEC56127E259D00BD253D /* LXNetworkUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58A68126DC49300DDC7FE /* LXNetworkUtils.c */; };
+		5A8CEC57127E259D00BD253D /* LXPatternGen.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58A69126DC49300DDC7FE /* LXPatternGen.c */; };
+		5A8CEC58127E259D00BD253D /* LXRandomGen.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58A6A126DC49300DDC7FE /* LXRandomGen.c */; };
+		5A8CEC59127E259D00BD253D /* LXShaderUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58A64126DC49300DDC7FE /* LXShaderUtils.c */; };
+		5A8CEC5A127E259D00BD253D /* LXStringUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58A63126DC49300DDC7FE /* LXStringUtils.c */; };
+		5A8CEC5B127E259D00BD253D /* mtwist.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58A6B126DC49300DDC7FE /* mtwist.c */; };
+		5A8CEC5C127E259D00BD253D /* mtwist.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A6C126DC49300DDC7FE /* mtwist.h */; };
+		5A8CEC68127E25E800BD253D /* LXDraw_d3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A8CEC5F127E25E800BD253D /* LXDraw_d3d.cpp */; };
+		5A8CEC69127E25E800BD253D /* LXPixelBuffer_winimage.c in Sources */ = {isa = PBXBuildFile; fileRef = 5A8CEC60127E25E800BD253D /* LXPixelBuffer_winimage.c */; };
+		5A8CEC6B127E25E800BD253D /* LXPlatform_d3d.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8CEC62127E25E800BD253D /* LXPlatform_d3d.m */; };
+		5A8CEC6C127E25E800BD253D /* LXShader_d3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A8CEC63127E25E800BD253D /* LXShader_d3d.cpp */; };
+		5A8CEC6D127E25E800BD253D /* LXStdout_win.c in Sources */ = {isa = PBXBuildFile; fileRef = 5A8CEC64127E25E800BD253D /* LXStdout_win.c */; };
+		5A8CEC6E127E25E800BD253D /* LXSurface_d3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A8CEC65127E25E800BD253D /* LXSurface_d3d.cpp */; };
+		5A8CEC6F127E25E800BD253D /* LXTexture_d3d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A8CEC66127E25E800BD253D /* LXTexture_d3d.cpp */; };
+		5A8CEC86127E281200BD253D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
+		5A9DE6901805E068006D0662 /* LXFileHandlers_objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B28126DC5C700DDC7FE /* LXFileHandlers_objc.m */; };
+		5AB589DD126DC2D800DDC7FE /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB589DC126DC2D800DDC7FE /* OpenGL.framework */; };
+		5AB589DF126DC2DB00DDC7FE /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB589DE126DC2DB00DDC7FE /* Accelerate.framework */; };
+		5AB589E1126DC34B00DDC7FE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB589E0126DC34B00DDC7FE /* libz.dylib */; };
+		5AB58A01126DC3B400DDC7FE /* libjpeg8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB589F2126DC3B400DDC7FE /* libjpeg8.a */; };
+		5AB58A02126DC3B400DDC7FE /* jconfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB589F3126DC3B400DDC7FE /* jconfig.h */; };
+		5AB58A03126DC3B400DDC7FE /* jmorecfg.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB589F4126DC3B400DDC7FE /* jmorecfg.h */; };
+		5AB58A04126DC3B400DDC7FE /* jpeglib.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB589F5126DC3B400DDC7FE /* jpeglib.h */; };
+		5AB58A09126DC3B400DDC7FE /* libtiff.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB589FB126DC3B400DDC7FE /* libtiff.a */; };
+		5AB58A0A126DC3B400DDC7FE /* tiffconf.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB589FC126DC3B400DDC7FE /* tiffconf.h */; };
+		5AB58A0B126DC3B400DDC7FE /* tiffiop.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB589FD126DC3B400DDC7FE /* tiffiop.h */; };
+		5AB58A0C126DC3B400DDC7FE /* tiffvers.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB589FE126DC3B400DDC7FE /* tiffvers.h */; };
+		5AB58A0D126DC3B400DDC7FE /* tiff.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB589FF126DC3B400DDC7FE /* tiff.h */; };
+		5AB58A0E126DC3B400DDC7FE /* tiffio.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A00126DC3B400DDC7FE /* tiffio.h */; };
+		5AB58A25126DC3E500DDC7FE /* LQGLContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58A17126DC3E500DDC7FE /* LQGLContext.m */; };
+		5AB58A6E126DC49300DDC7FE /* LXBinaryUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58A62126DC49300DDC7FE /* LXBinaryUtils.c */; };
+		5AB58A6F126DC49300DDC7FE /* LXStringUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58A63126DC49300DDC7FE /* LXStringUtils.c */; };
+		5AB58A70126DC49300DDC7FE /* LXShaderUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58A64126DC49300DDC7FE /* LXShaderUtils.c */; };
+		5AB58A71126DC49300DDC7FE /* LXColorFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58A65126DC49300DDC7FE /* LXColorFunctions.c */; };
+		5AB58A72126DC49300DDC7FE /* LXCurveFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58A66126DC49300DDC7FE /* LXCurveFunctions.c */; };
+		5AB58A73126DC49300DDC7FE /* LXImageFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58A67126DC49300DDC7FE /* LXImageFunctions.c */; };
+		5AB58A74126DC49300DDC7FE /* LXNetworkUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58A68126DC49300DDC7FE /* LXNetworkUtils.c */; };
+		5AB58A75126DC49300DDC7FE /* LXPatternGen.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58A69126DC49300DDC7FE /* LXPatternGen.c */; };
+		5AB58A76126DC49300DDC7FE /* LXRandomGen.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58A6A126DC49300DDC7FE /* LXRandomGen.c */; };
+		5AB58A77126DC49300DDC7FE /* mtwist.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58A6B126DC49300DDC7FE /* mtwist.c */; };
+		5AB58A9E126DC49F00DDC7FE /* LXColorFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A7A126DC49F00DDC7FE /* LXColorFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58A9F126DC49F00DDC7FE /* LXDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A7B126DC49F00DDC7FE /* LXDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AA0126DC49F00DDC7FE /* LXCurveTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A7C126DC49F00DDC7FE /* LXCurveTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AA1126DC49F00DDC7FE /* LXCurveFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A7D126DC49F00DDC7FE /* LXCurveFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AA2126DC49F00DDC7FE /* LXFileHandlers.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A7E126DC49F00DDC7FE /* LXFileHandlers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AA3126DC49F00DDC7FE /* LXImageFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A7F126DC49F00DDC7FE /* LXImageFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AA4126DC49F00DDC7FE /* LXMutex.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A80126DC49F00DDC7FE /* LXMutex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AA5126DC49F00DDC7FE /* LXMutexAtomic.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A81126DC49F00DDC7FE /* LXMutexAtomic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AA6126DC49F00DDC7FE /* LXNetworkUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A82126DC49F00DDC7FE /* LXNetworkUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AA7126DC49F00DDC7FE /* LXPatternGen.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A83126DC49F00DDC7FE /* LXPatternGen.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AA8126DC49F00DDC7FE /* LXRandomGen.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A84126DC49F00DDC7FE /* LXRandomGen.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AA9126DC49F00DDC7FE /* LXStringUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A85126DC49F00DDC7FE /* LXStringUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AAA126DC49F00DDC7FE /* LXShaderUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A86126DC49F00DDC7FE /* LXShaderUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AAB126DC49F00DDC7FE /* LXThreadLocal.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A87126DC49F00DDC7FE /* LXThreadLocal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AAC126DC49F00DDC7FE /* Lacefx.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A89126DC49F00DDC7FE /* Lacefx.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AAD126DC49F00DDC7FE /* LXAccumulator.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A8A126DC49F00DDC7FE /* LXAccumulator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AAE126DC49F00DDC7FE /* LXBasicTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A8B126DC49F00DDC7FE /* LXBasicTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AAF126DC49F00DDC7FE /* LXBasicTypeFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A8C126DC49F00DDC7FE /* LXBasicTypeFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AB0126DC49F00DDC7FE /* LXCList.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A8D126DC49F00DDC7FE /* LXCList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AB1126DC49F00DDC7FE /* LXConvolver.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A8E126DC49F00DDC7FE /* LXConvolver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AB2126DC49F00DDC7FE /* LXDrawContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A8F126DC49F00DDC7FE /* LXDrawContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AB3126DC49F00DDC7FE /* LXFPClosure.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A90126DC49F00DDC7FE /* LXFPClosure.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AB4126DC49F00DDC7FE /* LXFPClosureContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A91126DC49F00DDC7FE /* LXFPClosureContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AB5126DC49F00DDC7FE /* LXHalfFloat.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A92126DC49F00DDC7FE /* LXHalfFloat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AB6126DC49F00DDC7FE /* LXMap.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A93126DC49F00DDC7FE /* LXMap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AB7126DC49F00DDC7FE /* LXPixelBuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A94126DC49F00DDC7FE /* LXPixelBuffer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AB8126DC49F00DDC7FE /* LXPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A95126DC49F00DDC7FE /* LXPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AB9126DC49F00DDC7FE /* LXPool.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A96126DC49F00DDC7FE /* LXPool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58ABA126DC49F00DDC7FE /* LXRefTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A97126DC49F00DDC7FE /* LXRefTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58ABB126DC49F00DDC7FE /* LXShader.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A98126DC49F00DDC7FE /* LXShader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58ABC126DC49F00DDC7FE /* LXSuites.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A99126DC49F00DDC7FE /* LXSuites.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58ABD126DC49F00DDC7FE /* LXSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A9A126DC49F00DDC7FE /* LXSurface.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58ABE126DC49F00DDC7FE /* LXTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A9B126DC49F00DDC7FE /* LXTexture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58ABF126DC49F00DDC7FE /* LXTextureArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A9C126DC49F00DDC7FE /* LXTextureArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58AC0126DC49F00DDC7FE /* LXTransform3D.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58A9D126DC49F00DDC7FE /* LXTransform3D.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58ADA126DC52100DDC7FE /* LXAccumulator.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58ACA126DC52100DDC7FE /* LXAccumulator.c */; };
+		5AB58ADB126DC52100DDC7FE /* LXBasicTypeFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58ACB126DC52100DDC7FE /* LXBasicTypeFunctions.c */; };
+		5AB58ADC126DC52100DDC7FE /* LXCList.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58ACC126DC52100DDC7FE /* LXCList.c */; };
+		5AB58ADD126DC52100DDC7FE /* LQLXConvolver.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58ACD126DC52100DDC7FE /* LQLXConvolver.h */; };
+		5AB58ADE126DC52100DDC7FE /* LQLXConvolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58ACE126DC52100DDC7FE /* LQLXConvolver.m */; };
+		5AB58ADF126DC52100DDC7FE /* LXConvolver_lx.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58ACF126DC52100DDC7FE /* LXConvolver_lx.m */; };
+		5AB58AE0126DC52100DDC7FE /* LXDrawContext.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AD0126DC52100DDC7FE /* LXDrawContext.c */; };
+		5AB58AE1126DC52100DDC7FE /* LXDraw_Impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AD1126DC52100DDC7FE /* LXDraw_Impl.h */; };
+		5AB58AE2126DC52100DDC7FE /* LXFixedPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AD2126DC52100DDC7FE /* LXFixedPoint.h */; };
+		5AB58AE3126DC52100DDC7FE /* LXFixedPoint.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AD3126DC52100DDC7FE /* LXFixedPoint.c */; };
+		5AB58AE4126DC52100DDC7FE /* LXFPClosure.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AD4126DC52100DDC7FE /* LXFPClosure.c */; };
+		5AB58AE5126DC52100DDC7FE /* LXFPClosureContext.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AD5126DC52100DDC7FE /* LXFPClosureContext.c */; };
+		5AB58AE6126DC52100DDC7FE /* LXHalfFloat.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AD6126DC52100DDC7FE /* LXHalfFloat.c */; };
+		5AB58AE7126DC52100DDC7FE /* LXHalfELUT.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AD7126DC52100DDC7FE /* LXHalfELUT.h */; };
+		5AB58AE8126DC52100DDC7FE /* LXHalfToFloatLUT.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AD8126DC52100DDC7FE /* LXHalfToFloatLUT.h */; };
+		5AB58AE9126DC52100DDC7FE /* LXImplTests.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AD9126DC52100DDC7FE /* LXImplTests.c */; };
+		5AB58AFD126DC55B00DDC7FE /* LXMap_c.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AEA126DC55B00DDC7FE /* LXMap_c.c */; };
+		5AB58AFE126DC55B00DDC7FE /* hashmap.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AEB126DC55B00DDC7FE /* hashmap.h */; };
+		5AB58AFF126DC55B00DDC7FE /* hashmap.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AEC126DC55B00DDC7FE /* hashmap.c */; };
+		5AB58B00126DC55B00DDC7FE /* LXPixelBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AED126DC55B00DDC7FE /* LXPixelBuffer.c */; };
+		5AB58B01126DC55B00DDC7FE /* LXPixelBuffer_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AEE126DC55B00DDC7FE /* LXPixelBuffer_priv.h */; };
+		5AB58B02126DC55B00DDC7FE /* LXPixelBuffer_bmp.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AEF126DC55B00DDC7FE /* LXPixelBuffer_bmp.c */; };
+		5AB58B03126DC55B00DDC7FE /* LXPixelBuffer_dpx.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF0126DC55B00DDC7FE /* LXPixelBuffer_dpx.c */; };
+		5AB58B04126DC55B00DDC7FE /* LXPixelBuffer_jpeg.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF1126DC55B00DDC7FE /* LXPixelBuffer_jpeg.c */; };
+		5AB58B05126DC55B00DDC7FE /* LXPixelBuffer_tiff.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF2126DC55B00DDC7FE /* LXPixelBuffer_tiff.c */; };
+		5AB58B06126DC55B00DDC7FE /* LXPool.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF3126DC55B00DDC7FE /* LXPool.c */; };
+		5AB58B07126DC55B00DDC7FE /* LXPool_pixelbuffer_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AF4126DC55B00DDC7FE /* LXPool_pixelbuffer_priv.h */; };
+		5AB58B08126DC55B00DDC7FE /* LXPool_pixelbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF5126DC55B00DDC7FE /* LXPool_pixelbuffer.c */; };
+		5AB58B09126DC55B00DDC7FE /* LXRef.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF6126DC55B00DDC7FE /* LXRef.c */; };
+		5AB58B0A126DC55B00DDC7FE /* LXRef_Impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AF7126DC55B00DDC7FE /* LXRef_Impl.h */; };
+		5AB58B0B126DC55B00DDC7FE /* LXShader_common.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF8126DC55B00DDC7FE /* LXShader_common.m */; };
+		5AB58B0C126DC55B00DDC7FE /* LXShader_Impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AF9126DC55B00DDC7FE /* LXShader_Impl.h */; };
+		5AB58B0D126DC55B00DDC7FE /* LXShaderTranslation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AFA126DC55B00DDC7FE /* LXShaderTranslation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB58B0E126DC55B00DDC7FE /* LXShaderTranslation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AFB126DC55B00DDC7FE /* LXShaderTranslation.m */; };
+		5AB58B0F126DC55B00DDC7FE /* LXDrawContext_Impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AFC126DC55B00DDC7FE /* LXDrawContext_Impl.h */; };
+		5AB58B19126DC56A00DDC7FE /* LXSurface_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B11126DC56A00DDC7FE /* LXSurface_utils.c */; };
+		5AB58B1A126DC56A00DDC7FE /* LXTextureArray.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B12126DC56A00DDC7FE /* LXTextureArray.c */; };
+		5AB58B1B126DC56A00DDC7FE /* LXTransform3D.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B13126DC56A00DDC7FE /* LXTransform3D.c */; };
+		5AB58B1C126DC56A00DDC7FE /* LXMutexAtomic.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B14126DC56A00DDC7FE /* LXMutexAtomic.c */; };
+		5AB58B1D126DC56A00DDC7FE /* LXThreadLocal.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B15126DC56A00DDC7FE /* LXThreadLocal.c */; };
+		5AB58B1E126DC56A00DDC7FE /* LXVecInline_SSE2.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58B16126DC56A00DDC7FE /* LXVecInline_SSE2.h */; };
+		5AB58B1F126DC56A00DDC7FE /* LXPool_surface_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58B17126DC56A00DDC7FE /* LXPool_surface_priv.h */; };
+		5AB58B30126DC5C700DDC7FE /* LXPlatform_applebase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B24126DC5C700DDC7FE /* LXPlatform_applebase.m */; };
+		5AB58B31126DC5C700DDC7FE /* LXPlatform_macgl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B25126DC5C700DDC7FE /* LXPlatform_macgl.m */; };
+		5AB58B33126DC5C700DDC7FE /* LXDraw_macgl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B27126DC5C700DDC7FE /* LXDraw_macgl.m */; };
+		5AB58B35126DC5C700DDC7FE /* LXPixelBuffer_cocoaimage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B29126DC5C700DDC7FE /* LXPixelBuffer_cocoaimage.m */; };
+		5AB58B36126DC5C700DDC7FE /* LXShader_macgl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B2A126DC5C700DDC7FE /* LXShader_macgl.m */; };
+		5AB58B37126DC5C700DDC7FE /* LXSurface_macgl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B2B126DC5C700DDC7FE /* LXSurface_macgl.m */; };
+		5AB58B3A126DC5C700DDC7FE /* LXTexture_macgl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B2E126DC5C700DDC7FE /* LXTexture_macgl.m */; };
+		5AB58B86126DCA2C00DDC7FE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB58B85126DCA2C00DDC7FE /* QuartzCore.framework */; };
+		5AC696A41711A6A100B1B277 /* GLCheck.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AC696A21711A6A100B1B277 /* GLCheck.c */; };
+		5AD8891C12BE90A2006BBDCF /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD8891B12BE90A2006BBDCF /* CoreServices.framework */; };
+		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		5A8CEBF7127E226200BD253D /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = org.cocotron.1.0.windows.i386.gcc.default;
+			fileType = sourcecode.c;
+			isEditable = 1;
+			outputFiles = (
+			);
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXFileReference section */
+		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		32DBCF5E0370ADEE00C91783 /* Lacefx_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lacefx_Prefix.pch; sourceTree = "<group>"; };
+		5A70443514B216A300F34048 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		5A86531A1274BCE900EA24CC /* LXRef_objcwrap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LXRef_objcwrap.m; path = Lacefx/LXRef_objcwrap.m; sourceTree = "<group>"; };
+		5A8CEAFD127E215300BD253D /* Lacefx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Lacefx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A8CEAFE127E215300BD253D /* Lacefx-Cocotron-Windows-i386-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lacefx-Cocotron-Windows-i386-Info.plist"; sourceTree = "<group>"; };
+		5A8CEC5F127E25E800BD253D /* LXDraw_d3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LXDraw_d3d.cpp; sourceTree = "<group>"; };
+		5A8CEC60127E25E800BD253D /* LXPixelBuffer_winimage.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LXPixelBuffer_winimage.c; sourceTree = "<group>"; };
+		5A8CEC61127E25E800BD253D /* LXPlatform_d3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXPlatform_d3d.h; sourceTree = "<group>"; };
+		5A8CEC62127E25E800BD253D /* LXPlatform_d3d.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXPlatform_d3d.m; sourceTree = "<group>"; };
+		5A8CEC63127E25E800BD253D /* LXShader_d3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LXShader_d3d.cpp; sourceTree = "<group>"; };
+		5A8CEC64127E25E800BD253D /* LXStdout_win.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LXStdout_win.c; sourceTree = "<group>"; };
+		5A8CEC65127E25E800BD253D /* LXSurface_d3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LXSurface_d3d.cpp; sourceTree = "<group>"; };
+		5A8CEC66127E25E800BD253D /* LXTexture_d3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LXTexture_d3d.cpp; sourceTree = "<group>"; };
+		5AB589DC126DC2D800DDC7FE /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		5AB589DE126DC2DB00DDC7FE /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
+		5AB589E0126DC34B00DDC7FE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		5AB589E7126DC3A500DDC7FE /* AdobeRGB1998.icc */ = {isa = PBXFileReference; lastKnownFileType = file; path = AdobeRGB1998.icc; sourceTree = "<group>"; };
+		5AB589E8126DC3A500DDC7FE /* sRGB.icc */ = {isa = PBXFileReference; lastKnownFileType = file; path = sRGB.icc; sourceTree = "<group>"; };
+		5AB589E9126DC3A500DDC7FE /* LinearRGB_709.icc */ = {isa = PBXFileReference; lastKnownFileType = file; path = LinearRGB_709.icc; sourceTree = "<group>"; };
+		5AB589EA126DC3A500DDC7FE /* WideGamutRGB.icc */ = {isa = PBXFileReference; lastKnownFileType = file; path = WideGamutRGB.icc; sourceTree = "<group>"; };
+		5AB589EB126DC3A500DDC7FE /* ProPhotoRGB.icc */ = {isa = PBXFileReference; lastKnownFileType = file; path = ProPhotoRGB.icc; sourceTree = "<group>"; };
+		5AB589F2126DC3B400DDC7FE /* libjpeg8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg8.a; path = jpeg/libjpeg8.a; sourceTree = "<group>"; };
+		5AB589F3126DC3B400DDC7FE /* jconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jconfig.h; path = jpeg/jconfig.h; sourceTree = "<group>"; };
+		5AB589F4126DC3B400DDC7FE /* jmorecfg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jmorecfg.h; path = jpeg/jmorecfg.h; sourceTree = "<group>"; };
+		5AB589F5126DC3B400DDC7FE /* jpeglib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jpeglib.h; path = jpeg/jpeglib.h; sourceTree = "<group>"; };
+		5AB589FB126DC3B400DDC7FE /* libtiff.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtiff.a; sourceTree = "<group>"; };
+		5AB589FC126DC3B400DDC7FE /* tiffconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tiffconf.h; sourceTree = "<group>"; };
+		5AB589FD126DC3B400DDC7FE /* tiffiop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tiffiop.h; sourceTree = "<group>"; };
+		5AB589FE126DC3B400DDC7FE /* tiffvers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tiffvers.h; sourceTree = "<group>"; };
+		5AB589FF126DC3B400DDC7FE /* tiff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tiff.h; sourceTree = "<group>"; };
+		5AB58A00126DC3B400DDC7FE /* tiffio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tiffio.h; sourceTree = "<group>"; };
+		5AB58A16126DC3E500DDC7FE /* LQGLContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LQGLContext.h; sourceTree = "<group>"; };
+		5AB58A17126DC3E500DDC7FE /* LQGLContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LQGLContext.m; sourceTree = "<group>"; };
+		5AB58A61126DC49300DDC7FE /* LXBinaryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXBinaryUtils.h; sourceTree = "<group>"; };
+		5AB58A62126DC49300DDC7FE /* LXBinaryUtils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LXBinaryUtils.c; sourceTree = "<group>"; };
+		5AB58A63126DC49300DDC7FE /* LXStringUtils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LXStringUtils.c; sourceTree = "<group>"; };
+		5AB58A64126DC49300DDC7FE /* LXShaderUtils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LXShaderUtils.c; sourceTree = "<group>"; };
+		5AB58A65126DC49300DDC7FE /* LXColorFunctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LXColorFunctions.c; sourceTree = "<group>"; };
+		5AB58A66126DC49300DDC7FE /* LXCurveFunctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LXCurveFunctions.c; sourceTree = "<group>"; };
+		5AB58A67126DC49300DDC7FE /* LXImageFunctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LXImageFunctions.c; sourceTree = "<group>"; };
+		5AB58A68126DC49300DDC7FE /* LXNetworkUtils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LXNetworkUtils.c; sourceTree = "<group>"; };
+		5AB58A69126DC49300DDC7FE /* LXPatternGen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LXPatternGen.c; sourceTree = "<group>"; };
+		5AB58A6A126DC49300DDC7FE /* LXRandomGen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LXRandomGen.c; sourceTree = "<group>"; };
+		5AB58A6B126DC49300DDC7FE /* mtwist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mtwist.c; sourceTree = "<group>"; };
+		5AB58A6C126DC49300DDC7FE /* mtwist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mtwist.h; sourceTree = "<group>"; };
+		5AB58A7A126DC49F00DDC7FE /* LXColorFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXColorFunctions.h; path = Lacefx/LXColorFunctions.h; sourceTree = "<group>"; };
+		5AB58A7B126DC49F00DDC7FE /* LXDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXDevice.h; path = Lacefx/LXDevice.h; sourceTree = "<group>"; };
+		5AB58A7C126DC49F00DDC7FE /* LXCurveTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXCurveTypes.h; path = Lacefx/LXCurveTypes.h; sourceTree = "<group>"; };
+		5AB58A7D126DC49F00DDC7FE /* LXCurveFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXCurveFunctions.h; path = Lacefx/LXCurveFunctions.h; sourceTree = "<group>"; };
+		5AB58A7E126DC49F00DDC7FE /* LXFileHandlers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXFileHandlers.h; path = Lacefx/LXFileHandlers.h; sourceTree = "<group>"; };
+		5AB58A7F126DC49F00DDC7FE /* LXImageFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXImageFunctions.h; path = Lacefx/LXImageFunctions.h; sourceTree = "<group>"; };
+		5AB58A80126DC49F00DDC7FE /* LXMutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXMutex.h; path = Lacefx/LXMutex.h; sourceTree = "<group>"; };
+		5AB58A81126DC49F00DDC7FE /* LXMutexAtomic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXMutexAtomic.h; path = Lacefx/LXMutexAtomic.h; sourceTree = "<group>"; };
+		5AB58A82126DC49F00DDC7FE /* LXNetworkUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXNetworkUtils.h; path = Lacefx/LXNetworkUtils.h; sourceTree = "<group>"; };
+		5AB58A83126DC49F00DDC7FE /* LXPatternGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXPatternGen.h; path = Lacefx/LXPatternGen.h; sourceTree = "<group>"; };
+		5AB58A84126DC49F00DDC7FE /* LXRandomGen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXRandomGen.h; path = Lacefx/LXRandomGen.h; sourceTree = "<group>"; };
+		5AB58A85126DC49F00DDC7FE /* LXStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXStringUtils.h; path = Lacefx/LXStringUtils.h; sourceTree = "<group>"; };
+		5AB58A86126DC49F00DDC7FE /* LXShaderUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXShaderUtils.h; path = Lacefx/LXShaderUtils.h; sourceTree = "<group>"; };
+		5AB58A87126DC49F00DDC7FE /* LXThreadLocal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXThreadLocal.h; path = Lacefx/LXThreadLocal.h; sourceTree = "<group>"; };
+		5AB58A89126DC49F00DDC7FE /* Lacefx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lacefx.h; path = Lacefx/Lacefx.h; sourceTree = "<group>"; };
+		5AB58A8A126DC49F00DDC7FE /* LXAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXAccumulator.h; path = Lacefx/LXAccumulator.h; sourceTree = "<group>"; };
+		5AB58A8B126DC49F00DDC7FE /* LXBasicTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXBasicTypes.h; path = Lacefx/LXBasicTypes.h; sourceTree = "<group>"; };
+		5AB58A8C126DC49F00DDC7FE /* LXBasicTypeFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXBasicTypeFunctions.h; path = Lacefx/LXBasicTypeFunctions.h; sourceTree = "<group>"; };
+		5AB58A8D126DC49F00DDC7FE /* LXCList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXCList.h; path = Lacefx/LXCList.h; sourceTree = "<group>"; };
+		5AB58A8E126DC49F00DDC7FE /* LXConvolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXConvolver.h; path = Lacefx/LXConvolver.h; sourceTree = "<group>"; };
+		5AB58A8F126DC49F00DDC7FE /* LXDrawContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXDrawContext.h; path = Lacefx/LXDrawContext.h; sourceTree = "<group>"; };
+		5AB58A90126DC49F00DDC7FE /* LXFPClosure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXFPClosure.h; path = Lacefx/LXFPClosure.h; sourceTree = "<group>"; };
+		5AB58A91126DC49F00DDC7FE /* LXFPClosureContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXFPClosureContext.h; path = Lacefx/LXFPClosureContext.h; sourceTree = "<group>"; };
+		5AB58A92126DC49F00DDC7FE /* LXHalfFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXHalfFloat.h; path = Lacefx/LXHalfFloat.h; sourceTree = "<group>"; };
+		5AB58A93126DC49F00DDC7FE /* LXMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXMap.h; path = Lacefx/LXMap.h; sourceTree = "<group>"; };
+		5AB58A94126DC49F00DDC7FE /* LXPixelBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXPixelBuffer.h; path = Lacefx/LXPixelBuffer.h; sourceTree = "<group>"; };
+		5AB58A95126DC49F00DDC7FE /* LXPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXPlatform.h; path = Lacefx/LXPlatform.h; sourceTree = "<group>"; };
+		5AB58A96126DC49F00DDC7FE /* LXPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXPool.h; path = Lacefx/LXPool.h; sourceTree = "<group>"; };
+		5AB58A97126DC49F00DDC7FE /* LXRefTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXRefTypes.h; path = Lacefx/LXRefTypes.h; sourceTree = "<group>"; };
+		5AB58A98126DC49F00DDC7FE /* LXShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXShader.h; path = Lacefx/LXShader.h; sourceTree = "<group>"; };
+		5AB58A99126DC49F00DDC7FE /* LXSuites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXSuites.h; path = Lacefx/LXSuites.h; sourceTree = "<group>"; };
+		5AB58A9A126DC49F00DDC7FE /* LXSurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXSurface.h; path = Lacefx/LXSurface.h; sourceTree = "<group>"; };
+		5AB58A9B126DC49F00DDC7FE /* LXTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXTexture.h; path = Lacefx/LXTexture.h; sourceTree = "<group>"; };
+		5AB58A9C126DC49F00DDC7FE /* LXTextureArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXTextureArray.h; path = Lacefx/LXTextureArray.h; sourceTree = "<group>"; };
+		5AB58A9D126DC49F00DDC7FE /* LXTransform3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXTransform3D.h; path = Lacefx/LXTransform3D.h; sourceTree = "<group>"; };
+		5AB58AC6126DC4DE00DDC7FE /* LXSurface_baseinc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LXSurface_baseinc.c; sourceTree = "<group>"; };
+		5AB58AC7126DC4DE00DDC7FE /* LXTexture_baseinc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LXTexture_baseinc.c; sourceTree = "<group>"; };
+		5AB58ACA126DC52100DDC7FE /* LXAccumulator.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXAccumulator.c; path = Lacefx/LXAccumulator.c; sourceTree = "<group>"; };
+		5AB58ACB126DC52100DDC7FE /* LXBasicTypeFunctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXBasicTypeFunctions.c; path = Lacefx/LXBasicTypeFunctions.c; sourceTree = "<group>"; };
+		5AB58ACC126DC52100DDC7FE /* LXCList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXCList.c; path = Lacefx/LXCList.c; sourceTree = "<group>"; };
+		5AB58ACD126DC52100DDC7FE /* LQLXConvolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LQLXConvolver.h; path = Lacefx/LQLXConvolver.h; sourceTree = "<group>"; };
+		5AB58ACE126DC52100DDC7FE /* LQLXConvolver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LQLXConvolver.m; path = Lacefx/LQLXConvolver.m; sourceTree = "<group>"; };
+		5AB58ACF126DC52100DDC7FE /* LXConvolver_lx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LXConvolver_lx.m; path = Lacefx/LXConvolver_lx.m; sourceTree = "<group>"; };
+		5AB58AD0126DC52100DDC7FE /* LXDrawContext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXDrawContext.c; path = Lacefx/LXDrawContext.c; sourceTree = "<group>"; };
+		5AB58AD1126DC52100DDC7FE /* LXDraw_Impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXDraw_Impl.h; path = Lacefx/LXDraw_Impl.h; sourceTree = "<group>"; };
+		5AB58AD2126DC52100DDC7FE /* LXFixedPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXFixedPoint.h; path = Lacefx/LXFixedPoint.h; sourceTree = "<group>"; };
+		5AB58AD3126DC52100DDC7FE /* LXFixedPoint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXFixedPoint.c; path = Lacefx/LXFixedPoint.c; sourceTree = "<group>"; };
+		5AB58AD4126DC52100DDC7FE /* LXFPClosure.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXFPClosure.c; path = Lacefx/LXFPClosure.c; sourceTree = "<group>"; };
+		5AB58AD5126DC52100DDC7FE /* LXFPClosureContext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXFPClosureContext.c; path = Lacefx/LXFPClosureContext.c; sourceTree = "<group>"; };
+		5AB58AD6126DC52100DDC7FE /* LXHalfFloat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXHalfFloat.c; path = Lacefx/LXHalfFloat.c; sourceTree = "<group>"; };
+		5AB58AD7126DC52100DDC7FE /* LXHalfELUT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXHalfELUT.h; path = Lacefx/LXHalfELUT.h; sourceTree = "<group>"; };
+		5AB58AD8126DC52100DDC7FE /* LXHalfToFloatLUT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXHalfToFloatLUT.h; path = Lacefx/LXHalfToFloatLUT.h; sourceTree = "<group>"; };
+		5AB58AD9126DC52100DDC7FE /* LXImplTests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXImplTests.c; path = Lacefx/LXImplTests.c; sourceTree = "<group>"; };
+		5AB58AEA126DC55B00DDC7FE /* LXMap_c.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXMap_c.c; path = Lacefx/LXMap_c.c; sourceTree = "<group>"; };
+		5AB58AEB126DC55B00DDC7FE /* hashmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hashmap.h; path = Lacefx/hashmap.h; sourceTree = "<group>"; };
+		5AB58AEC126DC55B00DDC7FE /* hashmap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hashmap.c; path = Lacefx/hashmap.c; sourceTree = "<group>"; };
+		5AB58AED126DC55B00DDC7FE /* LXPixelBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXPixelBuffer.c; path = Lacefx/LXPixelBuffer.c; sourceTree = "<group>"; };
+		5AB58AEE126DC55B00DDC7FE /* LXPixelBuffer_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXPixelBuffer_priv.h; path = Lacefx/LXPixelBuffer_priv.h; sourceTree = "<group>"; };
+		5AB58AEF126DC55B00DDC7FE /* LXPixelBuffer_bmp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXPixelBuffer_bmp.c; path = Lacefx/LXPixelBuffer_bmp.c; sourceTree = "<group>"; };
+		5AB58AF0126DC55B00DDC7FE /* LXPixelBuffer_dpx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXPixelBuffer_dpx.c; path = Lacefx/LXPixelBuffer_dpx.c; sourceTree = "<group>"; };
+		5AB58AF1126DC55B00DDC7FE /* LXPixelBuffer_jpeg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXPixelBuffer_jpeg.c; path = Lacefx/LXPixelBuffer_jpeg.c; sourceTree = "<group>"; };
+		5AB58AF2126DC55B00DDC7FE /* LXPixelBuffer_tiff.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXPixelBuffer_tiff.c; path = Lacefx/LXPixelBuffer_tiff.c; sourceTree = "<group>"; };
+		5AB58AF3126DC55B00DDC7FE /* LXPool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXPool.c; path = Lacefx/LXPool.c; sourceTree = "<group>"; };
+		5AB58AF4126DC55B00DDC7FE /* LXPool_pixelbuffer_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXPool_pixelbuffer_priv.h; path = Lacefx/LXPool_pixelbuffer_priv.h; sourceTree = "<group>"; };
+		5AB58AF5126DC55B00DDC7FE /* LXPool_pixelbuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXPool_pixelbuffer.c; path = Lacefx/LXPool_pixelbuffer.c; sourceTree = "<group>"; };
+		5AB58AF6126DC55B00DDC7FE /* LXRef.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXRef.c; path = Lacefx/LXRef.c; sourceTree = "<group>"; };
+		5AB58AF7126DC55B00DDC7FE /* LXRef_Impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXRef_Impl.h; path = Lacefx/LXRef_Impl.h; sourceTree = "<group>"; };
+		5AB58AF8126DC55B00DDC7FE /* LXShader_common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LXShader_common.m; path = Lacefx/LXShader_common.m; sourceTree = "<group>"; };
+		5AB58AF9126DC55B00DDC7FE /* LXShader_Impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXShader_Impl.h; path = Lacefx/LXShader_Impl.h; sourceTree = "<group>"; };
+		5AB58AFA126DC55B00DDC7FE /* LXShaderTranslation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXShaderTranslation.h; path = Lacefx/LXShaderTranslation.h; sourceTree = "<group>"; };
+		5AB58AFB126DC55B00DDC7FE /* LXShaderTranslation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LXShaderTranslation.m; path = Lacefx/LXShaderTranslation.m; sourceTree = "<group>"; };
+		5AB58AFC126DC55B00DDC7FE /* LXDrawContext_Impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXDrawContext_Impl.h; path = Lacefx/LXDrawContext_Impl.h; sourceTree = "<group>"; };
+		5AB58B11126DC56A00DDC7FE /* LXSurface_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXSurface_utils.c; path = Lacefx/LXSurface_utils.c; sourceTree = "<group>"; };
+		5AB58B12126DC56A00DDC7FE /* LXTextureArray.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXTextureArray.c; path = Lacefx/LXTextureArray.c; sourceTree = "<group>"; };
+		5AB58B13126DC56A00DDC7FE /* LXTransform3D.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXTransform3D.c; path = Lacefx/LXTransform3D.c; sourceTree = "<group>"; };
+		5AB58B14126DC56A00DDC7FE /* LXMutexAtomic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXMutexAtomic.c; path = Lacefx/LXMutexAtomic.c; sourceTree = "<group>"; };
+		5AB58B15126DC56A00DDC7FE /* LXThreadLocal.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXThreadLocal.c; path = Lacefx/LXThreadLocal.c; sourceTree = "<group>"; };
+		5AB58B16126DC56A00DDC7FE /* LXVecInline_SSE2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXVecInline_SSE2.h; path = Lacefx/LXVecInline_SSE2.h; sourceTree = "<group>"; };
+		5AB58B17126DC56A00DDC7FE /* LXPool_surface_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXPool_surface_priv.h; path = Lacefx/LXPool_surface_priv.h; sourceTree = "<group>"; };
+		5AB58B23126DC5C700DDC7FE /* LXPlatform_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXPlatform_mac.h; sourceTree = "<group>"; };
+		5AB58B24126DC5C700DDC7FE /* LXPlatform_applebase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXPlatform_applebase.m; sourceTree = "<group>"; };
+		5AB58B25126DC5C700DDC7FE /* LXPlatform_macgl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXPlatform_macgl.m; sourceTree = "<group>"; };
+		5AB58B27126DC5C700DDC7FE /* LXDraw_macgl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDraw_macgl.m; sourceTree = "<group>"; };
+		5AB58B28126DC5C700DDC7FE /* LXFileHandlers_objc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFileHandlers_objc.m; sourceTree = "<group>"; };
+		5AB58B29126DC5C700DDC7FE /* LXPixelBuffer_cocoaimage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXPixelBuffer_cocoaimage.m; sourceTree = "<group>"; };
+		5AB58B2A126DC5C700DDC7FE /* LXShader_macgl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXShader_macgl.m; sourceTree = "<group>"; };
+		5AB58B2B126DC5C700DDC7FE /* LXSurface_macgl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXSurface_macgl.m; sourceTree = "<group>"; };
+		5AB58B2D126DC5C700DDC7FE /* LXSurface_macgl_inc_fbo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXSurface_macgl_inc_fbo.m; sourceTree = "<group>"; };
+		5AB58B2E126DC5C700DDC7FE /* LXTexture_macgl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTexture_macgl.m; sourceTree = "<group>"; };
+		5AB58B85126DCA2C00DDC7FE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5AC696A21711A6A100B1B277 /* GLCheck.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = GLCheck.c; sourceTree = "<group>"; };
+		5AC696A31711A6A100B1B277 /* GLCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLCheck.h; sourceTree = "<group>"; };
+		5AD8891B12BE90A2006BBDCF /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DC2EF5B0486A6940098B216 /* Lacefx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Lacefx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A8CEAFB127E215300BD253D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A8CEC86127E281200BD253D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC2EF560486A6940098B216 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
+				5AB589DD126DC2D800DDC7FE /* OpenGL.framework in Frameworks */,
+				5AB589DF126DC2DB00DDC7FE /* Accelerate.framework in Frameworks */,
+				5AB589E1126DC34B00DDC7FE /* libz.dylib in Frameworks */,
+				5AB58A01126DC3B400DDC7FE /* libjpeg8.a in Frameworks */,
+				5AB58A09126DC3B400DDC7FE /* libtiff.a in Frameworks */,
+				5AB58B86126DCA2C00DDC7FE /* QuartzCore.framework in Frameworks */,
+				5AD8891C12BE90A2006BBDCF /* CoreServices.framework in Frameworks */,
+				5A70443614B216A300F34048 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DC2EF5B0486A6940098B216 /* Lacefx.framework */,
+				5A8CEAFD127E215300BD253D /* Lacefx.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* Lacefx */ = {
+			isa = PBXGroup;
+			children = (
+				5AB58A88126DC49F00DDC7FE /* Base API Public Headers */,
+				5AB58A79126DC49F00DDC7FE /* Utils API Public Headers */,
+				5AB58AC4126DC4B400DDC7FE /* Base sources, common */,
+				5AB58AC5126DC4DE00DDC7FE /* Base Includes (no compile) */,
+				5AB58B22126DC5C700DDC7FE /* Mac-OpenGL Specific */,
+				5A8CEC5D127E25A500BD253D /* Windows-Direct3D Specific */,
+				5AB58A60126DC49300DDC7FE /* Utils sources */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				089C1665FE841158C02AAC07 /* Resources */,
+				5AB589E6126DC39700DDC7FE /* Static Libraries */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = Lacefx;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
+				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5AB589E7126DC3A500DDC7FE /* AdobeRGB1998.icc */,
+				5AB589E8126DC3A500DDC7FE /* sRGB.icc */,
+				5AB589E9126DC3A500DDC7FE /* LinearRGB_709.icc */,
+				5AB589EA126DC3A500DDC7FE /* WideGamutRGB.icc */,
+				5AB589EB126DC3A500DDC7FE /* ProPhotoRGB.icc */,
+				5A8CEAFE127E215300BD253D /* Lacefx-Cocotron-Windows-i386-Info.plist */,
+				8DC2EF5A0486A6940098B216 /* Info.plist */,
+			);
+			name = Resources;
+			path = Lacefx;
+			sourceTree = "<group>";
+		};
+		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5AB589DC126DC2D800DDC7FE /* OpenGL.framework */,
+				5AB589DE126DC2DB00DDC7FE /* Accelerate.framework */,
+				5AB589E0126DC34B00DDC7FE /* libz.dylib */,
+				5AB58B85126DCA2C00DDC7FE /* QuartzCore.framework */,
+				5AD8891B12BE90A2006BBDCF /* CoreServices.framework */,
+				5A70443514B216A300F34048 /* IOKit.framework */,
+				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
+				D2F7E79907B2D74100F64583 /* CoreData.framework */,
+				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF5E0370ADEE00C91783 /* Lacefx_Prefix.pch */,
+			);
+			name = "Other Sources";
+			path = Lacefx;
+			sourceTree = "<group>";
+		};
+		5A8CEC5D127E25A500BD253D /* Windows-Direct3D Specific */ = {
+			isa = PBXGroup;
+			children = (
+				5A8CEC5F127E25E800BD253D /* LXDraw_d3d.cpp */,
+				5A8CEC60127E25E800BD253D /* LXPixelBuffer_winimage.c */,
+				5A8CEC61127E25E800BD253D /* LXPlatform_d3d.h */,
+				5A8CEC62127E25E800BD253D /* LXPlatform_d3d.m */,
+				5A8CEC63127E25E800BD253D /* LXShader_d3d.cpp */,
+				5A8CEC64127E25E800BD253D /* LXStdout_win.c */,
+				5A8CEC65127E25E800BD253D /* LXSurface_d3d.cpp */,
+				5A8CEC66127E25E800BD253D /* LXTexture_d3d.cpp */,
+			);
+			name = "Windows-Direct3D Specific";
+			path = Lacefx;
+			sourceTree = "<group>";
+		};
+		5A9D140917D4983700F09EF9 /* Functions with Obj-C dependency */ = {
+			isa = PBXGroup;
+			children = (
+				5AB58ACF126DC52100DDC7FE /* LXConvolver_lx.m */,
+				5AB58ACD126DC52100DDC7FE /* LQLXConvolver.h */,
+				5AB58ACE126DC52100DDC7FE /* LQLXConvolver.m */,
+			);
+			name = "Functions with Obj-C dependency";
+			sourceTree = "<group>";
+		};
+		5AB589E6126DC39700DDC7FE /* Static Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				5AB589FA126DC3B400DDC7FE /* tiff */,
+				5AB589F1126DC3B400DDC7FE /* jpeg */,
+			);
+			name = "Static Libraries";
+			sourceTree = "<group>";
+		};
+		5AB589F1126DC3B400DDC7FE /* jpeg */ = {
+			isa = PBXGroup;
+			children = (
+				5AB589F2126DC3B400DDC7FE /* libjpeg8.a */,
+				5AB589F3126DC3B400DDC7FE /* jconfig.h */,
+				5AB589F4126DC3B400DDC7FE /* jmorecfg.h */,
+				5AB589F5126DC3B400DDC7FE /* jpeglib.h */,
+			);
+			name = jpeg;
+			sourceTree = "<group>";
+		};
+		5AB589FA126DC3B400DDC7FE /* tiff */ = {
+			isa = PBXGroup;
+			children = (
+				5AB589FB126DC3B400DDC7FE /* libtiff.a */,
+				5AB589FC126DC3B400DDC7FE /* tiffconf.h */,
+				5AB589FD126DC3B400DDC7FE /* tiffiop.h */,
+				5AB589FE126DC3B400DDC7FE /* tiffvers.h */,
+				5AB589FF126DC3B400DDC7FE /* tiff.h */,
+				5AB58A00126DC3B400DDC7FE /* tiffio.h */,
+			);
+			path = tiff;
+			sourceTree = "<group>";
+		};
+		5AB58A60126DC49300DDC7FE /* Utils sources */ = {
+			isa = PBXGroup;
+			children = (
+				5AB58A61126DC49300DDC7FE /* LXBinaryUtils.h */,
+				5AB58A62126DC49300DDC7FE /* LXBinaryUtils.c */,
+				5AB58A63126DC49300DDC7FE /* LXStringUtils.c */,
+				5AB58A64126DC49300DDC7FE /* LXShaderUtils.c */,
+				5AB58A65126DC49300DDC7FE /* LXColorFunctions.c */,
+				5AB58A66126DC49300DDC7FE /* LXCurveFunctions.c */,
+				5AB58A67126DC49300DDC7FE /* LXImageFunctions.c */,
+				5AB58A68126DC49300DDC7FE /* LXNetworkUtils.c */,
+				5AB58A69126DC49300DDC7FE /* LXPatternGen.c */,
+				5AB58A6A126DC49300DDC7FE /* LXRandomGen.c */,
+				5AB58A6C126DC49300DDC7FE /* mtwist.h */,
+				5AB58A6B126DC49300DDC7FE /* mtwist.c */,
+			);
+			name = "Utils sources";
+			path = Lacefx;
+			sourceTree = "<group>";
+		};
+		5AB58A79126DC49F00DDC7FE /* Utils API Public Headers */ = {
+			isa = PBXGroup;
+			children = (
+				5AB58A7A126DC49F00DDC7FE /* LXColorFunctions.h */,
+				5AB58A7B126DC49F00DDC7FE /* LXDevice.h */,
+				5AB58A7C126DC49F00DDC7FE /* LXCurveTypes.h */,
+				5AB58A7D126DC49F00DDC7FE /* LXCurveFunctions.h */,
+				5AB58A7E126DC49F00DDC7FE /* LXFileHandlers.h */,
+				5AB58A7F126DC49F00DDC7FE /* LXImageFunctions.h */,
+				5AB58A80126DC49F00DDC7FE /* LXMutex.h */,
+				5AB58A81126DC49F00DDC7FE /* LXMutexAtomic.h */,
+				5AB58A82126DC49F00DDC7FE /* LXNetworkUtils.h */,
+				5AB58A83126DC49F00DDC7FE /* LXPatternGen.h */,
+				5AB58A84126DC49F00DDC7FE /* LXRandomGen.h */,
+				5AB58A85126DC49F00DDC7FE /* LXStringUtils.h */,
+				5AB58A86126DC49F00DDC7FE /* LXShaderUtils.h */,
+				5AB58A87126DC49F00DDC7FE /* LXThreadLocal.h */,
+			);
+			name = "Utils API Public Headers";
+			sourceTree = "<group>";
+		};
+		5AB58A88126DC49F00DDC7FE /* Base API Public Headers */ = {
+			isa = PBXGroup;
+			children = (
+				5AB58A89126DC49F00DDC7FE /* Lacefx.h */,
+				5AB58A8A126DC49F00DDC7FE /* LXAccumulator.h */,
+				5AB58A8B126DC49F00DDC7FE /* LXBasicTypes.h */,
+				5AB58A8C126DC49F00DDC7FE /* LXBasicTypeFunctions.h */,
+				5AB58A8D126DC49F00DDC7FE /* LXCList.h */,
+				5AB58A8E126DC49F00DDC7FE /* LXConvolver.h */,
+				5AB58A8F126DC49F00DDC7FE /* LXDrawContext.h */,
+				5AB58A90126DC49F00DDC7FE /* LXFPClosure.h */,
+				5AB58A91126DC49F00DDC7FE /* LXFPClosureContext.h */,
+				5AB58A92126DC49F00DDC7FE /* LXHalfFloat.h */,
+				5AB58A93126DC49F00DDC7FE /* LXMap.h */,
+				5AB58A94126DC49F00DDC7FE /* LXPixelBuffer.h */,
+				5AB58A95126DC49F00DDC7FE /* LXPlatform.h */,
+				5AB58A96126DC49F00DDC7FE /* LXPool.h */,
+				5AB58A97126DC49F00DDC7FE /* LXRefTypes.h */,
+				5AB58A98126DC49F00DDC7FE /* LXShader.h */,
+				5AB58A99126DC49F00DDC7FE /* LXSuites.h */,
+				5AB58A9A126DC49F00DDC7FE /* LXSurface.h */,
+				5AB58A9B126DC49F00DDC7FE /* LXTexture.h */,
+				5AB58A9C126DC49F00DDC7FE /* LXTextureArray.h */,
+				5AB58A9D126DC49F00DDC7FE /* LXTransform3D.h */,
+			);
+			name = "Base API Public Headers";
+			sourceTree = "<group>";
+		};
+		5AB58AC4126DC4B400DDC7FE /* Base sources, common */ = {
+			isa = PBXGroup;
+			children = (
+				5A9D140917D4983700F09EF9 /* Functions with Obj-C dependency */,
+				5AB58ACA126DC52100DDC7FE /* LXAccumulator.c */,
+				5AB58ACB126DC52100DDC7FE /* LXBasicTypeFunctions.c */,
+				5AB58ACC126DC52100DDC7FE /* LXCList.c */,
+				5AB58AD0126DC52100DDC7FE /* LXDrawContext.c */,
+				5AB58AD1126DC52100DDC7FE /* LXDraw_Impl.h */,
+				5AB58AD2126DC52100DDC7FE /* LXFixedPoint.h */,
+				5AB58AD3126DC52100DDC7FE /* LXFixedPoint.c */,
+				5AB58AD4126DC52100DDC7FE /* LXFPClosure.c */,
+				5AB58AD5126DC52100DDC7FE /* LXFPClosureContext.c */,
+				5AB58AD6126DC52100DDC7FE /* LXHalfFloat.c */,
+				5AB58AD7126DC52100DDC7FE /* LXHalfELUT.h */,
+				5AB58AD8126DC52100DDC7FE /* LXHalfToFloatLUT.h */,
+				5AB58AD9126DC52100DDC7FE /* LXImplTests.c */,
+				5AB58AEA126DC55B00DDC7FE /* LXMap_c.c */,
+				5AB58AEB126DC55B00DDC7FE /* hashmap.h */,
+				5AB58AEC126DC55B00DDC7FE /* hashmap.c */,
+				5AB58B14126DC56A00DDC7FE /* LXMutexAtomic.c */,
+				5AB58AED126DC55B00DDC7FE /* LXPixelBuffer.c */,
+				5AB58AEE126DC55B00DDC7FE /* LXPixelBuffer_priv.h */,
+				5AB58AEF126DC55B00DDC7FE /* LXPixelBuffer_bmp.c */,
+				5AB58AF0126DC55B00DDC7FE /* LXPixelBuffer_dpx.c */,
+				5AB58AF1126DC55B00DDC7FE /* LXPixelBuffer_jpeg.c */,
+				5AB58AF2126DC55B00DDC7FE /* LXPixelBuffer_tiff.c */,
+				5AB58AF3126DC55B00DDC7FE /* LXPool.c */,
+				5AB58AF4126DC55B00DDC7FE /* LXPool_pixelbuffer_priv.h */,
+				5AB58AF5126DC55B00DDC7FE /* LXPool_pixelbuffer.c */,
+				5AB58B17126DC56A00DDC7FE /* LXPool_surface_priv.h */,
+				5AB58AF6126DC55B00DDC7FE /* LXRef.c */,
+				5AB58AF7126DC55B00DDC7FE /* LXRef_Impl.h */,
+				5A86531A1274BCE900EA24CC /* LXRef_objcwrap.m */,
+				5AB58AF8126DC55B00DDC7FE /* LXShader_common.m */,
+				5AB58AF9126DC55B00DDC7FE /* LXShader_Impl.h */,
+				5AB58AFA126DC55B00DDC7FE /* LXShaderTranslation.h */,
+				5AB58AFB126DC55B00DDC7FE /* LXShaderTranslation.m */,
+				5AB58AFC126DC55B00DDC7FE /* LXDrawContext_Impl.h */,
+				5AB58B11126DC56A00DDC7FE /* LXSurface_utils.c */,
+				5AB58B12126DC56A00DDC7FE /* LXTextureArray.c */,
+				5AB58B13126DC56A00DDC7FE /* LXTransform3D.c */,
+				5AB58B15126DC56A00DDC7FE /* LXThreadLocal.c */,
+				5AB58B16126DC56A00DDC7FE /* LXVecInline_SSE2.h */,
+			);
+			name = "Base sources, common";
+			sourceTree = "<group>";
+		};
+		5AB58AC5126DC4DE00DDC7FE /* Base Includes (no compile) */ = {
+			isa = PBXGroup;
+			children = (
+				5AB58AC6126DC4DE00DDC7FE /* LXSurface_baseinc.c */,
+				5AB58AC7126DC4DE00DDC7FE /* LXTexture_baseinc.c */,
+			);
+			name = "Base Includes (no compile)";
+			path = Lacefx;
+			sourceTree = "<group>";
+		};
+		5AB58B22126DC5C700DDC7FE /* Mac-OpenGL Specific */ = {
+			isa = PBXGroup;
+			children = (
+				5AB58B23126DC5C700DDC7FE /* LXPlatform_mac.h */,
+				5AB58B24126DC5C700DDC7FE /* LXPlatform_applebase.m */,
+				5AB58B25126DC5C700DDC7FE /* LXPlatform_macgl.m */,
+				5AB58B27126DC5C700DDC7FE /* LXDraw_macgl.m */,
+				5AB58B28126DC5C700DDC7FE /* LXFileHandlers_objc.m */,
+				5AB58B29126DC5C700DDC7FE /* LXPixelBuffer_cocoaimage.m */,
+				5AB58B2A126DC5C700DDC7FE /* LXShader_macgl.m */,
+				5AB58B2B126DC5C700DDC7FE /* LXSurface_macgl.m */,
+				5AB58B2D126DC5C700DDC7FE /* LXSurface_macgl_inc_fbo.m */,
+				5AB58B2E126DC5C700DDC7FE /* LXTexture_macgl.m */,
+				5AC696A31711A6A100B1B277 /* GLCheck.h */,
+				5AC696A21711A6A100B1B277 /* GLCheck.c */,
+				5AB58A16126DC3E500DDC7FE /* LQGLContext.h */,
+				5AB58A17126DC3E500DDC7FE /* LQGLContext.m */,
+			);
+			name = "Mac-OpenGL Specific";
+			path = Lacefx;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5A8CEAF8127E215300BD253D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A8CEB11127E218C00BD253D /* Lacefx.h in Headers */,
+				5A8CEB12127E218C00BD253D /* LXAccumulator.h in Headers */,
+				5A8CEB13127E218C00BD253D /* LXBasicTypeFunctions.h in Headers */,
+				5A8CEB14127E218C00BD253D /* LXBasicTypes.h in Headers */,
+				5A8CEB15127E218C00BD253D /* LXCList.h in Headers */,
+				5A8CEB16127E218C00BD253D /* LXConvolver.h in Headers */,
+				5A8CEB17127E218C00BD253D /* LXDrawContext.h in Headers */,
+				5A8CEB18127E218C00BD253D /* LXFPClosure.h in Headers */,
+				5A8CEB19127E218C00BD253D /* LXFPClosureContext.h in Headers */,
+				5A8CEB1A127E218C00BD253D /* LXHalfFloat.h in Headers */,
+				5A8CEB1B127E218C00BD253D /* LXMap.h in Headers */,
+				5A8CEB1C127E218C00BD253D /* LXPixelBuffer.h in Headers */,
+				5A8CEB1D127E218C00BD253D /* LXPlatform.h in Headers */,
+				5A8CEB1E127E218C00BD253D /* LXPool.h in Headers */,
+				5A8CEB1F127E218C00BD253D /* LXRefTypes.h in Headers */,
+				5A8CEB20127E218C00BD253D /* LXShader.h in Headers */,
+				5A8CEB21127E218C00BD253D /* LXSuites.h in Headers */,
+				5A8CEB22127E218C00BD253D /* LXSurface.h in Headers */,
+				5A8CEB23127E218C00BD253D /* LXTexture.h in Headers */,
+				5A8CEB24127E218C00BD253D /* LXTextureArray.h in Headers */,
+				5A8CEB25127E218C00BD253D /* LXTransform3D.h in Headers */,
+				5A8CEB26127E219100BD253D /* LXColorFunctions.h in Headers */,
+				5A8CEB27127E219100BD253D /* LXCurveFunctions.h in Headers */,
+				5A8CEB28127E219100BD253D /* LXCurveTypes.h in Headers */,
+				5A8CEB29127E219100BD253D /* LXDevice.h in Headers */,
+				5A8CEB2A127E219100BD253D /* LXFileHandlers.h in Headers */,
+				5A8CEB2B127E219100BD253D /* LXImageFunctions.h in Headers */,
+				5A8CEB2C127E219100BD253D /* LXMutex.h in Headers */,
+				5A8CEB2D127E219100BD253D /* LXMutexAtomic.h in Headers */,
+				5A8CEB2E127E219100BD253D /* LXNetworkUtils.h in Headers */,
+				5A8CEB2F127E219100BD253D /* LXPatternGen.h in Headers */,
+				5A8CEB30127E219100BD253D /* LXRandomGen.h in Headers */,
+				5A8CEB31127E219100BD253D /* LXShaderUtils.h in Headers */,
+				5A8CEB32127E219100BD253D /* LXStringUtils.h in Headers */,
+				5A8CEB33127E219100BD253D /* LXThreadLocal.h in Headers */,
+				5A8CEBC9127E21A200BD253D /* hashmap.h in Headers */,
+				5A8CEBCA127E21A200BD253D /* LQLXConvolver.h in Headers */,
+				5A8CEBD0127E21A200BD253D /* LXDraw_Impl.h in Headers */,
+				5A8CEBD2127E21A200BD253D /* LXDrawContext_Impl.h in Headers */,
+				5A8CEBD4127E21A200BD253D /* LXFixedPoint.h in Headers */,
+				5A8CEBD7127E21A200BD253D /* LXHalfELUT.h in Headers */,
+				5A8CEBD9127E21A200BD253D /* LXHalfToFloatLUT.h in Headers */,
+				5A8CEBE1127E21A200BD253D /* LXPixelBuffer_priv.h in Headers */,
+				5A8CEBE5127E21A200BD253D /* LXPool_pixelbuffer_priv.h in Headers */,
+				5A8CEBE6127E21A200BD253D /* LXPool_surface_priv.h in Headers */,
+				5A8CEBE8127E21A200BD253D /* LXRef_Impl.h in Headers */,
+				5A8CEBEB127E21A200BD253D /* LXShader_Impl.h in Headers */,
+				5A8CEBEC127E21A200BD253D /* LXShaderTranslation.h in Headers */,
+				5A8CEBF3127E21A300BD253D /* LXVecInline_SSE2.h in Headers */,
+				5A8CEC52127E259D00BD253D /* LXBinaryUtils.h in Headers */,
+				5A8CEC5C127E259D00BD253D /* mtwist.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC2EF500486A6940098B216 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AB58A02126DC3B400DDC7FE /* jconfig.h in Headers */,
+				5AB58A03126DC3B400DDC7FE /* jmorecfg.h in Headers */,
+				5AB58A04126DC3B400DDC7FE /* jpeglib.h in Headers */,
+				5AB58A0A126DC3B400DDC7FE /* tiffconf.h in Headers */,
+				5AB58A0B126DC3B400DDC7FE /* tiffiop.h in Headers */,
+				5AB58A0C126DC3B400DDC7FE /* tiffvers.h in Headers */,
+				5AB58A0D126DC3B400DDC7FE /* tiff.h in Headers */,
+				5AB58A0E126DC3B400DDC7FE /* tiffio.h in Headers */,
+				5AB58A9E126DC49F00DDC7FE /* LXColorFunctions.h in Headers */,
+				5AB58A9F126DC49F00DDC7FE /* LXDevice.h in Headers */,
+				5AB58AA0126DC49F00DDC7FE /* LXCurveTypes.h in Headers */,
+				5AB58AA1126DC49F00DDC7FE /* LXCurveFunctions.h in Headers */,
+				5AB58AA2126DC49F00DDC7FE /* LXFileHandlers.h in Headers */,
+				5AB58AA3126DC49F00DDC7FE /* LXImageFunctions.h in Headers */,
+				5AB58AA4126DC49F00DDC7FE /* LXMutex.h in Headers */,
+				5AB58AA5126DC49F00DDC7FE /* LXMutexAtomic.h in Headers */,
+				5AB58AA6126DC49F00DDC7FE /* LXNetworkUtils.h in Headers */,
+				5AB58AA7126DC49F00DDC7FE /* LXPatternGen.h in Headers */,
+				5AB58AA8126DC49F00DDC7FE /* LXRandomGen.h in Headers */,
+				5A61C4941805F06300D16742 /* LQGLContext.h in Headers */,
+				5A61C4951805F06400D16742 /* GLCheck.h in Headers */,
+				5AB58AA9126DC49F00DDC7FE /* LXStringUtils.h in Headers */,
+				5AB58AAA126DC49F00DDC7FE /* LXShaderUtils.h in Headers */,
+				5AB58AAB126DC49F00DDC7FE /* LXThreadLocal.h in Headers */,
+				5AB58AAC126DC49F00DDC7FE /* Lacefx.h in Headers */,
+				5AB58AAD126DC49F00DDC7FE /* LXAccumulator.h in Headers */,
+				5AB58AAE126DC49F00DDC7FE /* LXBasicTypes.h in Headers */,
+				5AB58AAF126DC49F00DDC7FE /* LXBasicTypeFunctions.h in Headers */,
+				5AB58AB0126DC49F00DDC7FE /* LXCList.h in Headers */,
+				5AB58AB1126DC49F00DDC7FE /* LXConvolver.h in Headers */,
+				5AB58AB2126DC49F00DDC7FE /* LXDrawContext.h in Headers */,
+				5AB58AB3126DC49F00DDC7FE /* LXFPClosure.h in Headers */,
+				5AB58AB4126DC49F00DDC7FE /* LXFPClosureContext.h in Headers */,
+				5AB58AB5126DC49F00DDC7FE /* LXHalfFloat.h in Headers */,
+				5AB58AB6126DC49F00DDC7FE /* LXMap.h in Headers */,
+				5AB58AB7126DC49F00DDC7FE /* LXPixelBuffer.h in Headers */,
+				5AB58AB8126DC49F00DDC7FE /* LXPlatform.h in Headers */,
+				5AB58AB9126DC49F00DDC7FE /* LXPool.h in Headers */,
+				5A61C4931805F05B00D16742 /* LXPlatform_mac.h in Headers */,
+				5AB58ABA126DC49F00DDC7FE /* LXRefTypes.h in Headers */,
+				5AB58ABB126DC49F00DDC7FE /* LXShader.h in Headers */,
+				5AB58ABC126DC49F00DDC7FE /* LXSuites.h in Headers */,
+				5AB58ABD126DC49F00DDC7FE /* LXSurface.h in Headers */,
+				5AB58ABE126DC49F00DDC7FE /* LXTexture.h in Headers */,
+				5AB58ABF126DC49F00DDC7FE /* LXTextureArray.h in Headers */,
+				5AB58AC0126DC49F00DDC7FE /* LXTransform3D.h in Headers */,
+				5AB58ADD126DC52100DDC7FE /* LQLXConvolver.h in Headers */,
+				5AB58AE1126DC52100DDC7FE /* LXDraw_Impl.h in Headers */,
+				5AB58AE2126DC52100DDC7FE /* LXFixedPoint.h in Headers */,
+				5AB58AE7126DC52100DDC7FE /* LXHalfELUT.h in Headers */,
+				5AB58AE8126DC52100DDC7FE /* LXHalfToFloatLUT.h in Headers */,
+				5AB58AFE126DC55B00DDC7FE /* hashmap.h in Headers */,
+				5AB58B01126DC55B00DDC7FE /* LXPixelBuffer_priv.h in Headers */,
+				5AB58B07126DC55B00DDC7FE /* LXPool_pixelbuffer_priv.h in Headers */,
+				5AB58B0A126DC55B00DDC7FE /* LXRef_Impl.h in Headers */,
+				5AB58B0C126DC55B00DDC7FE /* LXShader_Impl.h in Headers */,
+				5AB58B0D126DC55B00DDC7FE /* LXShaderTranslation.h in Headers */,
+				5AB58B0F126DC55B00DDC7FE /* LXDrawContext_Impl.h in Headers */,
+				5AB58B1E126DC56A00DDC7FE /* LXVecInline_SSE2.h in Headers */,
+				5AB58B1F126DC56A00DDC7FE /* LXPool_surface_priv.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5A8CEAFC127E215300BD253D /* Lacefx-Cocotron-Windows-i386 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A8CEB01127E215400BD253D /* Build configuration list for PBXNativeTarget "Lacefx-Cocotron-Windows-i386" */;
+			buildPhases = (
+				5A8CEAF8127E215300BD253D /* Headers */,
+				5A8CEAF9127E215300BD253D /* Resources */,
+				5A8CEAFA127E215300BD253D /* Sources */,
+				5A8CEAFB127E215300BD253D /* Frameworks */,
+			);
+			buildRules = (
+				5A8CEBF7127E226200BD253D /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = "Lacefx-Cocotron-Windows-i386";
+			productName = "Lacefx-Cocotron-Windows-i386";
+			productReference = 5A8CEAFD127E215300BD253D /* Lacefx.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8DC2EF4F0486A6940098B216 /* Lacefx-Mac-GL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "Lacefx-Mac-GL" */;
+			buildPhases = (
+				8DC2EF500486A6940098B216 /* Headers */,
+				8DC2EF520486A6940098B216 /* Resources */,
+				8DC2EF540486A6940098B216 /* Sources */,
+				8DC2EF560486A6940098B216 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lacefx-Mac-GL";
+			productInstallPath = "$(HOME)/Library/Frameworks";
+			productName = Lacefx;
+			productReference = 8DC2EF5B0486A6940098B216 /* Lacefx.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+			};
+			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "Lacefx" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* Lacefx */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DC2EF4F0486A6940098B216 /* Lacefx-Mac-GL */,
+				5A8CEAFC127E215300BD253D /* Lacefx-Cocotron-Windows-i386 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A8CEAF9127E215300BD253D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC2EF520486A6940098B216 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A010DFF1805EEFC00EBFCC1 /* AdobeRGB1998.icc in Resources */,
+				5A010E001805EEFC00EBFCC1 /* sRGB.icc in Resources */,
+				5A010E011805EEFC00EBFCC1 /* LinearRGB_709.icc in Resources */,
+				5A010E021805EEFC00EBFCC1 /* WideGamutRGB.icc in Resources */,
+				5A010E031805EEFC00EBFCC1 /* ProPhotoRGB.icc in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A8CEAFA127E215300BD253D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A8CEBC8127E21A200BD253D /* hashmap.c in Sources */,
+				5A8CEBCB127E21A200BD253D /* LQLXConvolver.m in Sources */,
+				5A8CEBCC127E21A200BD253D /* LXAccumulator.c in Sources */,
+				5A8CEBCD127E21A200BD253D /* LXBasicTypeFunctions.c in Sources */,
+				5A8CEBCE127E21A200BD253D /* LXCList.c in Sources */,
+				5A8CEBCF127E21A200BD253D /* LXConvolver_lx.m in Sources */,
+				5A8CEBD1127E21A200BD253D /* LXDrawContext.c in Sources */,
+				5A8CEBD3127E21A200BD253D /* LXFixedPoint.c in Sources */,
+				5A8CEBD5127E21A200BD253D /* LXFPClosure.c in Sources */,
+				5A8CEBD6127E21A200BD253D /* LXFPClosureContext.c in Sources */,
+				5A8CEBD8127E21A200BD253D /* LXHalfFloat.c in Sources */,
+				5A8CEBDA127E21A200BD253D /* LXImplTests.c in Sources */,
+				5A8CEBDB127E21A200BD253D /* LXMap_c.c in Sources */,
+				5A8CEBDC127E21A200BD253D /* LXMutexAtomic.c in Sources */,
+				5A8CEBDD127E21A200BD253D /* LXPixelBuffer.c in Sources */,
+				5A8CEBDE127E21A200BD253D /* LXPixelBuffer_bmp.c in Sources */,
+				5A8CEBDF127E21A200BD253D /* LXPixelBuffer_dpx.c in Sources */,
+				5A8CEBE0127E21A200BD253D /* LXPixelBuffer_jpeg.c in Sources */,
+				5A8CEBE2127E21A200BD253D /* LXPixelBuffer_tiff.c in Sources */,
+				5A8CEBE3127E21A200BD253D /* LXPool.c in Sources */,
+				5A8CEBE4127E21A200BD253D /* LXPool_pixelbuffer.c in Sources */,
+				5A8CEBE7127E21A200BD253D /* LXRef.c in Sources */,
+				5A8CEBE9127E21A200BD253D /* LXRef_objcwrap.m in Sources */,
+				5A8CEBEA127E21A200BD253D /* LXShader_common.m in Sources */,
+				5A8CEBED127E21A200BD253D /* LXShaderTranslation.m in Sources */,
+				5A8CEBEF127E21A300BD253D /* LXSurface_utils.c in Sources */,
+				5A8CEBF0127E21A300BD253D /* LXTextureArray.c in Sources */,
+				5A8CEBF1127E21A300BD253D /* LXThreadLocal.c in Sources */,
+				5A8CEBF2127E21A300BD253D /* LXTransform3D.c in Sources */,
+				5A8CEC51127E259D00BD253D /* LXBinaryUtils.c in Sources */,
+				5A8CEC53127E259D00BD253D /* LXColorFunctions.c in Sources */,
+				5A8CEC54127E259D00BD253D /* LXCurveFunctions.c in Sources */,
+				5A8CEC55127E259D00BD253D /* LXImageFunctions.c in Sources */,
+				5A8CEC56127E259D00BD253D /* LXNetworkUtils.c in Sources */,
+				5A8CEC57127E259D00BD253D /* LXPatternGen.c in Sources */,
+				5A8CEC58127E259D00BD253D /* LXRandomGen.c in Sources */,
+				5A8CEC59127E259D00BD253D /* LXShaderUtils.c in Sources */,
+				5A8CEC5A127E259D00BD253D /* LXStringUtils.c in Sources */,
+				5A8CEC5B127E259D00BD253D /* mtwist.c in Sources */,
+				5A8CEC68127E25E800BD253D /* LXDraw_d3d.cpp in Sources */,
+				5A8CEC69127E25E800BD253D /* LXPixelBuffer_winimage.c in Sources */,
+				5A8CEC6B127E25E800BD253D /* LXPlatform_d3d.m in Sources */,
+				5A8CEC6C127E25E800BD253D /* LXShader_d3d.cpp in Sources */,
+				5A8CEC6D127E25E800BD253D /* LXStdout_win.c in Sources */,
+				5A8CEC6E127E25E800BD253D /* LXSurface_d3d.cpp in Sources */,
+				5A8CEC6F127E25E800BD253D /* LXTexture_d3d.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DC2EF540486A6940098B216 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AB58A25126DC3E500DDC7FE /* LQGLContext.m in Sources */,
+				5AB58A6E126DC49300DDC7FE /* LXBinaryUtils.c in Sources */,
+				5AB58A6F126DC49300DDC7FE /* LXStringUtils.c in Sources */,
+				5AB58A70126DC49300DDC7FE /* LXShaderUtils.c in Sources */,
+				5AB58A71126DC49300DDC7FE /* LXColorFunctions.c in Sources */,
+				5AB58A72126DC49300DDC7FE /* LXCurveFunctions.c in Sources */,
+				5AB58A73126DC49300DDC7FE /* LXImageFunctions.c in Sources */,
+				5AB58A74126DC49300DDC7FE /* LXNetworkUtils.c in Sources */,
+				5AB58A75126DC49300DDC7FE /* LXPatternGen.c in Sources */,
+				5AB58A76126DC49300DDC7FE /* LXRandomGen.c in Sources */,
+				5AB58A77126DC49300DDC7FE /* mtwist.c in Sources */,
+				5AB58ADA126DC52100DDC7FE /* LXAccumulator.c in Sources */,
+				5AB58ADB126DC52100DDC7FE /* LXBasicTypeFunctions.c in Sources */,
+				5AB58ADC126DC52100DDC7FE /* LXCList.c in Sources */,
+				5AB58ADE126DC52100DDC7FE /* LQLXConvolver.m in Sources */,
+				5AB58ADF126DC52100DDC7FE /* LXConvolver_lx.m in Sources */,
+				5AB58AE0126DC52100DDC7FE /* LXDrawContext.c in Sources */,
+				5AB58AE3126DC52100DDC7FE /* LXFixedPoint.c in Sources */,
+				5AB58AE4126DC52100DDC7FE /* LXFPClosure.c in Sources */,
+				5AB58AE5126DC52100DDC7FE /* LXFPClosureContext.c in Sources */,
+				5AB58AE6126DC52100DDC7FE /* LXHalfFloat.c in Sources */,
+				5AB58AE9126DC52100DDC7FE /* LXImplTests.c in Sources */,
+				5AB58AFD126DC55B00DDC7FE /* LXMap_c.c in Sources */,
+				5AB58AFF126DC55B00DDC7FE /* hashmap.c in Sources */,
+				5AB58B00126DC55B00DDC7FE /* LXPixelBuffer.c in Sources */,
+				5AB58B02126DC55B00DDC7FE /* LXPixelBuffer_bmp.c in Sources */,
+				5AB58B03126DC55B00DDC7FE /* LXPixelBuffer_dpx.c in Sources */,
+				5AB58B04126DC55B00DDC7FE /* LXPixelBuffer_jpeg.c in Sources */,
+				5AB58B05126DC55B00DDC7FE /* LXPixelBuffer_tiff.c in Sources */,
+				5AB58B06126DC55B00DDC7FE /* LXPool.c in Sources */,
+				5AB58B08126DC55B00DDC7FE /* LXPool_pixelbuffer.c in Sources */,
+				5AB58B09126DC55B00DDC7FE /* LXRef.c in Sources */,
+				5AB58B0B126DC55B00DDC7FE /* LXShader_common.m in Sources */,
+				5AB58B0E126DC55B00DDC7FE /* LXShaderTranslation.m in Sources */,
+				5AB58B19126DC56A00DDC7FE /* LXSurface_utils.c in Sources */,
+				5AB58B1A126DC56A00DDC7FE /* LXTextureArray.c in Sources */,
+				5AB58B1B126DC56A00DDC7FE /* LXTransform3D.c in Sources */,
+				5A9DE6901805E068006D0662 /* LXFileHandlers_objc.m in Sources */,
+				5AB58B1C126DC56A00DDC7FE /* LXMutexAtomic.c in Sources */,
+				5AB58B1D126DC56A00DDC7FE /* LXThreadLocal.c in Sources */,
+				5AB58B30126DC5C700DDC7FE /* LXPlatform_applebase.m in Sources */,
+				5AB58B31126DC5C700DDC7FE /* LXPlatform_macgl.m in Sources */,
+				5AB58B33126DC5C700DDC7FE /* LXDraw_macgl.m in Sources */,
+				5AB58B35126DC5C700DDC7FE /* LXPixelBuffer_cocoaimage.m in Sources */,
+				5AB58B36126DC5C700DDC7FE /* LXShader_macgl.m in Sources */,
+				5AB58B37126DC5C700DDC7FE /* LXSurface_macgl.m in Sources */,
+				5AB58B3A126DC5C700DDC7FE /* LXTexture_macgl.m in Sources */,
+				5A86531B1274BCE900EA24CC /* LXRef_objcwrap.m in Sources */,
+				5AC696A41711A6A100B1B277 /* GLCheck.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91AE08733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_X86_VECTOR_INSTRUCTIONS = sse3;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ALTIVEC_EXTENSIONS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Lacefx/Lacefx_Prefix.pch;
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/tiff\"";
+				INFOPLIST_FILE = Lacefx/Info.plist;
+				INSTALL_PATH = "@rpath";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/jpeg\"",
+					"\"$(SRCROOT)/tiff\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = Lacefx;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+				SYMROOT = "$(PROJECT_DIR)/../build/lx";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		1DEB91AF08733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_X86_VECTOR_INSTRUCTIONS = sse3;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ALTIVEC_EXTENSIONS = YES;
+				GCC_ENABLE_OBJC_GC = unsupported;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Lacefx/Lacefx_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = RELEASE;
+				GCC_VERSION = "";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/tiff\"";
+				INFOPLIST_FILE = Lacefx/Info.plist;
+				INSTALL_PATH = "@rpath";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/jpeg\"",
+					"\"$(SRCROOT)/tiff\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = Lacefx;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = macosx;
+				SYMROOT = "$(PROJECT_DIR)/../build/lx";
+				WARNING_CFLAGS = "-Winline";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		1DEB91B208733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1DEB91B308733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5A8CEAFF127E215300BD253D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = i386;
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				EXECUTABLE_SUFFIX = .1.0_ct.dll;
+				FRAMEWORK_SEARCH_PATHS = /Developer/Cocotron/1.0/Windows/i386/Frameworks;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					LX_INSIDE_BUILD,
+					__LITTLE_ENDIAN__,
+				);
+				GCC_VERSION = org.cocotron.1.0.windows.i386.gcc.4.3.1;
+				HEADER_SEARCH_PATHS = (
+					/Developer/Cocotron/1.0/Windows/i386/d3d9/include,
+					/Developer/Cocotron/1.0/Windows/i386/libjpeg/include,
+					/Developer/Cocotron/1.0/Windows/i386/libtiff/include,
+					/Developer/Cocotron/1.0/Windows/i386/libpng/include,
+					"/Developer/Cocotron/1.0/Windows/i386/zlib-1.2.5/include",
+				);
+				INFOPLIST_FILE = "Lacefx/Lacefx-Cocotron-Windows-i386-Info.plist";
+				INSTALL_PATH = /Developer/Cocotron/1.0/Windows/i386/Frameworks;
+				LIBRARY_SEARCH_PATHS = "/Developer/Cocotron/1.0/Windows/i386/gtk/lib/**";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-msse2",
+					"-msse3",
+					"-march=i686",
+					"-Wreturn-type",
+					"-Winline",
+					"-flax-vector-conversions",
+				);
+				OTHER_LDFLAGS = (
+					"-shared",
+					"-lgdi32",
+					"-lole32",
+					"-lkernel32",
+					"-lz",
+					"-Wl,--enable-auto-import",
+					"-Wl,--export-all-symbols",
+					"-Wl,--out-implib,$TARGET_BUILD_DIR/Lacefx.framework/libLacefx.a",
+				);
+				PRODUCT_NAME = Lacefx;
+				SYMROOT = /Developer/Cocotron/1.0/build/Lacefx/Windows;
+			};
+			name = Debug;
+		};
+		5A8CEB00127E215300BD253D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = i386;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				EXECUTABLE_SUFFIX = .1.0_ct.dll;
+				FRAMEWORK_SEARCH_PATHS = /Developer/Cocotron/1.0/Windows/i386/Frameworks;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					LX_INSIDE_BUILD,
+					__LITTLE_ENDIAN__,
+				);
+				GCC_VERSION = org.cocotron.1.0.windows.i386.gcc.4.3.1;
+				HEADER_SEARCH_PATHS = (
+					/Developer/Cocotron/1.0/Windows/i386/d3d9/include,
+					/Developer/Cocotron/1.0/Windows/i386/libjpeg/include,
+					/Developer/Cocotron/1.0/Windows/i386/libtiff/include,
+					/Developer/Cocotron/1.0/Windows/i386/libpng/include,
+					"/Developer/Cocotron/1.0/Windows/i386/zlib-1.2.5/include",
+				);
+				INFOPLIST_FILE = "Lacefx/Lacefx-Cocotron-Windows-i386-Info.plist";
+				INSTALL_PATH = /Developer/Cocotron/1.0/Windows/i386/Frameworks;
+				LIBRARY_SEARCH_PATHS = (
+					/Developer/Cocotron/1.0/Windows/i386/libpng/lib,
+					"/Developer/Cocotron/1.0/Windows/i386/zlib-1.2.5/lib",
+					/Developer/Cocotron/1.0/Windows/i386/libjpeg/lib,
+					/Developer/Cocotron/1.0/Windows/i386/libtiff/lib,
+					/Developer/Cocotron/1.0/Windows/i386/d3d9/lib,
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-msse2",
+					"-msse3",
+					"-march=i686",
+					"-Wreturn-type",
+					"-Winline",
+					"-flax-vector-conversions",
+				);
+				OTHER_LDFLAGS = (
+					"-shared",
+					"-lgdi32",
+					"-lole32",
+					"-lkernel32",
+					"-lws2_32",
+					"-ld3d9",
+					"-ld3dx9_31",
+					"-ljpeg",
+					"-lpng.dll",
+					"-ltiff",
+					"-lz",
+					"-Wl,--enable-auto-import",
+					"-Wl,--export-all-symbols",
+					"-Wl,--out-implib,$TARGET_BUILD_DIR/Lacefx.framework/libLacefx.a",
+				);
+				PRODUCT_NAME = Lacefx;
+				SYMROOT = /Developer/Cocotron/1.0/build/Lacefx/Windows;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "Lacefx-Mac-GL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91AE08733DA50010E9CD /* Debug */,
+				1DEB91AF08733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "Lacefx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91B208733DA50010E9CD /* Debug */,
+				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A8CEB01127E215400BD253D /* Build configuration list for PBXNativeTarget "Lacefx-Cocotron-Windows-i386" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A8CEAFF127E215300BD253D /* Debug */,
+				5A8CEB00127E215300BD253D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

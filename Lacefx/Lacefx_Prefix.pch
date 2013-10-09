@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Lacefx' target in the 'Lacefx' project.
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
