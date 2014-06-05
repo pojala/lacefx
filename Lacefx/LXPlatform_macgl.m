@@ -32,7 +32,30 @@ extern void LXPlatformCreateLocks_();
 // shared OpenGL context
 static LQGLContext *g_ctx = nil;
 
+
+static CGDirectDisplayID g_mainDisplayCGID = 0;
 static CGOpenGLDisplayMask g_mainDisplayGLMask = 0;
+
+extern void _LXPlatformSetMainDisplayGLMask(CGOpenGLDisplayMask dmask);
+
+
+void LQUpdateMainDisplayGLMask()
+{
+    if ( 1) {   //    if (g_mainDisplayGLMask == 0) {
+        g_mainDisplayCGID = (CGDirectDisplayID) [[[[NSScreen mainScreen] deviceDescription] objectForKey:@"NSScreenNumber"] intValue];
+        
+        CGOpenGLDisplayMask glDisplayMask = CGDisplayIDToOpenGLDisplayMask(g_mainDisplayCGID);
+        
+        if ((CGOpenGLDisplayMask)LXPlatformMainDisplayIdentifier() != glDisplayMask) {
+            _LXPlatformSetMainDisplayGLMask(glDisplayMask);
+            
+#if 0 //!defined(RELEASE)
+            NSLog(@"Setting Lacefx main display cgID: %i -> glID %i; devicedesc: %@ --(end)", g_mainDisplayCGID, LXPlatformMainDisplayIdentifier(),
+                  [[[NSScreen mainScreen] deviceDescription] description]);
+#endif
+        }
+    }
+}
 
 
 
@@ -42,7 +65,8 @@ CGDisplayCount      g_displayCount = 0;
 
 static void updateGLCaps()
 {
-	if (g_glCaps && HaveOpenGLCapsChanged(g_glCaps, g_displayCount)) {
+    int change = 0;
+	if (g_glCaps && (change = HaveOpenGLCapsChanged(g_glCaps, g_displayCount))) {
 		free(g_glCaps);
 		g_glCaps = nil;
 	}
@@ -98,6 +122,15 @@ LXBool LXPlatformHWSupportsYCbCrTextures()
     return YES;  // all drivers on OS X support this
 }
 
+LXInteger LXPlatformGetHWAmountOfMemory()
+{
+    updateGLCaps();
+    
+    if (g_displayCount > 0) {
+        return g_glCaps->deviceVRAM;
+    }
+    return -1;
+}
 
 void LXPlatformGetHWMaxTextureSize(int *outW, int *outH)
 {

@@ -59,7 +59,7 @@ typedef struct {
 
 // platform-independent parts of the class
 #define LXSURFACEIMPL LXSurface_iOSImpl
-#include "LXSurface_baseinc.c"
+#include "../Lacefx/LXSurface_baseinc.c"
 
 
 

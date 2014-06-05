@@ -1,0 +1,662 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		5AD36A4A190171C100A25553 /* UniversalLib-iOS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5AD36A4B190171C100A25553 /* Build configuration list for PBXAggregateTarget "UniversalLib-iOS" */;
+			buildPhases = (
+				5AD36A4E190171F300A25553 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "UniversalLib-iOS";
+			productName = "UniversalLib-iOS";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		5AD3693219015CDD00A25553 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD3693119015CDD00A25553 /* Foundation.framework */; };
+		5AD3696C1901661500A25553 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD3696B1901661500A25553 /* ImageIO.framework */; };
+		5AD369A01901668300A25553 /* LXBinaryUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369951901668300A25553 /* LXBinaryUtils.c */; };
+		5AD369A11901668300A25553 /* LXStringUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369961901668300A25553 /* LXStringUtils.c */; };
+		5AD369A21901668300A25553 /* LXShaderUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369971901668300A25553 /* LXShaderUtils.c */; };
+		5AD369A31901668300A25553 /* LXColorFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369981901668300A25553 /* LXColorFunctions.c */; };
+		5AD369A41901668300A25553 /* LXCurveFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369991901668300A25553 /* LXCurveFunctions.c */; };
+		5AD369A51901668300A25553 /* LXImageFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3699A1901668300A25553 /* LXImageFunctions.c */; };
+		5AD369A61901668300A25553 /* LXNetworkUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3699B1901668300A25553 /* LXNetworkUtils.c */; };
+		5AD369A71901668300A25553 /* LXPatternGen.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3699C1901668300A25553 /* LXPatternGen.c */; };
+		5AD369A81901668300A25553 /* LXRandomGen.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3699D1901668300A25553 /* LXRandomGen.c */; };
+		5AD369D1190166A900A25553 /* LXAccumulator.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369AA190166A900A25553 /* LXAccumulator.c */; };
+		5AD369D2190166A900A25553 /* LXBasicTypeFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369AB190166A900A25553 /* LXBasicTypeFunctions.c */; };
+		5AD369D3190166A900A25553 /* LXCList.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369AC190166A900A25553 /* LXCList.c */; };
+		5AD369D4190166A900A25553 /* LXDrawContext.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369AD190166A900A25553 /* LXDrawContext.c */; };
+		5AD369D5190166A900A25553 /* LXFixedPoint.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369B0190166A900A25553 /* LXFixedPoint.c */; };
+		5AD369D6190166A900A25553 /* LXFPClosure.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369B1190166A900A25553 /* LXFPClosure.c */; };
+		5AD369D7190166A900A25553 /* LXFPClosureContext.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369B2190166A900A25553 /* LXFPClosureContext.c */; };
+		5AD369D8190166A900A25553 /* LXHalfFloat.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369B3190166A900A25553 /* LXHalfFloat.c */; };
+		5AD369D9190166A900A25553 /* LXImplTests.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369B6190166A900A25553 /* LXImplTests.c */; };
+		5AD369DA190166A900A25553 /* LXMap_c.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369B7190166A900A25553 /* LXMap_c.c */; };
+		5AD369DB190166A900A25553 /* hashmap.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369B9190166A900A25553 /* hashmap.c */; };
+		5AD369DC190166A900A25553 /* LXMutexAtomic.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369BA190166A900A25553 /* LXMutexAtomic.c */; };
+		5AD369DD190166A900A25553 /* LXPixelBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369BB190166A900A25553 /* LXPixelBuffer.c */; };
+		5AD369DE190166A900A25553 /* LXPixelBuffer_bmp.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369BD190166A900A25553 /* LXPixelBuffer_bmp.c */; };
+		5AD369DF190166A900A25553 /* LXPixelBuffer_dpx.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369BE190166A900A25553 /* LXPixelBuffer_dpx.c */; };
+		5AD369E2190166A900A25553 /* LXPool.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369C1190166A900A25553 /* LXPool.c */; };
+		5AD369E3190166A900A25553 /* LXPool_pixelbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369C3190166A900A25553 /* LXPool_pixelbuffer.c */; };
+		5AD369E4190166A900A25553 /* LXRef.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369C5190166A900A25553 /* LXRef.c */; };
+		5AD369E5190166A900A25553 /* LXRef_objcwrap.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369C7190166A900A25553 /* LXRef_objcwrap.m */; };
+		5AD369E6190166A900A25553 /* LXShader_common.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369C8190166A900A25553 /* LXShader_common.m */; };
+		5AD369E7190166A900A25553 /* LXShaderTranslation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369CB190166A900A25553 /* LXShaderTranslation.m */; };
+		5AD369E8190166A900A25553 /* LXSurface_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369CD190166A900A25553 /* LXSurface_utils.c */; };
+		5AD369E9190166A900A25553 /* LXTextureArray.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369CE190166A900A25553 /* LXTextureArray.c */; };
+		5AD369EA190166A900A25553 /* LXTransform3D.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369CF190166A900A25553 /* LXTransform3D.c */; };
+		5AD369EB190166A900A25553 /* LXThreadLocal.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369D0190166A900A25553 /* LXThreadLocal.c */; };
+		5AD369F81901676200A25553 /* LacefxESView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369EE1901676200A25553 /* LacefxESView.m */; };
+		5AD369F91901676200A25553 /* LXDraw_iosgles2.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369F01901676200A25553 /* LXDraw_iosgles2.m */; };
+		5AD369FA1901676200A25553 /* LXPlatform_iosgles2.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369F21901676200A25553 /* LXPlatform_iosgles2.m */; };
+		5AD369FB1901676200A25553 /* LXShader_iosgles2.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369F31901676200A25553 /* LXShader_iosgles2.m */; };
+		5AD369FC1901676200A25553 /* LXSurface_iosgles2.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369F41901676200A25553 /* LXSurface_iosgles2.m */; };
+		5AD369FD1901676200A25553 /* LXTexture_iosgles2.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369F51901676200A25553 /* LXTexture_iosgles2.m */; };
+		5AD369FE1901676200A25553 /* shaderCompileUtils_iosgles2.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD369F71901676200A25553 /* shaderCompileUtils_iosgles2.m */; };
+		5AD36A01190167B500A25553 /* LXPlatform_applebase.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD36A00190167B500A25553 /* LXPlatform_applebase.m */; };
+		5AD36A031901682400A25553 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD36A021901682400A25553 /* GLKit.framework */; };
+		5AD36A51190173DD00A25553 /* mtwist.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3699F1901668300A25553 /* mtwist.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5AD3692C19015CDD00A25553 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5AD3692E19015CDD00A25553 /* libLacefx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLacefx.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AD3693119015CDD00A25553 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5AD3693519015CDD00A25553 /* Lacefx-iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lacefx-iOS-Prefix.pch"; sourceTree = "<group>"; };
+		5AD3693F19015CDD00A25553 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5AD3694219015CDD00A25553 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		5AD3696B1901661500A25553 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		5AD3696E1901663A00A25553 /* Lacefx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Lacefx.h; path = Lacefx/Lacefx.h; sourceTree = SOURCE_ROOT; };
+		5AD3696F1901663A00A25553 /* LXAccumulator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXAccumulator.h; path = Lacefx/LXAccumulator.h; sourceTree = SOURCE_ROOT; };
+		5AD369701901663A00A25553 /* LXBasicTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXBasicTypes.h; path = Lacefx/LXBasicTypes.h; sourceTree = SOURCE_ROOT; };
+		5AD369711901663A00A25553 /* LXBasicTypeFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXBasicTypeFunctions.h; path = Lacefx/LXBasicTypeFunctions.h; sourceTree = SOURCE_ROOT; };
+		5AD369721901663A00A25553 /* LXCList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXCList.h; path = Lacefx/LXCList.h; sourceTree = SOURCE_ROOT; };
+		5AD369731901663A00A25553 /* LXConvolver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXConvolver.h; path = Lacefx/LXConvolver.h; sourceTree = SOURCE_ROOT; };
+		5AD369741901663A00A25553 /* LXDrawContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXDrawContext.h; path = Lacefx/LXDrawContext.h; sourceTree = SOURCE_ROOT; };
+		5AD369751901663A00A25553 /* LXFPClosure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXFPClosure.h; path = Lacefx/LXFPClosure.h; sourceTree = SOURCE_ROOT; };
+		5AD369761901663A00A25553 /* LXFPClosureContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXFPClosureContext.h; path = Lacefx/LXFPClosureContext.h; sourceTree = SOURCE_ROOT; };
+		5AD369771901663A00A25553 /* LXHalfFloat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXHalfFloat.h; path = Lacefx/LXHalfFloat.h; sourceTree = SOURCE_ROOT; };
+		5AD369781901663A00A25553 /* LXMap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXMap.h; path = Lacefx/LXMap.h; sourceTree = SOURCE_ROOT; };
+		5AD369791901663A00A25553 /* LXPixelBuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXPixelBuffer.h; path = Lacefx/LXPixelBuffer.h; sourceTree = SOURCE_ROOT; };
+		5AD3697A1901663A00A25553 /* LXPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXPlatform.h; path = Lacefx/LXPlatform.h; sourceTree = SOURCE_ROOT; };
+		5AD3697B1901663A00A25553 /* LXPool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXPool.h; path = Lacefx/LXPool.h; sourceTree = SOURCE_ROOT; };
+		5AD3697C1901663A00A25553 /* LXRefTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXRefTypes.h; path = Lacefx/LXRefTypes.h; sourceTree = SOURCE_ROOT; };
+		5AD3697D1901663A00A25553 /* LXShader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXShader.h; path = Lacefx/LXShader.h; sourceTree = SOURCE_ROOT; };
+		5AD3697E1901663A00A25553 /* LXSuites.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXSuites.h; path = Lacefx/LXSuites.h; sourceTree = SOURCE_ROOT; };
+		5AD3697F1901663A00A25553 /* LXSurface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXSurface.h; path = Lacefx/LXSurface.h; sourceTree = SOURCE_ROOT; };
+		5AD369801901663A00A25553 /* LXTexture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXTexture.h; path = Lacefx/LXTexture.h; sourceTree = SOURCE_ROOT; };
+		5AD369811901663A00A25553 /* LXTextureArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXTextureArray.h; path = Lacefx/LXTextureArray.h; sourceTree = SOURCE_ROOT; };
+		5AD369821901663A00A25553 /* LXTransform3D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXTransform3D.h; path = Lacefx/LXTransform3D.h; sourceTree = SOURCE_ROOT; };
+		5AD369841901665A00A25553 /* LXColorFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXColorFunctions.h; path = Lacefx/LXColorFunctions.h; sourceTree = SOURCE_ROOT; };
+		5AD369851901665A00A25553 /* LXDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXDevice.h; path = Lacefx/LXDevice.h; sourceTree = SOURCE_ROOT; };
+		5AD369861901665B00A25553 /* LXCurveTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXCurveTypes.h; path = Lacefx/LXCurveTypes.h; sourceTree = SOURCE_ROOT; };
+		5AD369871901665B00A25553 /* LXCurveFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXCurveFunctions.h; path = Lacefx/LXCurveFunctions.h; sourceTree = SOURCE_ROOT; };
+		5AD369881901665B00A25553 /* LXFileHandlers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXFileHandlers.h; path = Lacefx/LXFileHandlers.h; sourceTree = SOURCE_ROOT; };
+		5AD369891901665B00A25553 /* LXImageFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXImageFunctions.h; path = Lacefx/LXImageFunctions.h; sourceTree = SOURCE_ROOT; };
+		5AD3698A1901665B00A25553 /* LXMutex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXMutex.h; path = Lacefx/LXMutex.h; sourceTree = SOURCE_ROOT; };
+		5AD3698B1901665B00A25553 /* LXMutexAtomic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXMutexAtomic.h; path = Lacefx/LXMutexAtomic.h; sourceTree = SOURCE_ROOT; };
+		5AD3698C1901665B00A25553 /* LXNetworkUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXNetworkUtils.h; path = Lacefx/LXNetworkUtils.h; sourceTree = SOURCE_ROOT; };
+		5AD3698D1901665B00A25553 /* LXPatternGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXPatternGen.h; path = Lacefx/LXPatternGen.h; sourceTree = SOURCE_ROOT; };
+		5AD3698E1901665B00A25553 /* LXRandomGen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXRandomGen.h; path = Lacefx/LXRandomGen.h; sourceTree = SOURCE_ROOT; };
+		5AD3698F1901665B00A25553 /* LXStringUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXStringUtils.h; path = Lacefx/LXStringUtils.h; sourceTree = SOURCE_ROOT; };
+		5AD369901901665B00A25553 /* LXShaderUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXShaderUtils.h; path = Lacefx/LXShaderUtils.h; sourceTree = SOURCE_ROOT; };
+		5AD369911901665B00A25553 /* LXThreadLocal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LXThreadLocal.h; path = Lacefx/LXThreadLocal.h; sourceTree = SOURCE_ROOT; };
+		5AD369941901668300A25553 /* LXBinaryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXBinaryUtils.h; path = Lacefx/LXBinaryUtils.h; sourceTree = SOURCE_ROOT; };
+		5AD369951901668300A25553 /* LXBinaryUtils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXBinaryUtils.c; path = Lacefx/LXBinaryUtils.c; sourceTree = SOURCE_ROOT; };
+		5AD369961901668300A25553 /* LXStringUtils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXStringUtils.c; path = Lacefx/LXStringUtils.c; sourceTree = SOURCE_ROOT; };
+		5AD369971901668300A25553 /* LXShaderUtils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXShaderUtils.c; path = Lacefx/LXShaderUtils.c; sourceTree = SOURCE_ROOT; };
+		5AD369981901668300A25553 /* LXColorFunctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXColorFunctions.c; path = Lacefx/LXColorFunctions.c; sourceTree = SOURCE_ROOT; };
+		5AD369991901668300A25553 /* LXCurveFunctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXCurveFunctions.c; path = Lacefx/LXCurveFunctions.c; sourceTree = SOURCE_ROOT; };
+		5AD3699A1901668300A25553 /* LXImageFunctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXImageFunctions.c; path = Lacefx/LXImageFunctions.c; sourceTree = SOURCE_ROOT; };
+		5AD3699B1901668300A25553 /* LXNetworkUtils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXNetworkUtils.c; path = Lacefx/LXNetworkUtils.c; sourceTree = SOURCE_ROOT; };
+		5AD3699C1901668300A25553 /* LXPatternGen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXPatternGen.c; path = Lacefx/LXPatternGen.c; sourceTree = SOURCE_ROOT; };
+		5AD3699D1901668300A25553 /* LXRandomGen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXRandomGen.c; path = Lacefx/LXRandomGen.c; sourceTree = SOURCE_ROOT; };
+		5AD3699E1901668300A25553 /* mtwist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mtwist.h; path = Lacefx/mtwist.h; sourceTree = SOURCE_ROOT; };
+		5AD3699F1901668300A25553 /* mtwist.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mtwist.c; path = Lacefx/mtwist.c; sourceTree = SOURCE_ROOT; };
+		5AD369AA190166A900A25553 /* LXAccumulator.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXAccumulator.c; path = Lacefx/LXAccumulator.c; sourceTree = SOURCE_ROOT; };
+		5AD369AB190166A900A25553 /* LXBasicTypeFunctions.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXBasicTypeFunctions.c; path = Lacefx/LXBasicTypeFunctions.c; sourceTree = SOURCE_ROOT; };
+		5AD369AC190166A900A25553 /* LXCList.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXCList.c; path = Lacefx/LXCList.c; sourceTree = SOURCE_ROOT; };
+		5AD369AD190166A900A25553 /* LXDrawContext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXDrawContext.c; path = Lacefx/LXDrawContext.c; sourceTree = SOURCE_ROOT; };
+		5AD369AE190166A900A25553 /* LXDraw_Impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXDraw_Impl.h; path = Lacefx/LXDraw_Impl.h; sourceTree = SOURCE_ROOT; };
+		5AD369AF190166A900A25553 /* LXFixedPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXFixedPoint.h; path = Lacefx/LXFixedPoint.h; sourceTree = SOURCE_ROOT; };
+		5AD369B0190166A900A25553 /* LXFixedPoint.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXFixedPoint.c; path = Lacefx/LXFixedPoint.c; sourceTree = SOURCE_ROOT; };
+		5AD369B1190166A900A25553 /* LXFPClosure.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXFPClosure.c; path = Lacefx/LXFPClosure.c; sourceTree = SOURCE_ROOT; };
+		5AD369B2190166A900A25553 /* LXFPClosureContext.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXFPClosureContext.c; path = Lacefx/LXFPClosureContext.c; sourceTree = SOURCE_ROOT; };
+		5AD369B3190166A900A25553 /* LXHalfFloat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXHalfFloat.c; path = Lacefx/LXHalfFloat.c; sourceTree = SOURCE_ROOT; };
+		5AD369B4190166A900A25553 /* LXHalfELUT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXHalfELUT.h; path = Lacefx/LXHalfELUT.h; sourceTree = SOURCE_ROOT; };
+		5AD369B5190166A900A25553 /* LXHalfToFloatLUT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXHalfToFloatLUT.h; path = Lacefx/LXHalfToFloatLUT.h; sourceTree = SOURCE_ROOT; };
+		5AD369B6190166A900A25553 /* LXImplTests.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXImplTests.c; path = Lacefx/LXImplTests.c; sourceTree = SOURCE_ROOT; };
+		5AD369B7190166A900A25553 /* LXMap_c.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXMap_c.c; path = Lacefx/LXMap_c.c; sourceTree = SOURCE_ROOT; };
+		5AD369B8190166A900A25553 /* hashmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hashmap.h; path = Lacefx/hashmap.h; sourceTree = SOURCE_ROOT; };
+		5AD369B9190166A900A25553 /* hashmap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = hashmap.c; path = Lacefx/hashmap.c; sourceTree = SOURCE_ROOT; };
+		5AD369BA190166A900A25553 /* LXMutexAtomic.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXMutexAtomic.c; path = Lacefx/LXMutexAtomic.c; sourceTree = SOURCE_ROOT; };
+		5AD369BB190166A900A25553 /* LXPixelBuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXPixelBuffer.c; path = Lacefx/LXPixelBuffer.c; sourceTree = SOURCE_ROOT; };
+		5AD369BC190166A900A25553 /* LXPixelBuffer_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXPixelBuffer_priv.h; path = Lacefx/LXPixelBuffer_priv.h; sourceTree = SOURCE_ROOT; };
+		5AD369BD190166A900A25553 /* LXPixelBuffer_bmp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXPixelBuffer_bmp.c; path = Lacefx/LXPixelBuffer_bmp.c; sourceTree = SOURCE_ROOT; };
+		5AD369BE190166A900A25553 /* LXPixelBuffer_dpx.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXPixelBuffer_dpx.c; path = Lacefx/LXPixelBuffer_dpx.c; sourceTree = SOURCE_ROOT; };
+		5AD369C1190166A900A25553 /* LXPool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXPool.c; path = Lacefx/LXPool.c; sourceTree = SOURCE_ROOT; };
+		5AD369C2190166A900A25553 /* LXPool_pixelbuffer_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXPool_pixelbuffer_priv.h; path = Lacefx/LXPool_pixelbuffer_priv.h; sourceTree = SOURCE_ROOT; };
+		5AD369C3190166A900A25553 /* LXPool_pixelbuffer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXPool_pixelbuffer.c; path = Lacefx/LXPool_pixelbuffer.c; sourceTree = SOURCE_ROOT; };
+		5AD369C4190166A900A25553 /* LXPool_surface_priv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXPool_surface_priv.h; path = Lacefx/LXPool_surface_priv.h; sourceTree = SOURCE_ROOT; };
+		5AD369C5190166A900A25553 /* LXRef.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXRef.c; path = Lacefx/LXRef.c; sourceTree = SOURCE_ROOT; };
+		5AD369C6190166A900A25553 /* LXRef_Impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXRef_Impl.h; path = Lacefx/LXRef_Impl.h; sourceTree = SOURCE_ROOT; };
+		5AD369C7190166A900A25553 /* LXRef_objcwrap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LXRef_objcwrap.m; path = Lacefx/LXRef_objcwrap.m; sourceTree = SOURCE_ROOT; };
+		5AD369C8190166A900A25553 /* LXShader_common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LXShader_common.m; path = Lacefx/LXShader_common.m; sourceTree = SOURCE_ROOT; };
+		5AD369C9190166A900A25553 /* LXShader_Impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXShader_Impl.h; path = Lacefx/LXShader_Impl.h; sourceTree = SOURCE_ROOT; };
+		5AD369CA190166A900A25553 /* LXShaderTranslation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXShaderTranslation.h; path = Lacefx/LXShaderTranslation.h; sourceTree = SOURCE_ROOT; };
+		5AD369CB190166A900A25553 /* LXShaderTranslation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LXShaderTranslation.m; path = Lacefx/LXShaderTranslation.m; sourceTree = SOURCE_ROOT; };
+		5AD369CC190166A900A25553 /* LXDrawContext_Impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXDrawContext_Impl.h; path = Lacefx/LXDrawContext_Impl.h; sourceTree = SOURCE_ROOT; };
+		5AD369CD190166A900A25553 /* LXSurface_utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXSurface_utils.c; path = Lacefx/LXSurface_utils.c; sourceTree = SOURCE_ROOT; };
+		5AD369CE190166A900A25553 /* LXTextureArray.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXTextureArray.c; path = Lacefx/LXTextureArray.c; sourceTree = SOURCE_ROOT; };
+		5AD369CF190166A900A25553 /* LXTransform3D.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXTransform3D.c; path = Lacefx/LXTransform3D.c; sourceTree = SOURCE_ROOT; };
+		5AD369D0190166A900A25553 /* LXThreadLocal.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = LXThreadLocal.c; path = Lacefx/LXThreadLocal.c; sourceTree = SOURCE_ROOT; };
+		5AD369ED1901676200A25553 /* LacefxESView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LacefxESView.h; sourceTree = "<group>"; };
+		5AD369EE1901676200A25553 /* LacefxESView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LacefxESView.m; sourceTree = "<group>"; };
+		5AD369EF1901676200A25553 /* LXDraw_iosgles2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDraw_iosgles2.h; sourceTree = "<group>"; };
+		5AD369F01901676200A25553 /* LXDraw_iosgles2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDraw_iosgles2.m; sourceTree = "<group>"; };
+		5AD369F11901676200A25553 /* LXPlatform_ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXPlatform_ios.h; sourceTree = "<group>"; };
+		5AD369F21901676200A25553 /* LXPlatform_iosgles2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXPlatform_iosgles2.m; sourceTree = "<group>"; };
+		5AD369F31901676200A25553 /* LXShader_iosgles2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXShader_iosgles2.m; sourceTree = "<group>"; };
+		5AD369F41901676200A25553 /* LXSurface_iosgles2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXSurface_iosgles2.m; sourceTree = "<group>"; };
+		5AD369F51901676200A25553 /* LXTexture_iosgles2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTexture_iosgles2.m; sourceTree = "<group>"; };
+		5AD369F61901676200A25553 /* shaderCompileUtils_iosgles2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shaderCompileUtils_iosgles2.h; sourceTree = "<group>"; };
+		5AD369F71901676200A25553 /* shaderCompileUtils_iosgles2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shaderCompileUtils_iosgles2.m; sourceTree = "<group>"; };
+		5AD36A00190167B500A25553 /* LXPlatform_applebase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LXPlatform_applebase.m; path = Lacefx/LXPlatform_applebase.m; sourceTree = SOURCE_ROOT; };
+		5AD36A021901682400A25553 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5AD3692B19015CDD00A25553 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AD36A031901682400A25553 /* GLKit.framework in Frameworks */,
+				5AD3696C1901661500A25553 /* ImageIO.framework in Frameworks */,
+				5AD3693219015CDD00A25553 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5AD3692519015CDD00A25553 = {
+			isa = PBXGroup;
+			children = (
+				5AD3693319015CDD00A25553 /* Lacefx-iOS */,
+				5AD3693019015CDD00A25553 /* Frameworks */,
+				5AD3692F19015CDD00A25553 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5AD3692F19015CDD00A25553 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5AD3692E19015CDD00A25553 /* libLacefx.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5AD3693019015CDD00A25553 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5AD36A021901682400A25553 /* GLKit.framework */,
+				5AD3696B1901661500A25553 /* ImageIO.framework */,
+				5AD3693119015CDD00A25553 /* Foundation.framework */,
+				5AD3693F19015CDD00A25553 /* XCTest.framework */,
+				5AD3694219015CDD00A25553 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5AD3693319015CDD00A25553 /* Lacefx-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5AD3696D1901662200A25553 /* Base API Public Headers */,
+				5AD369831901664C00A25553 /* Utils API Public Headers */,
+				5AD369921901666B00A25553 /* Base sources */,
+				5AD369FF190167A700A25553 /* Shared Apple platform impl */,
+				5AD369EC1901670600A25553 /* iOS specific */,
+				5AD369931901667300A25553 /* Utils sources */,
+				5AD3693419015CDD00A25553 /* Supporting Files */,
+			);
+			path = "Lacefx-iOS";
+			sourceTree = "<group>";
+		};
+		5AD3693419015CDD00A25553 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5AD3693519015CDD00A25553 /* Lacefx-iOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5AD3696D1901662200A25553 /* Base API Public Headers */ = {
+			isa = PBXGroup;
+			children = (
+				5AD3696E1901663A00A25553 /* Lacefx.h */,
+				5AD3696F1901663A00A25553 /* LXAccumulator.h */,
+				5AD369701901663A00A25553 /* LXBasicTypes.h */,
+				5AD369711901663A00A25553 /* LXBasicTypeFunctions.h */,
+				5AD369721901663A00A25553 /* LXCList.h */,
+				5AD369731901663A00A25553 /* LXConvolver.h */,
+				5AD369741901663A00A25553 /* LXDrawContext.h */,
+				5AD369751901663A00A25553 /* LXFPClosure.h */,
+				5AD369761901663A00A25553 /* LXFPClosureContext.h */,
+				5AD369771901663A00A25553 /* LXHalfFloat.h */,
+				5AD369781901663A00A25553 /* LXMap.h */,
+				5AD369791901663A00A25553 /* LXPixelBuffer.h */,
+				5AD3697A1901663A00A25553 /* LXPlatform.h */,
+				5AD3697B1901663A00A25553 /* LXPool.h */,
+				5AD3697C1901663A00A25553 /* LXRefTypes.h */,
+				5AD3697D1901663A00A25553 /* LXShader.h */,
+				5AD3697E1901663A00A25553 /* LXSuites.h */,
+				5AD3697F1901663A00A25553 /* LXSurface.h */,
+				5AD369801901663A00A25553 /* LXTexture.h */,
+				5AD369811901663A00A25553 /* LXTextureArray.h */,
+				5AD369821901663A00A25553 /* LXTransform3D.h */,
+			);
+			name = "Base API Public Headers";
+			sourceTree = "<group>";
+		};
+		5AD369831901664C00A25553 /* Utils API Public Headers */ = {
+			isa = PBXGroup;
+			children = (
+				5AD369841901665A00A25553 /* LXColorFunctions.h */,
+				5AD369851901665A00A25553 /* LXDevice.h */,
+				5AD369861901665B00A25553 /* LXCurveTypes.h */,
+				5AD369871901665B00A25553 /* LXCurveFunctions.h */,
+				5AD369881901665B00A25553 /* LXFileHandlers.h */,
+				5AD369891901665B00A25553 /* LXImageFunctions.h */,
+				5AD3698A1901665B00A25553 /* LXMutex.h */,
+				5AD3698B1901665B00A25553 /* LXMutexAtomic.h */,
+				5AD3698C1901665B00A25553 /* LXNetworkUtils.h */,
+				5AD3698D1901665B00A25553 /* LXPatternGen.h */,
+				5AD3698E1901665B00A25553 /* LXRandomGen.h */,
+				5AD3698F1901665B00A25553 /* LXStringUtils.h */,
+				5AD369901901665B00A25553 /* LXShaderUtils.h */,
+				5AD369911901665B00A25553 /* LXThreadLocal.h */,
+			);
+			name = "Utils API Public Headers";
+			sourceTree = "<group>";
+		};
+		5AD369921901666B00A25553 /* Base sources */ = {
+			isa = PBXGroup;
+			children = (
+				5AD369AA190166A900A25553 /* LXAccumulator.c */,
+				5AD369AB190166A900A25553 /* LXBasicTypeFunctions.c */,
+				5AD369AC190166A900A25553 /* LXCList.c */,
+				5AD369AD190166A900A25553 /* LXDrawContext.c */,
+				5AD369AE190166A900A25553 /* LXDraw_Impl.h */,
+				5AD369AF190166A900A25553 /* LXFixedPoint.h */,
+				5AD369B0190166A900A25553 /* LXFixedPoint.c */,
+				5AD369B1190166A900A25553 /* LXFPClosure.c */,
+				5AD369B2190166A900A25553 /* LXFPClosureContext.c */,
+				5AD369B3190166A900A25553 /* LXHalfFloat.c */,
+				5AD369B4190166A900A25553 /* LXHalfELUT.h */,
+				5AD369B5190166A900A25553 /* LXHalfToFloatLUT.h */,
+				5AD369B6190166A900A25553 /* LXImplTests.c */,
+				5AD369B7190166A900A25553 /* LXMap_c.c */,
+				5AD369B8190166A900A25553 /* hashmap.h */,
+				5AD369B9190166A900A25553 /* hashmap.c */,
+				5AD369BA190166A900A25553 /* LXMutexAtomic.c */,
+				5AD369BB190166A900A25553 /* LXPixelBuffer.c */,
+				5AD369BC190166A900A25553 /* LXPixelBuffer_priv.h */,
+				5AD369BD190166A900A25553 /* LXPixelBuffer_bmp.c */,
+				5AD369BE190166A900A25553 /* LXPixelBuffer_dpx.c */,
+				5AD369C1190166A900A25553 /* LXPool.c */,
+				5AD369C2190166A900A25553 /* LXPool_pixelbuffer_priv.h */,
+				5AD369C3190166A900A25553 /* LXPool_pixelbuffer.c */,
+				5AD369C4190166A900A25553 /* LXPool_surface_priv.h */,
+				5AD369C5190166A900A25553 /* LXRef.c */,
+				5AD369C6190166A900A25553 /* LXRef_Impl.h */,
+				5AD369C7190166A900A25553 /* LXRef_objcwrap.m */,
+				5AD369C8190166A900A25553 /* LXShader_common.m */,
+				5AD369C9190166A900A25553 /* LXShader_Impl.h */,
+				5AD369CA190166A900A25553 /* LXShaderTranslation.h */,
+				5AD369CB190166A900A25553 /* LXShaderTranslation.m */,
+				5AD369CC190166A900A25553 /* LXDrawContext_Impl.h */,
+				5AD369CD190166A900A25553 /* LXSurface_utils.c */,
+				5AD369CE190166A900A25553 /* LXTextureArray.c */,
+				5AD369CF190166A900A25553 /* LXTransform3D.c */,
+				5AD369D0190166A900A25553 /* LXThreadLocal.c */,
+			);
+			name = "Base sources";
+			sourceTree = "<group>";
+		};
+		5AD369931901667300A25553 /* Utils sources */ = {
+			isa = PBXGroup;
+			children = (
+				5AD369941901668300A25553 /* LXBinaryUtils.h */,
+				5AD369951901668300A25553 /* LXBinaryUtils.c */,
+				5AD369961901668300A25553 /* LXStringUtils.c */,
+				5AD369971901668300A25553 /* LXShaderUtils.c */,
+				5AD369981901668300A25553 /* LXColorFunctions.c */,
+				5AD369991901668300A25553 /* LXCurveFunctions.c */,
+				5AD3699A1901668300A25553 /* LXImageFunctions.c */,
+				5AD3699B1901668300A25553 /* LXNetworkUtils.c */,
+				5AD3699C1901668300A25553 /* LXPatternGen.c */,
+				5AD3699D1901668300A25553 /* LXRandomGen.c */,
+				5AD3699E1901668300A25553 /* mtwist.h */,
+				5AD3699F1901668300A25553 /* mtwist.c */,
+			);
+			name = "Utils sources";
+			sourceTree = "<group>";
+		};
+		5AD369EC1901670600A25553 /* iOS specific */ = {
+			isa = PBXGroup;
+			children = (
+				5AD369ED1901676200A25553 /* LacefxESView.h */,
+				5AD369EE1901676200A25553 /* LacefxESView.m */,
+				5AD369EF1901676200A25553 /* LXDraw_iosgles2.h */,
+				5AD369F01901676200A25553 /* LXDraw_iosgles2.m */,
+				5AD369F11901676200A25553 /* LXPlatform_ios.h */,
+				5AD369F21901676200A25553 /* LXPlatform_iosgles2.m */,
+				5AD369F31901676200A25553 /* LXShader_iosgles2.m */,
+				5AD369F41901676200A25553 /* LXSurface_iosgles2.m */,
+				5AD369F51901676200A25553 /* LXTexture_iosgles2.m */,
+				5AD369F61901676200A25553 /* shaderCompileUtils_iosgles2.h */,
+				5AD369F71901676200A25553 /* shaderCompileUtils_iosgles2.m */,
+			);
+			name = "iOS specific";
+			sourceTree = "<group>";
+		};
+		5AD369FF190167A700A25553 /* Shared Apple platform impl */ = {
+			isa = PBXGroup;
+			children = (
+				5AD36A00190167B500A25553 /* LXPlatform_applebase.m */,
+			);
+			name = "Shared Apple platform impl";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5AD3692D19015CDD00A25553 /* Lacefx-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AD3695119015CDD00A25553 /* Build configuration list for PBXNativeTarget "Lacefx-iOS" */;
+			buildPhases = (
+				5AD3692A19015CDD00A25553 /* Sources */,
+				5AD3692B19015CDD00A25553 /* Frameworks */,
+				5AD3692C19015CDD00A25553 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lacefx-iOS";
+			productName = "Lacefx-iOS";
+			productReference = 5AD3692E19015CDD00A25553 /* libLacefx.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5AD3692619015CDD00A25553 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Lacquer oy/ltd";
+			};
+			buildConfigurationList = 5AD3692919015CDD00A25553 /* Build configuration list for PBXProject "Lacefx-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5AD3692519015CDD00A25553;
+			productRefGroup = 5AD3692F19015CDD00A25553 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5AD3692D19015CDD00A25553 /* Lacefx-iOS */,
+				5AD36A4A190171C100A25553 /* UniversalLib-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5AD36A4E190171F300A25553 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# define output folder environment variable\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\nPROJECT_NAME=Lacefx-iOS\nPRODUCT_NAME=libLacefx.a\n\n# build Device and Simulator versions\nxcodebuild -project ${PROJECT_NAME}.xcodeproj -target ${PROJECT_NAME} ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\nxcodebuild -project ${PROJECT_NAME}.xcodeproj -target ${PROJECT_NAME} -configuration ${CONFIGURATION} -sdk iphonesimulator -arch i386 BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\"\n\n# ensure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# create universal binary file using lipo\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PRODUCT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PRODUCT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PRODUCT_NAME}\"\n\n# copy header files\n#cp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/include\" \"${UNIVERSAL_OUTPUTFOLDER}/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5AD3692A19015CDD00A25553 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AD369DD190166A900A25553 /* LXPixelBuffer.c in Sources */,
+				5AD369D2190166A900A25553 /* LXBasicTypeFunctions.c in Sources */,
+				5AD369EB190166A900A25553 /* LXThreadLocal.c in Sources */,
+				5AD369E9190166A900A25553 /* LXTextureArray.c in Sources */,
+				5AD369DE190166A900A25553 /* LXPixelBuffer_bmp.c in Sources */,
+				5AD369E3190166A900A25553 /* LXPool_pixelbuffer.c in Sources */,
+				5AD369A41901668300A25553 /* LXCurveFunctions.c in Sources */,
+				5AD369D9190166A900A25553 /* LXImplTests.c in Sources */,
+				5AD369A61901668300A25553 /* LXNetworkUtils.c in Sources */,
+				5AD369A21901668300A25553 /* LXShaderUtils.c in Sources */,
+				5AD369F81901676200A25553 /* LacefxESView.m in Sources */,
+				5AD369FD1901676200A25553 /* LXTexture_iosgles2.m in Sources */,
+				5AD369D7190166A900A25553 /* LXFPClosureContext.c in Sources */,
+				5AD369EA190166A900A25553 /* LXTransform3D.c in Sources */,
+				5AD369D6190166A900A25553 /* LXFPClosure.c in Sources */,
+				5AD369F91901676200A25553 /* LXDraw_iosgles2.m in Sources */,
+				5AD369A71901668300A25553 /* LXPatternGen.c in Sources */,
+				5AD369E2190166A900A25553 /* LXPool.c in Sources */,
+				5AD369E8190166A900A25553 /* LXSurface_utils.c in Sources */,
+				5AD369FB1901676200A25553 /* LXShader_iosgles2.m in Sources */,
+				5AD369D5190166A900A25553 /* LXFixedPoint.c in Sources */,
+				5AD369E6190166A900A25553 /* LXShader_common.m in Sources */,
+				5AD369E7190166A900A25553 /* LXShaderTranslation.m in Sources */,
+				5AD36A51190173DD00A25553 /* mtwist.c in Sources */,
+				5AD369DC190166A900A25553 /* LXMutexAtomic.c in Sources */,
+				5AD369DF190166A900A25553 /* LXPixelBuffer_dpx.c in Sources */,
+				5AD369A81901668300A25553 /* LXRandomGen.c in Sources */,
+				5AD369D3190166A900A25553 /* LXCList.c in Sources */,
+				5AD369FC1901676200A25553 /* LXSurface_iosgles2.m in Sources */,
+				5AD36A01190167B500A25553 /* LXPlatform_applebase.m in Sources */,
+				5AD369A11901668300A25553 /* LXStringUtils.c in Sources */,
+				5AD369A51901668300A25553 /* LXImageFunctions.c in Sources */,
+				5AD369E4190166A900A25553 /* LXRef.c in Sources */,
+				5AD369FE1901676200A25553 /* shaderCompileUtils_iosgles2.m in Sources */,
+				5AD369DA190166A900A25553 /* LXMap_c.c in Sources */,
+				5AD369D1190166A900A25553 /* LXAccumulator.c in Sources */,
+				5AD369D4190166A900A25553 /* LXDrawContext.c in Sources */,
+				5AD369FA1901676200A25553 /* LXPlatform_iosgles2.m in Sources */,
+				5AD369D8190166A900A25553 /* LXHalfFloat.c in Sources */,
+				5AD369E5190166A900A25553 /* LXRef_objcwrap.m in Sources */,
+				5AD369A01901668300A25553 /* LXBinaryUtils.c in Sources */,
+				5AD369A31901668300A25553 /* LXColorFunctions.c in Sources */,
+				5AD369DB190166A900A25553 /* hashmap.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5AD3694F19015CDD00A25553 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5AD3695019015CDD00A25553 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5AD3695219015CDD00A25553 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				DSTROOT = /tmp/Lacefx_iOS.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lacefx-iOS/Lacefx-iOS-Prefix.pch";
+				GCC_WARN_UNUSED_FUNCTION = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = Lacefx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5AD3695319015CDD00A25553 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				DSTROOT = /tmp/Lacefx_iOS.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lacefx-iOS/Lacefx-iOS-Prefix.pch";
+				GCC_WARN_UNUSED_FUNCTION = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = Lacefx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5AD36A4C190171C100A25553 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5AD36A4D190171C100A25553 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5AD3692919015CDD00A25553 /* Build configuration list for PBXProject "Lacefx-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AD3694F19015CDD00A25553 /* Debug */,
+				5AD3695019015CDD00A25553 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AD3695119015CDD00A25553 /* Build configuration list for PBXNativeTarget "Lacefx-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AD3695219015CDD00A25553 /* Debug */,
+				5AD3695319015CDD00A25553 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AD36A4B190171C100A25553 /* Build configuration list for PBXAggregateTarget "UniversalLib-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AD36A4C190171C100A25553 /* Debug */,
+				5AD36A4D190171C100A25553 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5AD3692619015CDD00A25553 /* Project object */;
+}

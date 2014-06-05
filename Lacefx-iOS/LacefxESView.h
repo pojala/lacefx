@@ -13,7 +13,7 @@
 */
 
 #import <UIKit/UIKit.h>
-#import <Lacefx/Lacefx.h>
+#import "Lacefx.h"
 #import <QuartzCore/QuartzCore.h>
 #import <OpenGLES/EAGL.h>
 #import <OpenGLES/EAGLDrawable.h>
@@ -30,8 +30,6 @@
 
     LXSurfaceRef _lxSurface;
     
-    id _displayLink;
-    
     EAGLContext *_context;
     // The pixel dimensions of the backbuffer
     GLint _backingWidth;
@@ -42,7 +40,7 @@
 
 @property (nonatomic, assign) BOOL isBeingRotated;
 
-- (EAGLContext *)EAGLContext;
+@property (nonatomic, readonly) EAGLContext *EAGLContext;
 
 - (void)drawView:(id)sender;
 

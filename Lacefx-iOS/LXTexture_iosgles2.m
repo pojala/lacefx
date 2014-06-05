@@ -43,7 +43,7 @@ typedef struct {
 
 // platform-independent parts of the class
 #define LXTEXTUREIMPL LXTexture_iOSImpl
-#include "LXTexture_baseinc.c"
+#include "../Lacefx/LXTexture_baseinc.c"
 
 
 LXTextureRef LXTextureRetain(LXTextureRef r)

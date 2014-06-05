@@ -67,11 +67,11 @@ LXINLINE LXFUNCATTR_PURE LXHalf LXHalfFromFloat(const float f)
 
         x.f = f;
         
-        register LXUInteger e = (x.i >> 23) & 0x000001ff;
-        register LXUInteger el = s_LXHalf_eLut[e];
+        LXUInteger e = (x.i >> 23) & 0x000001ff;
+        LXUInteger el = s_LXHalf_eLut[e];
 
         if (el) {
-            register LXUInteger m = x.i & 0x007fffff;
+            LXUInteger m = x.i & 0x007fffff;
             h = el + ((m + 0x00000fff + ((m >> 13) & 1)) >> 13);
         }
         else {

@@ -13,6 +13,7 @@
  */
 
 #import "LacefxESView.h"
+#import "LXPlatform_ios.h"
 #import <QuartzCore/QuartzCore.h>
 #import <OpenGLES/EAGLDrawable.h>
 
@@ -60,7 +61,7 @@ extern void LXSurfaceEndUIViewDrawing_(LXSurfaceRef r);
         }
         
         if ( !_context || ![EAGLContext setCurrentContext:_context]) {
-            NSLog(@"*** %s: unable to init OpenGL ES context (api %i, existing ctx %p)", __func__, apiType, existingSharedContext);
+            NSLog(@"*** %s: unable to init OpenGL ES context (api %ld, existing ctx %p)", __func__, (long)apiType, existingSharedContext);
         } else {
             // Create system framebuffer object. The backing will be allocated in -reshapeFramebuffer
             glGenFramebuffers(1, &_viewFramebuffer);
@@ -69,7 +70,7 @@ extern void LXSurfaceEndUIViewDrawing_(LXSurfaceRef r);
             glBindRenderbuffer(GL_RENDERBUFFER, _viewRenderbuffer);
             glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, _viewRenderbuffer);
             
-            NSLog(@"%s -- created gl context %p, framebuffer %i", __func__, _context, (int)_viewFramebuffer);
+            NSLog(@"%s - created gl context %p, framebufferid=%i, renderbufferid=%i", __func__, _context, (int)_viewFramebuffer, (int)_viewRenderbuffer);
             
             if ( !existingSharedContext) {
                 LXPlatformSetSharedEAGLContext(_context);
@@ -176,10 +177,10 @@ extern void LXSurfaceEndUIViewDrawing_(LXSurfaceRef r);
 
 - (void)layoutSubviews
 {
-    if (_context) {
-        [self resizeFromLayer:(CAEAGLLayer*)self.layer];
-        [self drawView:nil];
-    }
+    [super layoutSubviews];
+    
+    [self resizeFromLayer:(CAEAGLLayer *)self.layer];
+    [self drawView:nil];
 }
 
 

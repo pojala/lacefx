@@ -17,6 +17,12 @@
 
 #include "LXFileHandlers.h"
 
+#if defined(LXPLATFORM_MAC) && defined(__OBJC__)
+// on Mac, this file includes functions for converting between LXPixelBufferRef and NSBitmapImageRep
+#import <AppKit/AppKit.h>
+#endif
+
+
 enum {
     kLXImage_PNG = 1,
     kLXImage_BMP,
@@ -89,6 +95,13 @@ LXEXPORT void LXFitRegionToBufferAndClearOutside(int32_t *pRegionX, int32_t *pRe
                                                  const uint32_t srcW, const uint32_t srcH);
 
 
+#if defined(LXPLATFORM_MAC) && defined(__OBJC__)
+LXEXPORT NSBitmapImageRep *LXPixelBufferCopyAsNSBitmapImageRep(LXPixelBufferRef srcPixbuf, LXError *outError);
+    
+LXEXPORT LXPixelBufferRef LXPixelBufferCreateFromNSBitmapImageRep(NSBitmapImageRep *rep, LXError *outError);
+#endif
+    
+    
 #ifdef __cplusplus
 }
 #endif

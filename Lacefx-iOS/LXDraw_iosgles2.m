@@ -19,7 +19,7 @@
 #include "LXTextureArray.h"
 #include "LXPlatform_ios.h"
 
-#import <OpenGLES/ES2/gl.h>
+#import <GLKit/GLKit.h>
 
 #import "LacefxESView.h"
 

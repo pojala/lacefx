@@ -54,7 +54,9 @@ LXEXPORT LXTextureRef LXTextureCreateWrapperForGLTexture_(unsigned int glTexID, 
 
 
 // --- other API missing on Windows ---
-    
+
+LXEXPORT LXInteger LXPlatformGetHWAmountOfMemory();
+
 LXEXPORT const char *LXPlatformRendererNameForDisplayIdentifier(LXInteger dmask);
     
 

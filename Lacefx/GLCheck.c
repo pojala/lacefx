@@ -113,36 +113,37 @@ unsigned char HaveOpenGLCapsChanged (GLCaps aDisplayCaps[],
 
   theError = CGGetActiveDisplayList(maxDisplays, activeDspys, &newDspyCnt);
   // if theError getting list mark as changed
-  if (theError) return 1; 
+  if (theError) return 2;
   // if number of displays not equal
-  if (dspyCnt != newDspyCnt) return 1;
+  if (dspyCnt != newDspyCnt) return 3;
   
   for (i = 0; i < dspyCnt; i++) {
     // get device ids
-    if (aDisplayCaps[i].cgDisplayID != activeDspys[i]) return 1;
+    if (aDisplayCaps[i].cgDisplayID != activeDspys[i]) return 4;
     if (aDisplayCaps[i].cglDisplayMask !=  
-        CGDisplayIDToOpenGLDisplayMask(activeDspys[i])) return 1;
+        CGDisplayIDToOpenGLDisplayMask(activeDspys[i])) return 5;
  
     // get current geometry
     {
       CGRect displayRect = CGDisplayBounds (activeDspys[i]);
-      // get mode dictionary
-      CFDictionaryRef dispMode = CGDisplayCurrentMode (activeDspys[i]);
-      // check for all geometry matches 
       if (aDisplayCaps[i].deviceWidth != (long) displayRect.size.width)
-        return 1;   
+        return 6;
       if (aDisplayCaps[i].deviceHeight != (long) displayRect.size.height) 
-        return 1;   
+        return 7;
       if (aDisplayCaps[i].deviceOriginX != (long) displayRect.origin.x) 
-        return 1;   
+        return 8;
       if (aDisplayCaps[i].deviceOriginY != (long) displayRect.origin.y) 
-        return 1;   
-      if (aDisplayCaps[i].deviceDepth != 
-                 (short) _getDictLong (dispMode,  kCGDisplayBitsPerPixel)) 
-        return 1;    
-      if (aDisplayCaps[i].deviceRefresh != 
-          (short)(_getDictDouble (dispMode, kCGDisplayRefreshRate) + 0.5)) 
-        return 1; // round to GLint
+        return 9;
+        
+      CFDictionaryRef dispMode = CGDisplayCurrentMode (activeDspys[i]);
+      if (dispMode) {
+            if (aDisplayCaps[i].deviceDepth !=
+                (short) _getDictLong (dispMode,  kCGDisplayBitsPerPixel))
+                return 10;
+            if (aDisplayCaps[i].deviceRefresh !=
+                (short)(_getDictDouble (dispMode, kCGDisplayRefreshRate) + 0.5))
+                return 11; // round to GLint
+        }
     }
 
     // get renderer info based on gDevice
@@ -150,8 +151,8 @@ unsigned char HaveOpenGLCapsChanged (GLCaps aDisplayCaps[],
       CGLRendererInfoObj info;
       GLint j, numRenderers = 0, rv = 0;
       CGLError theErr = 0;
-      GLint deviceVRAM; // video memory in bytes
-      unsigned long rendererID; // renderer ID
+      GLint deviceVRAM = 0; // video memory in bytes
+      GLint rendererID = 0; // renderer ID
       
       theErr = CGLQueryRendererInfo (aDisplayCaps[i].cglDisplayMask, 
                                   &info, &numRenderers);
@@ -162,13 +163,15 @@ unsigned char HaveOpenGLCapsChanged (GLCaps aDisplayCaps[],
           CGLDescribeRenderer (info, j, kCGLRPAccelerated, &rv); 
           if (true == rv) { // if accelerated
             // what is the renderer ID
-            CGLDescribeRenderer (info, j, kCGLRPRendererID, (GLint *)&rendererID);
-            if (rendererID != aDisplayCaps[i].rendererID) // check match
-              return 1;
+            CGLDescribeRenderer (info, j, kCGLRPRendererID, &rendererID);
+              if (rendererID != aDisplayCaps[i].rendererID) {
+                  //printf("%s, display %i/%i, renderer %i/%i: rendererID %ld, was %ld\n", __func__, i+1, dspyCnt, j+1, numRenderers, (long)rendererID, (long)aDisplayCaps[i].rendererID);
+                  return 12;
+              }
             // what is the VRAM
             CGLDescribeRenderer (info, j, kCGLRPVideoMemory, &deviceVRAM); 
-            if (deviceVRAM != aDisplayCaps[i].deviceVRAM) // check match
-              return 1;
+            if (deviceVRAM != aDisplayCaps[i].deviceVRAM)
+              return 13;
             break; // done
           }
         }
@@ -241,16 +244,18 @@ void CheckOpenGLCaps (CGDisplayCount maxDspys,
     { // get current geometry
       CGRect displayRect = CGDisplayBounds (dspys[i]);
       // get mode dictionary
-      CFDictionaryRef dispMode = CGDisplayCurrentMode (dspys[i]); 
-      dCaps[i].deviceWidth = (long) displayRect.size.width;   
+      dCaps[i].deviceWidth = (long) displayRect.size.width;
       dCaps[i].deviceHeight = (long) displayRect.size.height;   
       dCaps[i].deviceOriginX = (long) displayRect.origin.x;   
       dCaps[i].deviceOriginY = (long) displayRect.origin.y;   
-      dCaps[i].deviceDepth = (short) _getDictLong (dispMode,  
+      CFDictionaryRef dispMode = CGDisplayCurrentMode (dspys[i]);
+      if (dispMode) {
+            dCaps[i].deviceDepth = (short) _getDictLong (dispMode,
                                               kCGDisplayBitsPerPixel);    
-      dCaps[i].deviceRefresh = (short) (_getDictDouble (dispMode,
-                                        kCGDisplayRefreshRate) + 0.5); 
-    }    
+            dCaps[i].deviceRefresh = (short) (_getDictDouble (dispMode,
+                                        kCGDisplayRefreshRate) + 0.5);
+      }
+    }
 
     { // get renderer info based on gDevice
       CGLRendererInfoObj info;
@@ -268,16 +273,16 @@ void CheckOpenGLCaps (CGDisplayCount maxDspys,
           if (true == rv) { // if accelerated
             // what is the renderer ID
             CGLDescribeRenderer (info, j, kCGLRPRendererID,
-                                 &dCaps[i].rendererID);
+                                 (GLint *)&dCaps[i].rendererID);
             // can we do full screen?
             CGLDescribeRenderer (info, j, kCGLRPFullScreen, &rv); 
             dCaps[i].fullScreenCapable = (bool) rv;
             // what is the VRAM?
             CGLDescribeRenderer (info, j, kCGLRPVideoMemory,
-                                 &dCaps[i].deviceVRAM);
+                                 (GLint *)&dCaps[i].deviceVRAM);
             // what is the current texture memory? 
             CGLDescribeRenderer (info, j, kCGLRPTextureMemory,
-                                 &dCaps[i].deviceTextureRAM);
+                                 (GLint *)&dCaps[i].deviceTextureRAM);
             break; // done
           }
         }

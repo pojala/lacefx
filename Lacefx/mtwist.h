@@ -91,23 +91,15 @@
 #endif /* MT_MACHINE_BITS */
 
 
-// this macro added by Pauli Ojala to ensure proper compilation on GCC
-#if defined(__GNUC__) || defined(__GCC__)
-#ifndef MT_ALWAYS_INLINE
-#undef MT_EXTERN
-
-// for whatever reason, the ARM compiler behaves differently and requires this
-#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
- #define MT_EXTERN extern
-#else
+// this macro added by Pauli Ojala to ensure proper compilation on GCC/Clang
+#if defined(__GNUC__) || defined(__GCC__) || defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
+ #ifndef MT_ALWAYS_INLINE
+  #define MT_ALWAYS_INLINE __attribute__((always_inline))
+ #endif
+ #undef MT_EXTERN
  #define MT_EXTERN
-#endif
-
-#define MT_ALWAYS_INLINE __attribute__((always_inline))
-#endif
-
 #else
-#warning "Check that mtwist inlines are compiled correctly, may need defines"
+ #warning "Check that mtwist inlines are compiled correctly, may need defines"
 #endif
 
 

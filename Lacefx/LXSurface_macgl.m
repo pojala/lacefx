@@ -230,15 +230,20 @@ LXSurfaceRef LXSurfaceCreateFromNSView_(NSOpenGLView *view)
     
     LXSurfaceOSXImpl *imp = _lx_calloc(sizeof(LXSurfaceOSXImpl), 1);
     LXREF_INIT(imp, LXSurfaceTypeID(), LXSurfaceRetain, LXSurfaceRelease);
+    
+    NSSize size = [view bounds].size;
+    if ([view respondsToSelector:@selector(convertRectToBacking:)]) {
+        size = [view convertRectToBacking:[view bounds]].size;
+    }
 
-    imp->w = [view frame].size.width;
-    imp->h = [view frame].size.height;
+    imp->w = size.width;
+    imp->h = size.height;
     imp->pixelFormat = 0;
     imp->hasZBuffer = NO;
         
     imp->view = view;
     
-    ///NSLog(@"created LXSurface %p from view (%@); %i * %i", imp, view, imp->w, imp->h);
+    //NSLog(@"created LXSurface %p from view (%@); %i * %i", imp, view, imp->w, imp->h);
     
     return (LXSurfaceRef)imp;
 }

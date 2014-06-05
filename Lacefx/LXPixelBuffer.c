@@ -62,7 +62,7 @@ typedef struct {
 
     size_t rowBytes;
     uint8_t *buffer;
-    LXUInteger storageHint;  // currently only used value is kLXStorageHint_ClientStorage
+    LXUInteger storageHint;
     LXBool prefersCaching;
     
     // should add a (platform-dependent) lock here too, so the lock/unlock methods actually lock
@@ -422,12 +422,12 @@ LXTextureRef LXPixelBufferGetTexture(LXPixelBufferRef r, LXError *outError)
             storageHint |= kLXStorageHint_PreferCaching;
         }
         else {        
-            if (imp->storageHint & kLXStorageHint_PreferDMAToCaching) {
+            //if (imp->storageHint & kLXStorageHint_PreferDMAToCaching) {
                 storageHint |= kLXStorageHint_PreferDMAToCaching;
                 storageHint |= kLXStorageHint_ClientStorage;  // DMA flag makes no sense without client storage
-            }
+            //}
         }
-        //printf("%s, %p: storagehint %i (pxf %i)\n", __func__, r, (int)storageHint, (int)imp->pf);
+        //printf("%s, %p: storagehint %i (size %i*%i, pxf %i)\n", __func__, r, (int)storageHint, (int)imp->w, (int)imp->h, (int)imp->pf);
     
         imp->texture = LXTextureCreateWithData(imp->w, imp->h, imp->pf,
                                                imp->buffer, imp->rowBytes,

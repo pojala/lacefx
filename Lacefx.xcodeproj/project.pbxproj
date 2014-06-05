@@ -77,7 +77,7 @@
 		5A8CEBDE127E21A200BD253D /* LXPixelBuffer_bmp.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AEF126DC55B00DDC7FE /* LXPixelBuffer_bmp.c */; };
 		5A8CEBDF127E21A200BD253D /* LXPixelBuffer_dpx.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF0126DC55B00DDC7FE /* LXPixelBuffer_dpx.c */; };
 		5A8CEBE0127E21A200BD253D /* LXPixelBuffer_jpeg.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF1126DC55B00DDC7FE /* LXPixelBuffer_jpeg.c */; };
-		5A8CEBE1127E21A200BD253D /* LXPixelBuffer_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AEE126DC55B00DDC7FE /* LXPixelBuffer_priv.h */; };
+		5A8CEBE1127E21A200BD253D /* LXPixelBuffer_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AEE126DC55B00DDC7FE /* LXPixelBuffer_priv.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A8CEBE2127E21A200BD253D /* LXPixelBuffer_tiff.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF2126DC55B00DDC7FE /* LXPixelBuffer_tiff.c */; };
 		5A8CEBE3127E21A200BD253D /* LXPool.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF3126DC55B00DDC7FE /* LXPool.c */; };
 		5A8CEBE4127E21A200BD253D /* LXPool_pixelbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF5126DC55B00DDC7FE /* LXPool_pixelbuffer.c */; };
@@ -195,7 +195,7 @@
 		5AB58AFE126DC55B00DDC7FE /* hashmap.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AEB126DC55B00DDC7FE /* hashmap.h */; };
 		5AB58AFF126DC55B00DDC7FE /* hashmap.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AEC126DC55B00DDC7FE /* hashmap.c */; };
 		5AB58B00126DC55B00DDC7FE /* LXPixelBuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AED126DC55B00DDC7FE /* LXPixelBuffer.c */; };
-		5AB58B01126DC55B00DDC7FE /* LXPixelBuffer_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AEE126DC55B00DDC7FE /* LXPixelBuffer_priv.h */; };
+		5AB58B01126DC55B00DDC7FE /* LXPixelBuffer_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AEE126DC55B00DDC7FE /* LXPixelBuffer_priv.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AB58B02126DC55B00DDC7FE /* LXPixelBuffer_bmp.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AEF126DC55B00DDC7FE /* LXPixelBuffer_bmp.c */; };
 		5AB58B03126DC55B00DDC7FE /* LXPixelBuffer_dpx.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF0126DC55B00DDC7FE /* LXPixelBuffer_dpx.c */; };
 		5AB58B04126DC55B00DDC7FE /* LXPixelBuffer_jpeg.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF1126DC55B00DDC7FE /* LXPixelBuffer_jpeg.c */; };
@@ -431,6 +431,7 @@
 				5AB58A88126DC49F00DDC7FE /* Base API Public Headers */,
 				5AB58A79126DC49F00DDC7FE /* Utils API Public Headers */,
 				5AB58AC4126DC4B400DDC7FE /* Base sources, common */,
+				5A9D140917D4983700F09EF9 /* Functions with Obj-C dependency */,
 				5AB58AC5126DC4DE00DDC7FE /* Base Includes (no compile) */,
 				5AB58B22126DC5C700DDC7FE /* Mac-OpenGL Specific */,
 				5A8CEC5D127E25A500BD253D /* Windows-Direct3D Specific */,
@@ -632,7 +633,6 @@
 		5AB58AC4126DC4B400DDC7FE /* Base sources, common */ = {
 			isa = PBXGroup;
 			children = (
-				5A9D140917D4983700F09EF9 /* Functions with Obj-C dependency */,
 				5AB58ACA126DC52100DDC7FE /* LXAccumulator.c */,
 				5AB58ACB126DC52100DDC7FE /* LXBasicTypeFunctions.c */,
 				5AB58ACC126DC52100DDC7FE /* LXCList.c */,
@@ -1046,7 +1046,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_X86_VECTOR_INSTRUCTIONS = sse3;
+				CLANG_X86_VECTOR_INSTRUCTIONS = default;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1074,7 +1074,7 @@
 				PRODUCT_NAME = Lacefx;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
-				SYMROOT = "$(PROJECT_DIR)/../build/lx";
+				SYMROOT = "$(PROJECT_DIR)/../build";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -1083,7 +1083,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_X86_VECTOR_INSTRUCTIONS = sse3;
+				CLANG_X86_VECTOR_INSTRUCTIONS = default;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1110,7 +1110,7 @@
 				PRODUCT_NAME = Lacefx;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
-				SYMROOT = "$(PROJECT_DIR)/../build/lx";
+				SYMROOT = "$(PROJECT_DIR)/../build";
 				WARNING_CFLAGS = "-Winline";
 				WRAPPER_EXTENSION = framework;
 			};

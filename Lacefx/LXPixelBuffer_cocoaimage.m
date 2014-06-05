@@ -354,6 +354,16 @@ LXPixelBufferRef LXPixelBufferCreateFromNSBitmapImageRep_(NSBitmapImageRep *rep,
     return newPixbuf;
 }
 
+NSBitmapImageRep *LXPixelBufferCopyAsNSBitmapImageRep(LXPixelBufferRef srcPixbuf, LXError *outError)
+{
+    return LXPixelBufferCopyAsNSBitmapImageRep_(srcPixbuf, outError);
+}
+
+LXPixelBufferRef LXPixelBufferCreateFromNSBitmapImageRep(NSBitmapImageRep *rep, LXError *outError)
+{
+    return LXPixelBufferCreateFromNSBitmapImageRep_(rep, outError);
+}
+
 
 static CGColorSpaceRef createOutputCGColorSpaceFromLXProps(LXMapPtr properties)
 {

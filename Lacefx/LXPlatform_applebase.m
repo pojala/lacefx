@@ -21,6 +21,8 @@
 
 #if defined(LXPLATFORM_IOS)
  #import "LacefxESView.h"
+#elif defined(LXPLATFORM_MAC)
+extern void LQUpdateMainDisplayGLMask();
 #endif
 
 
@@ -54,14 +56,22 @@ LXVersion LXLibraryVersion()
 
 const char *LXPlatformGetID()
 {
-#ifdef __BIG_ENDIAN__
-    return "MacOSX-PowerPC-OpenGL";
-#else
+#if defined(LXPLATFORM_IOS)
  #ifdef __LP64__
-    return "MacOSX-x86_64-OpenGL"; 
+    return "iOS-ARM64-OpenGL";
  #else
-    return "MacOSX-i386-OpenGL";
+    return "iOS-ARM-OpenGL";
  #endif
+#else
+  #ifdef __BIG_ENDIAN__
+    return "MacOSX-PowerPC-OpenGL";
+  #else
+    #ifdef __LP64__
+    return "MacOSX-x86_64-OpenGL";
+    #else
+    return "MacOSX-i386-OpenGL";
+    #endif
+  #endif
 #endif
 }
 
@@ -74,30 +84,6 @@ void LXPlatformCreateLocks_()
         g_lxAtomicLock = &s_lxAtomicMutex;
         
         g_lxLocksInited = YES;
-    }
-}
-
-
-static CGDirectDisplayID g_mainDisplayCGID = 0;
-
-extern void _LXPlatformSetMainDisplayGLMask(CGOpenGLDisplayMask dmask);
-
-
-void LQUpdateMainDisplayGLMask()
-{
-    if ( 1) {   //    if (g_mainDisplayGLMask == 0) {
-        g_mainDisplayCGID = (CGDirectDisplayID) [[[[NSScreen mainScreen] deviceDescription] objectForKey:@"NSScreenNumber"] intValue];
-        
-        CGOpenGLDisplayMask glDisplayMask = CGDisplayIDToOpenGLDisplayMask(g_mainDisplayCGID);
-        
-        if ((CGOpenGLDisplayMask)LXPlatformMainDisplayIdentifier() != glDisplayMask) {
-            _LXPlatformSetMainDisplayGLMask(glDisplayMask);
-            
-#if 0 //!defined(RELEASE)
-            NSLog(@"Setting Lacefx main display cgID: %i -> glID %i; devicedesc: %@ --(end)", g_mainDisplayCGID, LXPlatformMainDisplayIdentifier(),
-                  [[[NSScreen mainScreen] deviceDescription] description]);
-#endif
-        }
     }
 }
 

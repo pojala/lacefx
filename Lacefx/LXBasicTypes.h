@@ -190,7 +190,7 @@ typedef LXBool LXSuccess;
 // LXFloat and LXInteger are native-width float and int types;
 // they match definitions of CGFloat and NSInteger in Mac OS X 10.5.
 // LXFloat can be explicitly forced to be a double by defining LXFLOAT_IS_DOUBLE
-#if defined(LX64BIT) || defined(LXFLOAT_IS_DOUBLE)
+#if !defined(LXPLATFORM_IOS) && (defined(LX64BIT) || defined(LXFLOAT_IS_DOUBLE))
  typedef double LXFloat;
  #ifndef LXFLOAT_IS_DOUBLE
   #define LXFLOAT_IS_DOUBLE 1

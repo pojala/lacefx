@@ -55,12 +55,8 @@ GLint compileShaderFromString(GLuint *shader, GLenum type, GLsizei count, NSStri
 #endif
     
     glGetShaderiv(*shader, GL_COMPILE_STATUS, &status);
-    if (status == GL_FALSE)
-	{
-		NSLog(@"Failed to compile shader:\n");
-		int i;
-		for (i = 0; i < count; i++)
-			NSLog(@"%s", sources[i]);
+    if (status == GL_FALSE) {
+		NSLog(@"Failed to compile shader:\n%@", string);
 	}
 	
 	return status;

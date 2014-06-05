@@ -1142,7 +1142,7 @@ static uint8_t *createDPXHeader(size_t dataSize,
 static void createTempBufWithCallerProperties(LXMapPtr metadata, size_t rgbDataSize, uint8_t **outRgbBuffer, LXBool *outBufferNeedsFree)
 {
     uint8_t *rgbBuffer = NULL;
-    LXBool bufferNeedsFree;
+    LXBool bufferNeedsFree = NO;
 
     // the caller may have provided a handle for this temp buffer
     uint8_t **tempBufHandleFromCaller = NULL;
