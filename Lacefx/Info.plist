@@ -11,7 +11,7 @@
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>fi.lacquer.Lacefx</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -21,9 +21,9 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>88.0</string>
+	<string>91.0</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>© 2008-13 Lacquer oy/ltd. </string>
+	<string>© 2008-16 Lacquer oy/ltd. </string>
 	<key>NSPrincipalClass</key>
 	<string></string>
 </dict>

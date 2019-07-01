@@ -75,7 +75,11 @@ LXINLINE LXFUNCATTR_PURE LXBool LXRGBAIsEqual(LXRGBA x, LXRGBA y) {
 
 LXINLINE LXFUNCATTR_PURE LXBool LXColorFloatIsVisuallyEquivalent(LXFloat a, LXFloat b)
 {
+#ifdef LXFLOAT_IS_DOUBLE
+    return (LXFABS(a - b) < 0.001) ? YES : NO;
+#else
     return (FABSF(a - b) < 0.001f) ? YES : NO;
+#endif
 }
 
 LXINLINE LXFUNCATTR_PURE LXBool LXRGBAIsVisuallyEquivalent(LXRGBA x, LXRGBA y)

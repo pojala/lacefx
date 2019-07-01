@@ -669,6 +669,20 @@ enum {
  #endif
 #endif
 
+#if LXFLOAT_IS_DOUBLE
+ #if defined(__GCC__)
+  #define LXFABS(f_) __builtin_fabs(f_)
+  #define LXFLOOR(f_) __builtin_floor(f_)
+ #else
+  #define LXFABS(f_) fabs(f_)
+  #define LXFLOOR(f_) floor(f_)
+ #endif
+#else
+ #define LXFABS(f_) FABSF(f_)
+ #define LXFLOOR(f_) FLOORF(f_)
+#endif
+
+
 // non-branching [0,1] clamp operation for 32-bit float pixels:  clamp(x,0,1) == (1+abs(x)-abs(x-1))/2 
 #ifndef CLAMP_SAT_F
  #define CLAMP_SAT_F(pxf_)  (  ( (1.0f+FABSF(pxf_) - FABSF(pxf_-1.0f)) )*0.5f  )

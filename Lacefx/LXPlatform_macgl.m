@@ -269,6 +269,8 @@ void _LXPlatformSetMainDisplayGLMask(CGOpenGLDisplayMask dmask)
 
 const char *LXPlatformRendererNameForDisplayIdentifier(LXInteger dmask)
 {
+    updateGLCaps();
+    
     int i;
     for (i = 0; i < g_displayCount; i++) {
         if (g_glCaps[i].cglDisplayMask == dmask) {

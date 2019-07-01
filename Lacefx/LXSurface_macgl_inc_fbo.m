@@ -194,6 +194,8 @@ void LXSurfaceRelease(LXSurfaceRef r)
     }
 }
 
+static volatile int64_t s_surfaceCreateCount = 0;
+
 LXSurfaceRef LXSurfaceCreate(LXPoolRef pool,
                              uint32_t w, uint32_t h, LXPixelFormat pxFormat,
                              uint32_t flags,
@@ -242,6 +244,15 @@ LXSurfaceRef LXSurfaceCreate(LXPoolRef pool,
     
     glGenTextures(1, &(imp->fboColorTex));
     glBindTexture(GL_TEXTURE_RECTANGLE_EXT, imp->fboColorTex);
+    
+    // for debugging
+    int64_t numSurfacesTotal = OSAtomicIncrement64(&s_surfaceCreateCount);
+    
+    if (g_lxSurfaceLogFuncCb) {
+        char text[512];
+        snprintf(text, 512, "%s: %p (fbo %ld, tex %ld), total %ld", __func__, imp, (long)imp->fbo, (long)imp->fboColorTex, (long)numSurfacesTotal);
+        g_lxSurfaceLogFuncCb(text, g_lxSurfaceLogFuncCbUserData);
+    }
 
     GLenum glPxf = 0;
     GLenum glPxfType = 0;

@@ -108,6 +108,9 @@ typedef LXFloat(*LXRefFloatGetterFuncPtr)(LXRef ref);
 // combiner function types
 typedef LXFloat(*LXFloatCombinerFuncPtr)(LXFloat v1, LXFloat v2);
 
+// utility callbacks
+typedef void(*LXLogFuncPtr)(const char *str, void *userData);
+
 
 #endif
 

@@ -764,12 +764,12 @@ LXSuccess LXPlotLinearSegment(LXPoint p0, LXPoint p1, LXPoint **outPixels, LXUIn
 {
     if ( !outPixels || !outPixelCount) return NO;
     
-    p0.x = FLOORF(p0.x);
-    p0.y = FLOORF(p0.y);
-    p1.x = FLOORF(p1.x);
-    p1.y = FLOORF(p1.y);
+    p0.x = LXFLOOR(p0.x);
+    p0.y = LXFLOOR(p0.y);
+    p1.x = LXFLOOR(p1.x);
+    p1.y = LXFLOOR(p1.y);
 
-    LXBool isSteep = FABSF(p1.y - p0.y) > FABSF(p1.x - p0.x);
+    LXBool isSteep = LXFABS(p1.y - p0.y) > LXFABS(p1.x - p0.x);
     if (isSteep) {  // swap x and y
         LXFloat t;
         t = p0.x;

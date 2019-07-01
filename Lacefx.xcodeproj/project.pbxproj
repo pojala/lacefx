@@ -118,12 +118,9 @@
 		5A9DE6901805E068006D0662 /* LXFileHandlers_objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B28126DC5C700DDC7FE /* LXFileHandlers_objc.m */; };
 		5AB589DD126DC2D800DDC7FE /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB589DC126DC2D800DDC7FE /* OpenGL.framework */; };
 		5AB589DF126DC2DB00DDC7FE /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB589DE126DC2DB00DDC7FE /* Accelerate.framework */; };
-		5AB589E1126DC34B00DDC7FE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB589E0126DC34B00DDC7FE /* libz.dylib */; };
-		5AB58A01126DC3B400DDC7FE /* libjpeg8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB589F2126DC3B400DDC7FE /* libjpeg8.a */; };
 		5AB58A02126DC3B400DDC7FE /* jconfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB589F3126DC3B400DDC7FE /* jconfig.h */; };
 		5AB58A03126DC3B400DDC7FE /* jmorecfg.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB589F4126DC3B400DDC7FE /* jmorecfg.h */; };
 		5AB58A04126DC3B400DDC7FE /* jpeglib.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB589F5126DC3B400DDC7FE /* jpeglib.h */; };
-		5AB58A09126DC3B400DDC7FE /* libtiff.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB589FB126DC3B400DDC7FE /* libtiff.a */; };
 		5AB58A0A126DC3B400DDC7FE /* tiffconf.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB589FC126DC3B400DDC7FE /* tiffconf.h */; };
 		5AB58A0B126DC3B400DDC7FE /* tiffiop.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB589FD126DC3B400DDC7FE /* tiffiop.h */; };
 		5AB58A0C126DC3B400DDC7FE /* tiffvers.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB589FE126DC3B400DDC7FE /* tiffvers.h */; };
@@ -226,6 +223,10 @@
 		5AB58B3A126DC5C700DDC7FE /* LXTexture_macgl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B2E126DC5C700DDC7FE /* LXTexture_macgl.m */; };
 		5AB58B86126DCA2C00DDC7FE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB58B85126DCA2C00DDC7FE /* QuartzCore.framework */; };
 		5AC696A41711A6A100B1B277 /* GLCheck.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AC696A21711A6A100B1B277 /* GLCheck.c */; };
+		5AD4C8771CFCC39C00AA01F8 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD4C8751CFCC39C00AA01F8 /* libjpeg.a */; };
+		5AD4C8781CFCC39C00AA01F8 /* libturbojpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD4C8761CFCC39C00AA01F8 /* libturbojpeg.a */; };
+		5AD4C87A1CFCC46300AA01F8 /* libtiff.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD4C8791CFCC46300AA01F8 /* libtiff.a */; };
+		5AD4C87C1CFCC4B600AA01F8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD4C87B1CFCC4B600AA01F8 /* libz.tbd */; };
 		5AD8891C12BE90A2006BBDCF /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD8891B12BE90A2006BBDCF /* CoreServices.framework */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -260,17 +261,14 @@
 		5A8CEC66127E25E800BD253D /* LXTexture_d3d.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LXTexture_d3d.cpp; sourceTree = "<group>"; };
 		5AB589DC126DC2D800DDC7FE /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		5AB589DE126DC2DB00DDC7FE /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
-		5AB589E0126DC34B00DDC7FE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		5AB589E7126DC3A500DDC7FE /* AdobeRGB1998.icc */ = {isa = PBXFileReference; lastKnownFileType = file; path = AdobeRGB1998.icc; sourceTree = "<group>"; };
 		5AB589E8126DC3A500DDC7FE /* sRGB.icc */ = {isa = PBXFileReference; lastKnownFileType = file; path = sRGB.icc; sourceTree = "<group>"; };
 		5AB589E9126DC3A500DDC7FE /* LinearRGB_709.icc */ = {isa = PBXFileReference; lastKnownFileType = file; path = LinearRGB_709.icc; sourceTree = "<group>"; };
 		5AB589EA126DC3A500DDC7FE /* WideGamutRGB.icc */ = {isa = PBXFileReference; lastKnownFileType = file; path = WideGamutRGB.icc; sourceTree = "<group>"; };
 		5AB589EB126DC3A500DDC7FE /* ProPhotoRGB.icc */ = {isa = PBXFileReference; lastKnownFileType = file; path = ProPhotoRGB.icc; sourceTree = "<group>"; };
-		5AB589F2126DC3B400DDC7FE /* libjpeg8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg8.a; path = jpeg/libjpeg8.a; sourceTree = "<group>"; };
-		5AB589F3126DC3B400DDC7FE /* jconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jconfig.h; path = jpeg/jconfig.h; sourceTree = "<group>"; };
-		5AB589F4126DC3B400DDC7FE /* jmorecfg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jmorecfg.h; path = jpeg/jmorecfg.h; sourceTree = "<group>"; };
-		5AB589F5126DC3B400DDC7FE /* jpeglib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jpeglib.h; path = jpeg/jpeglib.h; sourceTree = "<group>"; };
-		5AB589FB126DC3B400DDC7FE /* libtiff.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtiff.a; sourceTree = "<group>"; };
+		5AB589F3126DC3B400DDC7FE /* jconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jconfig.h; path = "libjpeg-turbo/jconfig.h"; sourceTree = "<group>"; };
+		5AB589F4126DC3B400DDC7FE /* jmorecfg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jmorecfg.h; path = "libjpeg-turbo/jmorecfg.h"; sourceTree = "<group>"; };
+		5AB589F5126DC3B400DDC7FE /* jpeglib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = jpeglib.h; path = "libjpeg-turbo/jpeglib.h"; sourceTree = "<group>"; };
 		5AB589FC126DC3B400DDC7FE /* tiffconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tiffconf.h; sourceTree = "<group>"; };
 		5AB589FD126DC3B400DDC7FE /* tiffiop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tiffiop.h; sourceTree = "<group>"; };
 		5AB589FE126DC3B400DDC7FE /* tiffvers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tiffvers.h; sourceTree = "<group>"; };
@@ -382,6 +380,10 @@
 		5AB58B85126DCA2C00DDC7FE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5AC696A21711A6A100B1B277 /* GLCheck.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = GLCheck.c; sourceTree = "<group>"; };
 		5AC696A31711A6A100B1B277 /* GLCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLCheck.h; sourceTree = "<group>"; };
+		5AD4C8751CFCC39C00AA01F8 /* libjpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjpeg.a; path = "libjpeg-turbo/libjpeg.a"; sourceTree = "<group>"; };
+		5AD4C8761CFCC39C00AA01F8 /* libturbojpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libturbojpeg.a; path = "libjpeg-turbo/libturbojpeg.a"; sourceTree = "<group>"; };
+		5AD4C8791CFCC46300AA01F8 /* libtiff.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtiff.a; sourceTree = "<group>"; };
+		5AD4C87B1CFCC4B600AA01F8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5AD8891B12BE90A2006BBDCF /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* Lacefx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Lacefx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -401,12 +403,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AD4C87C1CFCC4B600AA01F8 /* libz.tbd in Frameworks */,
 				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
 				5AB589DD126DC2D800DDC7FE /* OpenGL.framework in Frameworks */,
+				5AD4C8781CFCC39C00AA01F8 /* libturbojpeg.a in Frameworks */,
+				5AD4C8771CFCC39C00AA01F8 /* libjpeg.a in Frameworks */,
+				5AD4C87A1CFCC46300AA01F8 /* libtiff.a in Frameworks */,
 				5AB589DF126DC2DB00DDC7FE /* Accelerate.framework in Frameworks */,
-				5AB589E1126DC34B00DDC7FE /* libz.dylib in Frameworks */,
-				5AB58A01126DC3B400DDC7FE /* libjpeg8.a in Frameworks */,
-				5AB58A09126DC3B400DDC7FE /* libtiff.a in Frameworks */,
 				5AB58B86126DCA2C00DDC7FE /* QuartzCore.framework in Frameworks */,
 				5AD8891C12BE90A2006BBDCF /* CoreServices.framework in Frameworks */,
 				5A70443614B216A300F34048 /* IOKit.framework in Frameworks */,
@@ -428,6 +431,7 @@
 		0867D691FE84028FC02AAC07 /* Lacefx */ = {
 			isa = PBXGroup;
 			children = (
+				5AD4C87B1CFCC4B600AA01F8 /* libz.tbd */,
 				5AB58A88126DC49F00DDC7FE /* Base API Public Headers */,
 				5AB58A79126DC49F00DDC7FE /* Utils API Public Headers */,
 				5AB58AC4126DC4B400DDC7FE /* Base sources, common */,
@@ -474,7 +478,6 @@
 			children = (
 				5AB589DC126DC2D800DDC7FE /* OpenGL.framework */,
 				5AB589DE126DC2DB00DDC7FE /* Accelerate.framework */,
-				5AB589E0126DC34B00DDC7FE /* libz.dylib */,
 				5AB58B85126DCA2C00DDC7FE /* QuartzCore.framework */,
 				5AD8891B12BE90A2006BBDCF /* CoreServices.framework */,
 				5A70443514B216A300F34048 /* IOKit.framework */,
@@ -540,7 +543,8 @@
 		5AB589F1126DC3B400DDC7FE /* jpeg */ = {
 			isa = PBXGroup;
 			children = (
-				5AB589F2126DC3B400DDC7FE /* libjpeg8.a */,
+				5AD4C8751CFCC39C00AA01F8 /* libjpeg.a */,
+				5AD4C8761CFCC39C00AA01F8 /* libturbojpeg.a */,
 				5AB589F3126DC3B400DDC7FE /* jconfig.h */,
 				5AB589F4126DC3B400DDC7FE /* jmorecfg.h */,
 				5AB589F5126DC3B400DDC7FE /* jpeglib.h */,
@@ -551,7 +555,7 @@
 		5AB589FA126DC3B400DDC7FE /* tiff */ = {
 			isa = PBXGroup;
 			children = (
-				5AB589FB126DC3B400DDC7FE /* libtiff.a */,
+				5AD4C8791CFCC46300AA01F8 /* libtiff.a */,
 				5AB589FC126DC3B400DDC7FE /* tiffconf.h */,
 				5AB589FD126DC3B400DDC7FE /* tiffiop.h */,
 				5AB589FE126DC3B400DDC7FE /* tiffvers.h */,
@@ -884,7 +888,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 1020;
 			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "Lacefx" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1046,6 +1050,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_X86_VECTOR_INSTRUCTIONS = default;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -1068,9 +1073,12 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/jpeg\"",
 					"\"$(SRCROOT)/tiff\"",
+					"$(PROJECT_DIR)/libjpeg-turbo",
+					"$(PROJECT_DIR)/tiff",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = fi.lacquer.Lacefx;
 				PRODUCT_NAME = Lacefx;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
@@ -1083,6 +1091,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_X86_VECTOR_INSTRUCTIONS = default;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1105,8 +1114,11 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/jpeg\"",
 					"\"$(SRCROOT)/tiff\"",
+					"$(PROJECT_DIR)/libjpeg-turbo",
+					"$(PROJECT_DIR)/tiff",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = fi.lacquer.Lacefx;
 				PRODUCT_NAME = Lacefx;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
@@ -1119,10 +1131,34 @@
 		1DEB91B208733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1133,10 +1169,33 @@
 		1DEB91B308733DA50010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;

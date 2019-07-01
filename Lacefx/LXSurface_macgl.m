@@ -95,7 +95,7 @@ typedef struct {
     GLuint fbo;
     GLuint fboColorTex;
     GLuint fboDepthRBO;
-    GLint prevViewport;
+    GLint prevViewport[4];
 #else
     LQGLPbuffer *pb;
     LXInteger activeDrawableMode;
@@ -131,7 +131,17 @@ static NSMutableArray *g_userSharedCtxLockStateStack = nil;
 
 
 
-// ---- exported functions used by host implementation ---- 
+LXLogFuncPtr g_lxSurfaceLogFuncCb = NULL;
+void *g_lxSurfaceLogFuncCbUserData = NULL;
+
+
+// ---- exported functions used by host implementation ----
+
+LXEXPORT void LXSurfaceSetLogCallback(LXLogFuncPtr cb, void *data)
+{
+    g_lxSurfaceLogFuncCb = cb;
+    g_lxSurfaceLogFuncCbUserData = data;
+}
 
 NSString *LXBuildLockHolderTraceStringFromNamesAndRefTimes(id holderStack, id refTimeStack)
 {

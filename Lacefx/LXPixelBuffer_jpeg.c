@@ -235,8 +235,7 @@ static LXSuccess writeJPEGImage_YCbCr422_int8(LXPixelBufferRef pixbuf,
 	jpeg_set_defaults(&cinfo);
 
 	jpeg_set_colorspace(&cinfo, JCS_YCbCr);
-    cinfo.do_fancy_downsampling = FALSE;
-
+    
     jpeg_set_quality(&cinfo, MAX(0, MIN(100, (int)(jpegQualityF * 100))), FALSE);  // last argument indicates baseline compatibility
     
     cinfo.dct_method = JDCT_FLOAT;  // seems to be faster on modern x86
