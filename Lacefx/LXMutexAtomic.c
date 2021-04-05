@@ -18,7 +18,7 @@
 
 extern LXBool g_lxLocksInited;
 extern LXMutexPtr g_lxAtomicLock;
-extern void LXPlatformCreateLocks_();
+extern void LXPlatformCreateLocks_(void);
 
 
 #if defined(LXPLATFORM_WIN)
@@ -35,24 +35,6 @@ int32_t LXAtomicDec_int32(volatile int32_t *i)
     return InterlockedDecrement((volatile LONG *)i);
 }
 
-
-/*
-// old Mac implementation using Carbon functions that return the old value of the variable
-#elif defined(LXPLATFORM_MAC)
-#include <CoreServices/CoreServices.h>
-
-int32_t LXAtomicInc_int32(int32_t *i)
-{
-    int32_t n = IncrementAtomic((SInt32 *)i);
-    return n + 1;
-}
-
-int32_t LXAtomicDec_int32(int32_t *i)
-{
-    int32_t n = OSAtomicDecrement32Barrier(i);
-    return n - 1;
-}
-*/
 
 #elif defined(__APPLE__)
 // new implementation using iOS-compatible functions

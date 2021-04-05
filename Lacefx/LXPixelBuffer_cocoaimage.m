@@ -3,7 +3,7 @@
  *  Lacefx
  *
  *  Created by Pauli Ojala on 9.9.2007.
- *  Copyright 207 Lacquer oy/ltd.
+ *  Copyright 2007 Lacquer oy/ltd.
  *
 
  This Source Code Form is subject to the terms of the Mozilla Public
@@ -87,8 +87,10 @@ NSBitmapImageRep *LXPixelBufferCopyAsNSBitmapImageRep_(LXPixelBufferRef srcPixbu
         if ( !tempPixbuf)
             return nil;
         
-        if ( !LXPixelBufferCopyPixelBufferWithPixelFormatConversion(tempPixbuf, srcPixbuf, outError))
+        if ( !LXPixelBufferCopyPixelBufferWithPixelFormatConversion(tempPixbuf, srcPixbuf, outError)) {
+            LXPixelBufferRelease(tempPixbuf);
             return nil;
+        }
         
         //lxPixelFormat = kLX_RGBA_INT8;
         pixbuf = tempPixbuf;

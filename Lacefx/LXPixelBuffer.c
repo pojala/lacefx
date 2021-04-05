@@ -29,6 +29,18 @@
 #include <math.h>
 #include <ctype.h>
 
+#if defined(__APPLE__)
+#include <libkern/OSAtomic.h>
+static volatile int64_t s_createCount = 0;
+static volatile int64_t s_liveCount = 0;
+static volatile int64_t s_liveMemBytesEstimate = 0;
+// write to same log as LXSurface
+extern LXLogFuncPtr g_lxSurfaceLogFuncCb;
+extern void *g_lxSurfaceLogFuncCbUserData;
+#endif
+
+
+
 const char * const kLXPixelBufferAttachmentKey_ColorSpaceEncoding = "lxEnum_ColorSpaceEncoding";
 const char * const kLXPixelBufferAttachmentKey_YCbCrPixelFormatID = "lxEnum_YCbCrPixelFormatID";
 
@@ -115,6 +127,7 @@ int64_t _lx_ftell64(LXFilePtr file)
 }
 
 
+
 // plugin state
 static LXUInteger g_fileHandlerPluginCount = 0;
 static LXPixelBufferFileHandlerSuite_v1 *g_fileHandlerPluginSuites = NULL;
@@ -189,7 +202,17 @@ void LXPixelBufferRelease(LXPixelBufferRef r)
             LXIntegerMapDestroy(imp->attachmentMap);
             imp->attachmentMap = NULL;
         }
-        
+
+#if defined(__APPLE__)
+        int64_t numLive = OSAtomicDecrement64(&s_liveCount);
+        int64_t numLiveBytes = OSAtomicAdd64(-(int)(imp->w * imp->h * imp->bytesPerPixel), &s_liveMemBytesEstimate);
+        if (g_lxSurfaceLogFuncCb) {
+            char text[512];
+            snprintf(text, 512, "%s: %p = %d*%d, live now %ld, estimated live bytes %ld (%ld MB)", __func__, imp, imp->w, imp->h, (long)numLive, (long)numLiveBytes, (long)numLiveBytes/(1024*1024));
+            g_lxSurfaceLogFuncCb(text, g_lxSurfaceLogFuncCbUserData);
+        }
+#endif
+
         _lx_free(imp);
     }
 }
@@ -209,6 +232,7 @@ const char *LXPixelBufferTypeID()
     static const char *s = "LXPixelBuffer";
     return s;
 }
+
 
 LXPixelBufferRef LXPixelBufferCreateForData(uint32_t w, uint32_t h,
                                             LXPixelFormat pixelFormat,
@@ -231,11 +255,22 @@ LXPixelBufferRef LXPixelBufferCreateForData(uint32_t w, uint32_t h,
     imp->w = w;
     imp->h = h;
     imp->pf = pixelFormat;
-    imp->bytesPerPixel = LXBytesPerPixelForPixelFormat(pixelFormat);
+    imp->bytesPerPixel = (int)LXBytesPerPixelForPixelFormat(pixelFormat);
     
     imp->rowBytes = rowBytes;
     imp->buffer = data;
     imp->storageHint = storageHint;
+    
+#if defined(__APPLE__)
+    int64_t numTotal = OSAtomicIncrement64(&s_createCount);
+    int64_t numLive = OSAtomicIncrement64(&s_liveCount);
+    int64_t numLiveBytes = OSAtomicAdd64(w * h * imp->bytesPerPixel, &s_liveMemBytesEstimate);
+    if (g_lxSurfaceLogFuncCb) {
+        char text[512];
+        snprintf(text, 512, "%s: %p = %d*%d, total %ld, live %ld, estimated live bytes %ld (%ld MB)", __func__, imp, w, h, (long)numTotal, (long)numLive, (long)numLiveBytes, (long)numLiveBytes/(1024*1024));
+        g_lxSurfaceLogFuncCb(text, g_lxSurfaceLogFuncCbUserData);
+    }
+#endif
     
     return (LXPixelBufferRef)imp;
 
@@ -274,11 +309,22 @@ LXPixelBufferRef LXPixelBufferCreateWithRowBytes(LXPoolRef pool,
     imp->w = w;
     imp->h = h;
     imp->pf = pixelFormat;
-    imp->bytesPerPixel = LXBytesPerPixelForPixelFormat(pixelFormat);
+    imp->bytesPerPixel = (int)LXBytesPerPixelForPixelFormat(pixelFormat);
     
     imp->rowBytes = rowBytes;
     imp->buffer = (uint8_t *)_lx_malloc(imp->rowBytes * h);
-    
+
+#if defined(__APPLE__)
+    int64_t numTotal = OSAtomicIncrement64(&s_createCount);
+    int64_t numLive = OSAtomicIncrement64(&s_liveCount);
+    int64_t numLiveBytes = OSAtomicAdd64(w * h * imp->bytesPerPixel, &s_liveMemBytesEstimate);
+    if (g_lxSurfaceLogFuncCb) {
+        char text[512];
+        snprintf(text, 512, "%s: %p = %d*%d, total %ld, live %ld, estimated live bytes %ld (%ld MB)", __func__, imp, w, h, (long)numTotal, (long)numLive, (long)numLiveBytes, (long)numLiveBytes/(1024*1024));
+        g_lxSurfaceLogFuncCb(text, g_lxSurfaceLogFuncCbUserData);
+    }
+#endif
+
     return (LXPixelBufferRef)imp;
 }
 
@@ -288,7 +334,7 @@ LXPixelBufferRef LXPixelBufferCreate(LXPoolRef pool,
                                      LXPixelFormat pixelFormat,
                                      LXError *outError)
 {
-    int bytesPerPixel = LXBytesPerPixelForPixelFormat(pixelFormat);
+    int bytesPerPixel = (int)LXBytesPerPixelForPixelFormat(pixelFormat);
     //size_t rowBytes = ((w * bytesPerPixel) + 15) & ~15;  // 16-byte alignment
     size_t rowBytes = LXAlignedRowBytes(w * bytesPerPixel);
 

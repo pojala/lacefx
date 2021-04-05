@@ -3,7 +3,7 @@
  *  Lacefx
  *
  *  Created by Pauli Ojala on 29.8.2007.
- *  Copyright 207 Lacquer oy/ltd.
+ *  Copyright 2007 Lacquer oy/ltd.
  *
  
  This Source Code Form is subject to the terms of the Mozilla Public

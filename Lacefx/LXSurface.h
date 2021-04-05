@@ -90,7 +90,7 @@ LXEXPORT void LXSetQuadVerticesXYUV(LXVertexXYUV *vertices, LXRect quadRect, LXR
 
 #pragma mark --- LXSurface public API methods ---
 
-LXEXPORT const char *LXSurfaceTypeID();
+LXEXPORT const char *LXSurfaceTypeID(void);
 
 LXEXPORT LXSurfaceRef LXSurfaceCreate(LXPoolRef pool,
                              uint32_t w, uint32_t h, LXPixelFormat pxFormat,

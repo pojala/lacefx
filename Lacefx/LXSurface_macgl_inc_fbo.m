@@ -134,6 +134,10 @@ void LXSurfaceFlush(LXSurfaceRef r)
 }
 
 
+static volatile int64_t s_createCount = 0;
+static volatile int64_t s_liveCount = 0;
+static volatile int64_t s_liveMemBytesEstimate = 0;
+
 
 void LXSurfaceRelease(LXSurfaceRef r)
 {
@@ -145,56 +149,67 @@ void LXSurfaceRelease(LXSurfaceRef r)
     if (refCount == 0) {
         LXRefWillDestroyItself((LXRef)r);
         
-        NSDictionary *lockErrorDict = nil;
-        LXSuccess didLock = LXSurfaceBeginAccessOnThreadWithTimeOutAndNSCaller_(0, 40.0/1000.0, @"LXSurfaceRelease", &lockErrorDict);
-        
-        ///BOOL didLock = [SHAREDCTX activateWithTimeout:0.02 caller:@"LXSurfaceRelease"];
-        
-        if ( !didLock) {
-            NSString *traceStr = LXSurfaceBuildThreadAccessErrorString(lockErrorDict);
-            
-            if (imp->fboColorTex)  [SHAREDCTX deferDeleteOfGLTextureID:imp->fboColorTex];
-            if (imp->fbo)          [SHAREDCTX deferDeleteOfGLFrameBufferID:imp->fbo];
-            imp->fbo = 0;
-            imp->fboColorTex = 0;
-            
-            NSLog(@"%s: no ctx lock, deferred (texture %i, fbo %i, rbo %i); lock trace: %s\n",
-                            __func__, (int)imp->fboColorTex, (int)imp->fbo, (int)imp->fboDepthRBO, [traceStr UTF8String]);
+        if (imp->fbo) {
+            // only count memory usage of surfaces with FBO
+            OSAtomicDecrement64(&s_liveCount);
+            OSAtomicAdd64(-(int)(imp->w * imp->h * LXBytesPerPixelForPixelFormat(imp->pixelFormat)), &s_liveMemBytesEstimate);
         }
         
-        if (imp->lxTexture) {
-            LXTextureRelease(imp->lxTexture);
-            imp->lxTexture = NULL;
-        }
+        // lock surface only if it has an object that needs releasing
+        // (a surface could be created from an NSView and won't need this)
+        if (imp->fbo || imp->lxTexture) {
+            NSDictionary *lockErrorDict = nil;
+            LXSuccess didLock = LXSurfaceBeginAccessOnThreadWithTimeOutAndNSCaller_(0, 40.0/1000.0, @"LXSurfaceRelease", &lockErrorDict);
             
-        ///NSLog(@"%s, %p: fbo %i, texture %i, size %i * %i", __func__, r, imp->fbo, imp->fboColorTex, imp->w, imp->h);
-
-        if (didLock && imp->fbo) {
-            glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, 0);
-            
-            if (imp->fboColorTex) {
-                glDeleteTextures(1, &(imp->fboColorTex));
+            if ( !didLock) {
+                NSString *traceStr = LXSurfaceBuildThreadAccessErrorString(lockErrorDict);
+                
+                if (imp->fboColorTex)  [SHAREDCTX deferDeleteOfGLTextureID:imp->fboColorTex];
+                if (imp->fbo)          [SHAREDCTX deferDeleteOfGLFrameBufferID:imp->fbo];
+                imp->fbo = 0;
                 imp->fboColorTex = 0;
+                
+                if (g_lxSurfaceLogFuncCb) {
+                    char text[512];
+                    snprintf(text, 512, "%s: no ctx lock, deferred (texture %i, fbo %i, rbo %i); lock trace: %s",
+                             __func__, (int)imp->fboColorTex, (int)imp->fbo, (int)imp->fboDepthRBO, [traceStr UTF8String]);
+                    g_lxSurfaceLogFuncCb(text, g_lxSurfaceLogFuncCbUserData);
+                }
+                
+                NSLog(@"%s: no ctx lock, deferred (texture %i, fbo %i, rbo %i); lock trace: %s\n",
+                      __func__, (int)imp->fboColorTex, (int)imp->fbo, (int)imp->fboDepthRBO, [traceStr UTF8String]);
             }
-            if (imp->fboDepthRBO) {
-                glDeleteRenderbuffersEXT(1, &(imp->fboDepthRBO));
-                imp->fboDepthRBO = 0;
+            
+            if (imp->lxTexture) {
+                LXTextureRelease(imp->lxTexture);
+                imp->lxTexture = NULL;
             }
-            glDeleteFramebuffersEXT(1, &(imp->fbo));
-            imp->fbo = 0;
-        }
-        
-        if (didLock) {
-            //EXITSHAREDCTXLOCK;
-            //[SHAREDCTX deactivate];
-            LXSurfaceEndAccessOnThread();
+            
+            ///NSLog(@"%s, %p: fbo %i, texture %i, size %i * %i", __func__, r, imp->fbo, imp->fboColorTex, imp->w, imp->h);
+            
+            if (didLock && imp->fbo) {
+                glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, 0);
+                
+                if (imp->fboColorTex) {
+                    glDeleteTextures(1, &(imp->fboColorTex));
+                    imp->fboColorTex = 0;
+                }
+                if (imp->fboDepthRBO) {
+                    glDeleteRenderbuffersEXT(1, &(imp->fboDepthRBO));
+                    imp->fboDepthRBO = 0;
+                }
+                glDeleteFramebuffersEXT(1, &(imp->fbo));
+                imp->fbo = 0;
+            }
+            
+            if (didLock) {
+                LXSurfaceEndAccessOnThread();
+            }
         }
 
         _lx_free(imp);
     }
 }
-
-static volatile int64_t s_surfaceCreateCount = 0;
 
 LXSurfaceRef LXSurfaceCreate(LXPoolRef pool,
                              uint32_t w, uint32_t h, LXPixelFormat pxFormat,
@@ -246,11 +261,12 @@ LXSurfaceRef LXSurfaceCreate(LXPoolRef pool,
     glBindTexture(GL_TEXTURE_RECTANGLE_EXT, imp->fboColorTex);
     
     // for debugging
-    int64_t numSurfacesTotal = OSAtomicIncrement64(&s_surfaceCreateCount);
-    
+    int64_t numSurfacesTotal = OSAtomicIncrement64(&s_createCount);
+    int64_t numSurfacesLive = OSAtomicIncrement64(&s_liveCount);
+    int64_t numLiveBytes = OSAtomicAdd64(w * h * LXBytesPerPixelForPixelFormat(pxFormat), &s_liveMemBytesEstimate);
     if (g_lxSurfaceLogFuncCb) {
         char text[512];
-        snprintf(text, 512, "%s: %p (fbo %ld, tex %ld), total %ld", __func__, imp, (long)imp->fbo, (long)imp->fboColorTex, (long)numSurfacesTotal);
+        snprintf(text, 512, "%s: %p (fbo %ld, tex %ld), total %ld, live %ld, estimated live bytes %ld (%ld MB)", __func__, imp, (long)imp->fbo, (long)imp->fboColorTex, (long)numSurfacesTotal, (long)numSurfacesLive, (long)numLiveBytes, (long)numLiveBytes/(1024*1024));
         g_lxSurfaceLogFuncCb(text, g_lxSurfaceLogFuncCbUserData);
     }
 
@@ -418,7 +434,7 @@ LXSuccess LXCopyGLFrameBufferRegionIntoPixelBuffer_(GLuint fbo, GLint srcW, GLin
         GLint prevAlign = 4;
         glGetIntegerv(GL_PACK_ALIGNMENT, &prevAlign);
         glPixelStorei(GL_PACK_ALIGNMENT, glAlignment);
-        glPixelStorei(GL_PACK_ROW_LENGTH, dstRowBytes / dstBytesPerPixel);
+        glPixelStorei(GL_PACK_ROW_LENGTH, (int)(dstRowBytes / dstBytesPerPixel));
     
         glReadBuffer(GL_FRONT);
         glReadPixels(regionX, regionY, regionW, regionH, glPixelFormat, glPixelFormatType, fittedDstBuf);
