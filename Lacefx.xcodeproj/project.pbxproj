@@ -1075,7 +1075,6 @@
 				PRODUCT_NAME = Lacefx;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
-				SYMROOT = "$(PROJECT_DIR)/../build";
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -1111,7 +1110,6 @@
 				PRODUCT_NAME = Lacefx;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
-				SYMROOT = "$(PROJECT_DIR)/../build";
 				WARNING_CFLAGS = "-Winline";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -1150,7 +1148,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Debug;
