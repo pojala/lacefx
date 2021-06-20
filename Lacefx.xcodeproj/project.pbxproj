@@ -196,7 +196,6 @@
 		5AB58B02126DC55B00DDC7FE /* LXPixelBuffer_bmp.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AEF126DC55B00DDC7FE /* LXPixelBuffer_bmp.c */; };
 		5AB58B03126DC55B00DDC7FE /* LXPixelBuffer_dpx.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF0126DC55B00DDC7FE /* LXPixelBuffer_dpx.c */; };
 		5AB58B04126DC55B00DDC7FE /* LXPixelBuffer_jpeg.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF1126DC55B00DDC7FE /* LXPixelBuffer_jpeg.c */; };
-		5AB58B05126DC55B00DDC7FE /* LXPixelBuffer_tiff.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF2126DC55B00DDC7FE /* LXPixelBuffer_tiff.c */; };
 		5AB58B06126DC55B00DDC7FE /* LXPool.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF3126DC55B00DDC7FE /* LXPool.c */; };
 		5AB58B07126DC55B00DDC7FE /* LXPool_pixelbuffer_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AF4126DC55B00DDC7FE /* LXPool_pixelbuffer_priv.h */; };
 		5AB58B08126DC55B00DDC7FE /* LXPool_pixelbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF5126DC55B00DDC7FE /* LXPool_pixelbuffer.c */; };
@@ -225,7 +224,6 @@
 		5AC696A41711A6A100B1B277 /* GLCheck.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AC696A21711A6A100B1B277 /* GLCheck.c */; };
 		5AD4C8771CFCC39C00AA01F8 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD4C8751CFCC39C00AA01F8 /* libjpeg.a */; };
 		5AD4C8781CFCC39C00AA01F8 /* libturbojpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD4C8761CFCC39C00AA01F8 /* libturbojpeg.a */; };
-		5AD4C87A1CFCC46300AA01F8 /* libtiff.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD4C8791CFCC46300AA01F8 /* libtiff.a */; };
 		5AD4C87C1CFCC4B600AA01F8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD4C87B1CFCC4B600AA01F8 /* libz.tbd */; };
 		5AD8891C12BE90A2006BBDCF /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AD8891B12BE90A2006BBDCF /* CoreServices.framework */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
@@ -410,7 +408,6 @@
 				5AB589DD126DC2D800DDC7FE /* OpenGL.framework in Frameworks */,
 				5AD4C8781CFCC39C00AA01F8 /* libturbojpeg.a in Frameworks */,
 				5AD4C8771CFCC39C00AA01F8 /* libjpeg.a in Frameworks */,
-				5AD4C87A1CFCC46300AA01F8 /* libtiff.a in Frameworks */,
 				5AB589DF126DC2DB00DDC7FE /* Accelerate.framework in Frameworks */,
 				5AB58B86126DCA2C00DDC7FE /* QuartzCore.framework in Frameworks */,
 				5AD8891C12BE90A2006BBDCF /* CoreServices.framework in Frameworks */,
@@ -890,7 +887,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1250;
 			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "Lacefx" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1021,7 +1018,6 @@
 				5AB58B02126DC55B00DDC7FE /* LXPixelBuffer_bmp.c in Sources */,
 				5AB58B03126DC55B00DDC7FE /* LXPixelBuffer_dpx.c in Sources */,
 				5AB58B04126DC55B00DDC7FE /* LXPixelBuffer_jpeg.c in Sources */,
-				5AB58B05126DC55B00DDC7FE /* LXPixelBuffer_tiff.c in Sources */,
 				5AB58B06126DC55B00DDC7FE /* LXPool.c in Sources */,
 				5AB58B08126DC55B00DDC7FE /* LXPool_pixelbuffer.c in Sources */,
 				5AB58B09126DC55B00DDC7FE /* LXRef.c in Sources */,
@@ -1051,7 +1047,6 @@
 		1DEB91AE08733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_X86_VECTOR_INSTRUCTIONS = default;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1059,11 +1054,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				GCC_ALTIVEC_EXTENSIONS = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_GC = unsupported;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Lacefx/Lacefx_Prefix.pch;
@@ -1078,7 +1069,7 @@
 					"$(PROJECT_DIR)/libjpeg-turbo",
 					"$(PROJECT_DIR)/tiff",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = fi.lacquer.Lacefx;
 				PRODUCT_NAME = Lacefx;
@@ -1092,7 +1083,6 @@
 		1DEB91AF08733DA50010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_X86_VECTOR_INSTRUCTIONS = default;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1100,10 +1090,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
-				GCC_ALTIVEC_EXTENSIONS = YES;
-				GCC_ENABLE_OBJC_GC = unsupported;
-				GCC_ENABLE_SSE3_EXTENSIONS = YES;
-				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Lacefx/Lacefx_Prefix.pch;
@@ -1119,7 +1105,8 @@
 					"$(PROJECT_DIR)/libjpeg-turbo",
 					"$(PROJECT_DIR)/tiff",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = fi.lacquer.Lacefx;
 				PRODUCT_NAME = Lacefx;
 				RUN_CLANG_STATIC_ANALYZER = YES;

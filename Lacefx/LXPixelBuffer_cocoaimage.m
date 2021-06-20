@@ -20,8 +20,6 @@
 #import <QuartzCore/QuartzCore.h>
 
 
-#define LX_HAS_LIBTIFF 1
-
 #if defined(LX_HAS_LIBTIFF)
  #include <tiff.h>
  #include <tiffio.h>
@@ -588,7 +586,7 @@ static LXSuccess writeImageUsingNSBitmapImageRep_RGBA_float16_to_int16(LXPixelBu
         }
     }
 
-#if defined(LX_HAS_LIBTIFF)
+#if LX_HAS_LIBTIFF
     TIFF *tiff;
 
     if( !(tiff = TIFFOpen([path UTF8String], "w"))) {

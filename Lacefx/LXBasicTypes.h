@@ -40,6 +40,11 @@
   #define LXPLATFORM_IOS 1
  #else
   #define LXPLATFORM_MAC 1
+
+  #if defined(__arm64__)
+   #define LXPLATFORM_MAC_ARM64 1
+  #endif
+
  #endif
 #endif
 

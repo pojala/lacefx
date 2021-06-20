@@ -379,7 +379,7 @@ LXHalf LXHalfFromFloat(float f)
 
 
 
-#if !defined(__BIG_ENDIAN__) && !defined(LXPLATFORM_IOS) && !defined(__SSE2__)
+#if !defined(__BIG_ENDIAN__) && !defined(LXPLATFORM_IOS) && !defined(LXPLATFORM_MAC_ARM64) && !defined(__SSE2__)
 #warning "Lacefx ought to be compiled with SSE2 on x86 for best performance"
 #endif
 

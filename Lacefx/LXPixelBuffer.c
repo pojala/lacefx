@@ -873,6 +873,9 @@ LXPixelBufferRef LXPixelBufferCreateFromFileAtPath(LXUnibuffer uni, LXMapPtr pro
         // read with our own DPX reader
         newPixbuf = LXPixelBufferCreateFromDPXImageAtPath(thePath, properties, outError);
     }
+#endif
+    
+#if LX_HAS_LIBTIFF
     else if (imageType == kLXImage_TIFF) {
         // try first with our own reader; if it fails, let the native API open the file.
         // if the caller wants a colorspace conversion, we must let the native API handle it.
@@ -992,10 +995,14 @@ LXSuccess LXPixelBufferWriteAsFileToPath(LXPixelBufferRef pixbuf, LXUnibuffer un
     else if (imageType == kLXImage_JPEG) {
         retVal = LXPixelBufferWriteAsJPEGImageToPath(pixbuf, unipath, properties, outError);
     }
+#endif
+    
+#if LX_HAS_LIBTIFF
     else if (imageType == kLXImage_TIFF) {
         retVal = LXPixelBufferWriteAsTIFFImageToPath(pixbuf, unipath, properties, outError);
     }
 #endif
+    
     else if (imageType > 0) {
         retVal = LXPixelBufferWriteToPathUsingNativeAPI_(pixbuf, unipath, imageType, properties, outError);
     }

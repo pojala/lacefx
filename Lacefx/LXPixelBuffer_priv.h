@@ -22,6 +22,8 @@
 #import <AppKit/AppKit.h>
 #endif
 
+#define LX_HAS_LIBTIFF 0
+
 
 enum {
     kLXImage_PNG = 1,

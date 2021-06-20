@@ -37,8 +37,8 @@ extern "C" {
 // these functions work like Cocoa's autorelease pools (thread-local, and can be nested by creating a new one).
 // most of the time you'll want to use the thread-local pool for autoreleasing temporary objects,
 // hence the LXAutorelease macro.
-LXEXPORT LXPoolRef LXPoolCreateForThread();
-LXEXPORT LXPoolRef LXPoolCurrentForThread();
+LXEXPORT LXPoolRef LXPoolCreateForThread(void);
+LXEXPORT LXPoolRef LXPoolCurrentForThread(void);
 
 // the autorelease functions & macros return the same pointer that was passed in.
 // "AutoreleaseCPtr" can be used for any memory object that needs to be freed with _lx_free() -- e.g. strings from Lacefx.
@@ -46,7 +46,7 @@ LXEXPORT LXPoolRef LXPoolCurrentForThread();
 #define LXAutoreleaseCPtr(_obj_)    LXPoolAutoreleaseWithHint(LXPoolCurrentForThread(), (LXRef)(_obj_), kLXPoolHint_ObjectIsMalloced)
 
 
-LXEXPORT LXPoolRef LXPoolCreate();
+LXEXPORT LXPoolRef LXPoolCreate(void);
 
 LXEXPORT LXPoolRef LXPoolRetain(LXPoolRef poolRef);
 LXEXPORT void LXPoolRelease(LXPoolRef poolRef);

@@ -45,7 +45,7 @@ typedef DWORD LXThreadLocalVar;
 
 typedef pthread_key_t LXThreadLocalVar;
 
-LXEXPORT LXThreadLocalVar LXThreadLocalCreate();
+LXEXPORT LXThreadLocalVar LXThreadLocalCreate(void);
 LXEXPORT void LXThreadLocalDestroy(LXThreadLocalVar tls);
 
 #define LXThreadLocalGet(t_)            pthread_getspecific(t_)

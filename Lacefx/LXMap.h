@@ -42,7 +42,7 @@ extern "C" {
 
 #pragma mark --- LXMap public API ---
 
-LXEXPORT LXMapPtr LXMapCreateMutable();
+LXEXPORT LXMapPtr LXMapCreateMutable(void);
 LXEXPORT void LXMapDestroy(LXMapPtr r);
 
 LXEXPORT void LXMapSetBool(LXMapPtr map, const char *key, LXBool v);
@@ -82,7 +82,7 @@ LXEXPORT void LXMapCopyEntriesFromMap(LXMapPtr map, LXMapPtr otherMap);
 // 
 // * the insert / get / pop operations are atomic, so an integer map can be shared between threads.
 //
-LXEXPORT LXIntegerMapPtr LXIntegerMapCreateMutable();
+LXEXPORT LXIntegerMapPtr LXIntegerMapCreateMutable(void);
 LXEXPORT void LXIntegerMapDestroy(LXIntegerMapPtr r);
 
 LXEXPORT void LXIntegerMapInsert(LXMapPtr map, const char *key, LXInteger v);
