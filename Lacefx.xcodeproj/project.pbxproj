@@ -179,7 +179,7 @@
 		5AB58ADE126DC52100DDC7FE /* LQLXConvolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58ACE126DC52100DDC7FE /* LQLXConvolver.m */; };
 		5AB58ADF126DC52100DDC7FE /* LXConvolver_lx.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58ACF126DC52100DDC7FE /* LXConvolver_lx.m */; };
 		5AB58AE0126DC52100DDC7FE /* LXDrawContext.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AD0126DC52100DDC7FE /* LXDrawContext.c */; };
-		5AB58AE1126DC52100DDC7FE /* LXDraw_Impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AD1126DC52100DDC7FE /* LXDraw_Impl.h */; };
+		5AB58AE1126DC52100DDC7FE /* LXDraw_Impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AD1126DC52100DDC7FE /* LXDraw_Impl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AB58AE2126DC52100DDC7FE /* LXFixedPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AD2126DC52100DDC7FE /* LXFixedPoint.h */; };
 		5AB58AE3126DC52100DDC7FE /* LXFixedPoint.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AD3126DC52100DDC7FE /* LXFixedPoint.c */; };
 		5AB58AE4126DC52100DDC7FE /* LXFPClosure.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AD4126DC52100DDC7FE /* LXFPClosure.c */; };
@@ -200,12 +200,12 @@
 		5AB58B07126DC55B00DDC7FE /* LXPool_pixelbuffer_priv.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AF4126DC55B00DDC7FE /* LXPool_pixelbuffer_priv.h */; };
 		5AB58B08126DC55B00DDC7FE /* LXPool_pixelbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF5126DC55B00DDC7FE /* LXPool_pixelbuffer.c */; };
 		5AB58B09126DC55B00DDC7FE /* LXRef.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF6126DC55B00DDC7FE /* LXRef.c */; };
-		5AB58B0A126DC55B00DDC7FE /* LXRef_Impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AF7126DC55B00DDC7FE /* LXRef_Impl.h */; };
+		5AB58B0A126DC55B00DDC7FE /* LXRef_Impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AF7126DC55B00DDC7FE /* LXRef_Impl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AB58B0B126DC55B00DDC7FE /* LXShader_common.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AF8126DC55B00DDC7FE /* LXShader_common.m */; };
-		5AB58B0C126DC55B00DDC7FE /* LXShader_Impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AF9126DC55B00DDC7FE /* LXShader_Impl.h */; };
+		5AB58B0C126DC55B00DDC7FE /* LXShader_Impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AF9126DC55B00DDC7FE /* LXShader_Impl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AB58B0D126DC55B00DDC7FE /* LXShaderTranslation.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AFA126DC55B00DDC7FE /* LXShaderTranslation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AB58B0E126DC55B00DDC7FE /* LXShaderTranslation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58AFB126DC55B00DDC7FE /* LXShaderTranslation.m */; };
-		5AB58B0F126DC55B00DDC7FE /* LXDrawContext_Impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AFC126DC55B00DDC7FE /* LXDrawContext_Impl.h */; };
+		5AB58B0F126DC55B00DDC7FE /* LXDrawContext_Impl.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AB58AFC126DC55B00DDC7FE /* LXDrawContext_Impl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5AB58B19126DC56A00DDC7FE /* LXSurface_utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B11126DC56A00DDC7FE /* LXSurface_utils.c */; };
 		5AB58B1A126DC56A00DDC7FE /* LXTextureArray.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B12126DC56A00DDC7FE /* LXTextureArray.c */; };
 		5AB58B1B126DC56A00DDC7FE /* LXTransform3D.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AB58B13126DC56A00DDC7FE /* LXTransform3D.c */; };

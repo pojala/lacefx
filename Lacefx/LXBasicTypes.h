@@ -101,7 +101,8 @@ typedef LXBool LXSuccess;
 #endif
 
 // can't use C99 standard's wchar_t for UTF-16 strings because it's 2 bytes on Windows but 4 bytes on OS X.
-#if !defined(_CHAR16_T)
+// C++11 has also added char16_t, so avoid conflict with that.
+#if !defined(_CHAR16_T) && !defined(__cpp_unicode_characters)
  #if defined(LXPLATFORM_WIN)
   typedef wchar_t char16_t;
  #else
