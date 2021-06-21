@@ -888,6 +888,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					8DC2EF4F0486A6940098B216 = {
+						DevelopmentTeam = 622WKG7D7D;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "Lacefx" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1049,8 +1055,11 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_X86_VECTOR_INSTRUCTIONS = default;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 622WKG7D7D;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -1073,6 +1082,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = fi.lacquer.Lacefx;
 				PRODUCT_NAME = Lacefx;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
@@ -1084,8 +1094,11 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_X86_VECTOR_INSTRUCTIONS = default;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 622WKG7D7D;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -1108,6 +1121,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = fi.lacquer.Lacefx;
 				PRODUCT_NAME = Lacefx;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
 				WARNING_CFLAGS = "-Winline";
